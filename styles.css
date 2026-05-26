@@ -765,20 +765,26 @@ html.has-reveal .reveal.in {
 }
 .company {
   flex: 0 0 auto;
-  padding: 48px 64px;
+  padding: 40px 56px;
   border-right: 1px solid var(--line-soft);
-  font-size: clamp(20px, 2vw, 28px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--fg);
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+  min-height: 120px;
 }
-.company-dot {
-  width: 10px; height: 10px;
-  background: var(--accent);
-  border-radius: 999px;
+.company-logo {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.company-name {
+  white-space: nowrap;
 }
 
 /* ============ REVIEWS ============ */
