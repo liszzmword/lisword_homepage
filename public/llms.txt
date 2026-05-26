@@ -1,0 +1,31 @@
+# 리즈워드 LISWORD
+
+> 기업·학교 대상 AI 교육 회사. 부트캠프와 스킬트레이닝(AI 리터러시, 데이터 리터러시, RAG 개발, 바이브 코딩)을 운영합니다. 대표 이인섭 (성균관대학교 서비스디자인 박사).
+
+## 회사 정의
+
+리즈워드는 임직원과 학생이 AI로 실제 문제를 해결할 수 있도록 돕는 한국의 AI 교육 회사입니다. 이론 중심이 아니라 현장 적용 중심의 부트캠프와 스킬트레이닝을 설계·진행합니다.
+
+## 두 가지 교육 형태
+
+- **AI 부트캠프**: 기업(2-12주), 학교(1학기). 자사 데이터·자사 문제로 진행.
+- **스킬트레이닝 (4트랙)**: AI 리터러시 / 데이터 리터러시 / RAG 개발 / 바이브 코딩.
+
+## 핵심 페이지
+
+- [회사 개요](https://lisword.co.kr/about)
+- [프로그램](https://lisword.co.kr/programs)
+- [AI 부트캠프](https://lisword.co.kr/programs/ai-bootcamp)
+- [스킬트레이닝](https://lisword.co.kr/programs/skill-training)
+- [사례](https://lisword.co.kr/cases)
+- [문의](https://lisword.co.kr/contact)
+
+## 함께한 기업·기관
+
+성균관대학교, 강원대학교, 도미노피자, 플렌티넷, 플렌티엠, 한국국토정보공사, 춘천시청, 삼성전자, LG이노텍, 문화체육관광부, 틱톡, TJ미디어.
+
+## 연락
+
+- 이메일: liszzm@lisword.co.kr
+- 전화: 010-9973-0158
+- 유튜브: https://www.youtube.com/@lisword
