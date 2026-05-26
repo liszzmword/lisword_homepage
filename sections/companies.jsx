@@ -1,7 +1,7 @@
 /* global React */
 function Companies() {
   const list = [
-    { name: "성균관대학교",       logo: "logos/skku.svg" },
+    { name: "성균관대학교",       logo: "logos/skku.png" },
     { name: "도미노피자",         logo: "logos/dominos.svg" },
     { name: "플렌티넷",           logo: "logos/plantynet.png" },
     { name: "플렌티엠",           logo: "logos/plantym.png" },
