@@ -1,6 +1,9 @@
 /* global React */
 function Companies() {
-  const list = ["성균관대학교", "도미노피자", "플렌티넷", "플렌티엠", "강원대학교"];
+  const list = [
+    "성균관대학교", "도미노피자", "플렌티넷", "플렌티엠", "강원대학교",
+    "한국국토정보공사", "춘천시청", "삼성전자", "LG이노텍", "문화체육관광부", "틱톡"
+  ];
   // duplicate for seamless marquee
   const loop = [...list, ...list, ...list];
   return (
