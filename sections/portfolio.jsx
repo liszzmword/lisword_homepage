@@ -1,12 +1,38 @@
 /* global React */
 function Portfolio() {
   const items = [
-    { id: "skku",    num: "01", title: "AI 부트캠프 — 창업·문제해결 트랙", client: "성균관대학교", date: "2025" },
-    { id: "domino",  num: "02", title: "임직원 AI 리터러시 · RAG 워크숍", client: "도미노피자", date: "2025" },
-    { id: "plentyn", num: "03", title: "데이터 리터러시 사내 교육", client: "플렌티넷", date: "2024" },
-    { id: "plentym", num: "04", title: "바이브 코딩 실무자 과정", client: "플렌티엠", date: "2024" },
-    { id: "kangwon", num: "05", title: "AI 문제해결 부트캠프", client: "강원대학교", date: "2024" },
-    { id: "more",    num: "06", title: "그 외 다수 기업·기관 교육", client: "ON GOING", date: "2024–2025" },
+    {
+      id: "skku",
+      num: "01",
+      title: "AI 부트캠프 — 창업·문제해결 트랙",
+      client: "성균관대학교",
+      date: "2025",
+      image: "성균관대학교%20AI부트캠프.jpeg",
+    },
+    {
+      id: "domino",
+      num: "02",
+      title: "임직원 AI 리터러시 · RAG 워크숍",
+      client: "도미노피자",
+      date: "2025",
+      image: "도미노RAG.jpg",
+    },
+    {
+      id: "plentyn",
+      num: "03",
+      title: "데이터 리터러시 사내 교육",
+      client: "플렌티넷",
+      date: "2024",
+      image: "플랜티넷_데이터리터러시%20사내%20교육.jpg",
+    },
+    {
+      id: "tjmedia",
+      num: "04",
+      title: "서비스디자인 부트캠프",
+      client: "TJ미디어",
+      date: "2025",
+      image: "서비스디자인해커톤.jpg",
+    },
   ];
   return (
     <section className="wrap section" id="portfolio">
@@ -25,11 +51,7 @@ function Portfolio() {
         {items.map((it) => (
           <article className="port-card" key={it.id}>
             <div className="port-image">
-              <image-slot
-                id={`port-${it.id}`}
-                shape="rect"
-                placeholder={`${it.client} 현장 사진`}
-              ></image-slot>
+              <img src={it.image} alt={`${it.client} ${it.title}`} loading="lazy" />
               <div className="port-image-num">{it.num}</div>
             </div>
             <div className="port-meta">

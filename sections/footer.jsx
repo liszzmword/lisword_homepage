@@ -5,10 +5,10 @@ function Footer() {
       <div className="footer-inner">
         <div className="logo">
           <span className="logo-mark"></span>
-          <span>LISZZM · 리즈워드</span>
+          <span>LISWORD · 리즈워드</span>
         </div>
         <div className="footer-meta">
-          © {new Date().getFullYear()} LISZZM. ALL RIGHTS RESERVED · LISZZM.CO.KR
+          © {new Date().getFullYear()} LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR
         </div>
       </div>
     </footer>

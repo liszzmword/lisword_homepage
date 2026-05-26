@@ -706,10 +706,11 @@ html.has-reveal .reveal.in {
   background: var(--bg-2);
   overflow: hidden;
 }
-.port-image image-slot {
+.port-image img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .port-image-num {
   position: absolute;

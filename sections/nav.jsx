@@ -5,7 +5,7 @@ function Nav() {
       <div className="wrap nav-inner">
         <a href="#top" className="logo">
           <span className="logo-mark"></span>
-          <span>LISZZM</span>
+          <span>LISWORD</span>
         </a>
         <nav className="nav-links">
           <a href="#programs">교육</a>

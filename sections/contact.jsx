@@ -35,7 +35,7 @@ function Contact() {
           <form
             className="contact-form reveal"
             style={{ "--reveal-delay": "120ms" }}
-            action="https://formsubmit.co/liszzm@liszzm.co.kr"
+            action="https://formsubmit.co/liszzm@lisword.co.kr"
             method="POST"
             onSubmit={submit}
           >
