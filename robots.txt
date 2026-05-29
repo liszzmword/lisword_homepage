@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# AI 검색 봇 명시적 허용 (GEO 전략)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://lisword.co.kr/sitemap.xml
