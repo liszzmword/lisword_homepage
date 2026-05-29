@@ -13,7 +13,11 @@ function Nav() {
           <a href="#portfolio">사례</a>
           <a href="#contact">문의</a>
         </nav>
-        <a href="#contact" className="nav-cta">교육 문의하기</a>
+        <a
+          href="#contact"
+          className="nav-cta"
+          onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "nav" })}
+        >교육 문의하기</a>
       </div>
     </header>
   );

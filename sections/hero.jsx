@@ -14,11 +14,19 @@ function Hero({ tagline }) {
         <div className="hero-meta reveal" style={{ "--reveal-delay": "180ms" }}>
           <p className="hero-desc">{tagline.desc}</p>
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-accent">
+            <a
+              href="#contact"
+              className="btn btn-accent"
+              onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "hero" })}
+            >
               교육 문의하기
               <span className="arrow">→</span>
             </a>
-            <a href="#programs" className="btn btn-ghost">
+            <a
+              href="#programs"
+              className="btn btn-ghost"
+              onClick={() => window.gtag && window.gtag("event", "program_view", { location: "hero" })}
+            >
               프로그램 보기
             </a>
           </div>

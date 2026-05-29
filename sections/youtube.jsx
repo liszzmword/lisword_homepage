@@ -59,7 +59,13 @@ function YouTube() {
               <div className="yt-channel-handle">youtube.com/@lisword</div>
             </div>
           </div>
-          <a href="https://www.youtube.com/@lisword" target="_blank" rel="noopener" className="btn btn-accent">
+          <a
+            href="https://www.youtube.com/@lisword"
+            target="_blank"
+            rel="noopener"
+            className="btn btn-accent"
+            onClick={() => window.gtag && window.gtag("event", "youtube_subscribe_click")}
+          >
             채널 구독하기<span className="arrow">↗</span>
           </a>
         </div>

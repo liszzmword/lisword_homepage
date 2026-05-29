@@ -27,7 +27,11 @@ function Programs() {
             <div className="program-list-row"><span>커스텀 트랙 설계</span><span>ON DEMAND</span></div>
           </div>
           <div className="program-foot">
-            <a href="#contact" className="btn btn-accent">상담 신청<span className="arrow">→</span></a>
+            <a
+              href="#contact"
+              className="btn btn-accent"
+              onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "programs_bootcamp" })}
+            >상담 신청<span className="arrow">→</span></a>
           </div>
         </article>
 
@@ -45,7 +49,11 @@ function Programs() {
             <div className="program-list-row"><span>바이브 코딩</span><span>TRACK 04</span></div>
           </div>
           <div className="program-foot">
-            <a href="#skills" className="btn btn-ghost">자세히 보기<span className="arrow">→</span></a>
+            <a
+              href="#skills"
+              className="btn btn-ghost"
+              onClick={() => window.gtag && window.gtag("event", "program_view", { location: "programs_skill" })}
+            >자세히 보기<span className="arrow">→</span></a>
           </div>
         </article>
       </div>

@@ -26,6 +26,7 @@ function Contact() {
         }),
       });
       if (res.ok) {
+        if (window.gtag) window.gtag("event", "contact_form_submit", { method: "formsubmit" });
         setShowModal(true);
         setForm({ org: "", name: "", email: "", phone: "", message: "" });
       } else {
