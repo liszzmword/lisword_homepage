@@ -66,6 +66,7 @@ function App() {
       <Programs />
       <Skills />
       <YouTube />
+      <News />
       <Portfolio />
       <Companies />
       <Reviews />

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -sI \"https://lisword.co.kr/sitemap.xml\")",
+      "Bash(curl -s \"https://lisword.co.kr/sitemap.xml\")",
+      "Bash(curl -sI \"https://lisword.co.kr/robots.txt\")",
+      "Bash(curl -sI \"https://www.lisword.co.kr/sitemap.xml\")",
+      "Bash(curl -s \"https://www.lisword.co.kr/sitemap.xml\")",
+      "Bash(curl -sI \"https://www.lisword.co.kr/\")",
+      "Bash(curl -s \"https://www.lisword.co.kr/\")",
+      "Bash(curl -sI \"https://lisword-homepage-567g.vercel.app/sitemap.xml\")",
+      "Bash(curl -sI \"https://www.lisword.co.kr/?$\\(date +%s\\)\")",
+      "Bash(curl -sI \"https://lisword-homepage-567g.vercel.app/?$\\(date +%s\\)\")",
+      "Bash(curl -s \"https://www.lisword.co.kr/?$\\(date +%s\\)\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://dhnews.co.kr/news/view/1065591701447441\")"
+    ]
+  }
+}

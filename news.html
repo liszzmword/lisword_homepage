@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>언론 보도 — 리즈워드 LISWORD</title>
+  <meta name="description" content="언론·매체에 소개된 리즈워드(LISWORD)의 활동을 모았습니다." />
+
+  <meta name="google-site-verification" content="ub7LGK-HluYi5lUNuCj12mv4FHHJSk6V6eFfujHzGT8" />
+  <meta name="naver-site-verification" content="691cfe6b9edab1367a8e7f1a8e481181e3a931e8" />
+  <meta name="naver-site-verification" content="9b08746dde93dee40802edc40ba17102ffa8fde0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFCE89BGF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFCE89BGF7');
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="news-data.js"></script>
+</head>
+<body>
+  <header class="wrap news-page-nav">
+    <div class="news-page-nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark"></span>
+        <span>LISWORD</span>
+      </a>
+      <a href="/" class="news-page-back">← 홈으로</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="news-page-head">
+      <div class="eyebrow mono">PRESS · 언론 보도</div>
+      <h1>언론에 나온 <em class="accent">리즈워드</em>.</h1>
+      <p style="font-size:16px; color:var(--fg-2); max-width:640px; line-height:1.7;">
+        매체에 소개된 리즈워드의 활동을 시간순으로 모았습니다. 제목을 누르면 원문 기사로 이동합니다.
+      </p>
+    </section>
+
+    <section class="news-page-list" id="news-list">
+      <noscript><p>이 페이지는 JavaScript가 필요합니다.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-mark"></span>
+        <span>LISWORD · 리즈워드</span>
+      </div>
+      <div class="footer-meta" id="copy-year">
+        © LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var year = new Date().getFullYear();
+      var copy = document.getElementById('copy-year');
+      if (copy) copy.textContent = '© ' + year + ' LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR';
+
+      var articles = window.NEWS_ARTICLES || [];
+      var list = document.getElementById('news-list');
+      if (!list) return;
+
+      if (articles.length === 0) {
+        list.innerHTML = '<p style="padding:40px 0; color:var(--fg-3);">아직 등록된 기사가 없습니다.</p>';
+        return;
+      }
+
+      // 최신순 정렬 (date desc)
+      articles = articles.slice().sort(function (a, b) {
+        return (b.date || '').localeCompare(a.date || '');
+      });
+
+      articles.forEach(function (a) {
+        var row = document.createElement('a');
+        row.href = a.url;
+        row.target = '_blank';
+        row.rel = 'noopener';
+        row.className = 'news-page-row';
+        row.addEventListener('click', function () {
+          if (window.gtag) window.gtag('event', 'press_article_click', { article_id: a.id, page: 'news_list' });
+        });
+
+        var date = document.createElement('span');
+        date.className = 'news-page-row-date';
+        date.textContent = a.date || '';
+
+        var title = document.createElement('span');
+        title.className = 'news-page-row-title';
+        title.textContent = a.title || '';
+
+        var source = document.createElement('span');
+        source.className = 'news-page-row-source';
+        source.textContent = a.source || '';
+
+        row.appendChild(date);
+        row.appendChild(title);
+        row.appendChild(source);
+        list.appendChild(row);
+      });
+    })();
+  </script>
+</body>
+</html>

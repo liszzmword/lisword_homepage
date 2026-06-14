@@ -38,7 +38,7 @@ function Portfolio() {
     <section className="wrap section" id="portfolio">
       <div className="section-head reveal">
         <div>
-          <div className="eyebrow mono">PORTFOLIO / 04</div>
+          <div className="eyebrow mono">PORTFOLIO / 05</div>
           <h2 className="section-title">진행했던 <em className="accent">교육들</em>.</h2>
         </div>
         <p className="section-lead">

@@ -21,7 +21,7 @@ function Reviews() {
     <section className="wrap section" id="reviews">
       <div className="section-head reveal">
         <div>
-          <div className="eyebrow mono">REVIEWS / 05</div>
+          <div className="eyebrow mono">REVIEWS / 06</div>
           <h2 className="section-title">수강생들의 <em className="accent">이야기</em>.</h2>
         </div>
         <p className="section-lead">
