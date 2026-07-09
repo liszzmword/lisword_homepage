@@ -1,6 +1,9 @@
 /* global React */
 const { useState: useStateContact } = React;
 
+// Web3Forms access key — 수신처: liszzm@lisword.co.kr (web3forms.com에서 발급)
+const WEB3FORMS_ACCESS_KEY = "c5fa5ef0-c3ff-4916-928b-0a590e6cb3ef";
+
 function Contact() {
   const [showModal, setShowModal] = useStateContact(false);
   const [sending, setSending] = useStateContact(false);
@@ -11,18 +14,19 @@ function Contact() {
     if (sending) return;
     setSending(true);
     try {
-      const res = await fetch("https://formsubmit.co/ajax/liszzm@lisword.co.kr", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "[리즈워드] 교육 문의가 도착했습니다",
+          from_name: "리즈워드 홈페이지",
           "기관·회사명": form.org,
           "담당자": form.name,
-          "이메일": form.email,
+          email: form.email,
           "연락처": form.phone,
           "문의내용": form.message,
-          "_subject": "[리즈워드] 교육 문의가 도착했습니다",
-          "_template": "table",
-          "_captcha": "false",
+          botcheck: "",
         }),
       });
       if (res.ok) {
