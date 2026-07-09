@@ -42,6 +42,7 @@ function Hero({ tagline }) {
               <span>AI 리터러시</span>
               <span>DATA LITERACY</span>
               <span>RAG DEVELOPMENT</span>
+              <span>AX TRANSFORMATION</span>
               <span>VIBE CODING</span>
               <span>창업 · 문제해결</span>
               <span>기업 · 학교</span>

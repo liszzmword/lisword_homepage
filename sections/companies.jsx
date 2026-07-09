@@ -20,7 +20,7 @@ function Companies() {
       <div className="wrap" style={{marginBottom: "clamp(40px, 5vw, 64px)"}}>
         <div className="section-head reveal">
           <div>
-            <div className="eyebrow mono">CLIENTS / 07</div>
+            <div className="eyebrow mono">CLIENTS / 08</div>
             <h2 className="section-title">함께한 <em className="accent">기업·기관</em>.</h2>
           </div>
           <p className="section-lead">

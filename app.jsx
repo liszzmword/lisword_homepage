@@ -65,6 +65,7 @@ function App() {
       <Hero tagline={tagline} />
       <Programs />
       <Skills />
+      <AX />
       <YouTube />
       <News />
       <Portfolio />

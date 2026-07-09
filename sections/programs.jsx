@@ -5,11 +5,11 @@ function Programs() {
       <div className="section-head reveal">
         <div>
           <div className="eyebrow mono">PROGRAMS / 01</div>
-          <h2 className="section-title">두 갈래의 <em className="accent">AI 교육</em>.</h2>
+          <h2 className="section-title">세 갈래의 <em className="accent">AI 파트너십</em>.</h2>
         </div>
         <p className="section-lead">
-          조직 단위로 문제를 해결하는 부트캠프와, 실무자가 빠르게 무장하는 스킬트레이닝.
-          어떤 상황이든 맞춤 설계로 풀어드립니다.
+          조직 단위로 문제를 해결하는 부트캠프, 실무자가 빠르게 무장하는 스킬트레이닝,
+          그리고 시스템을 만들어 남기는 AX 전환. 어떤 상황이든 맞춤 설계로 풀어드립니다.
         </p>
       </div>
 
@@ -53,6 +53,27 @@ function Programs() {
               href="#skills"
               className="btn btn-ghost"
               onClick={() => window.gtag && window.gtag("event", "program_view", { location: "programs_skill" })}
+            >자세히 보기<span className="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article className="program">
+          <span className="program-num">03 — AX PARTNERSHIP</span>
+          <h3 className="program-title">기업 <em>AX 전환</em></h3>
+          <p className="program-desc">
+            교육을 넘어 구축까지. RAG 챗봇과 업무 자동화를 만들고,
+            팀이 직접 운영하도록 내재화합니다.
+          </p>
+          <div className="program-list">
+            <div className="program-list-row"><span>AX 진단 · 로드맵</span><span>CONSULTING</span></div>
+            <div className="program-list-row"><span>RAG 챗봇 · 자동화 구축</span><span>BUILD</span></div>
+            <div className="program-list-row"><span>교육 결합 내재화</span><span>ENABLEMENT</span></div>
+          </div>
+          <div className="program-foot">
+            <a
+              href="#ax"
+              className="btn btn-ghost"
+              onClick={() => window.gtag && window.gtag("event", "program_view", { location: "programs_ax" })}
             >자세히 보기<span className="arrow">→</span></a>
           </div>
         </article>

@@ -16,7 +16,7 @@ function YouTube() {
       <div className="wrap">
         <div className="section-head reveal section-head--center">
           <div>
-            <div className="eyebrow mono">YOUTUBE / 03</div>
+            <div className="eyebrow mono">YOUTUBE / 04</div>
             <h2 className="section-title">강의실 밖에서도 <em className="accent">이야기</em>.</h2>
           </div>
           <p className="section-lead">

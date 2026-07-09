@@ -7,7 +7,7 @@ function News() {
     <section className="wrap section" id="news">
       <div className="section-head reveal">
         <div>
-          <div className="eyebrow mono">PRESS / 04</div>
+          <div className="eyebrow mono">PRESS / 05</div>
           <h2 className="section-title">언론에 나온 <em className="accent">리즈워드</em>.</h2>
         </div>
         <p className="section-lead">

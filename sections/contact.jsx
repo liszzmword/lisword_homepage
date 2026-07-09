@@ -49,7 +49,7 @@ function Contact() {
         <div className="wrap">
           <div className="contact-inner">
             <div className="reveal contact-head">
-              <div className="eyebrow mono">CONTACT / 08</div>
+              <div className="eyebrow mono">CONTACT / 09</div>
               <h2 className="contact-big">
                 교육이 <em>필요하신가요?</em><br/>
                 연락 주세요.

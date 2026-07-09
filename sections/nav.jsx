@@ -9,6 +9,7 @@ function Nav() {
         </a>
         <nav className="nav-links">
           <a href="#programs">교육</a>
+          <a href="#ax">AX 전환</a>
           <a href="#youtube">유튜브</a>
           <a href="#portfolio">사례</a>
           <a href="#contact">문의</a>
