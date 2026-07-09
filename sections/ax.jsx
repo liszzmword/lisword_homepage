@@ -54,7 +54,10 @@ function AX() {
         <a
           href="#contact"
           className="btn btn-accent"
-          onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "ax" })}
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("contact-type", { detail: "ax" }));
+            if (window.gtag) window.gtag("event", "cta_contact_click", { location: "ax" });
+          }}
         >
           AX 상담 신청<span className="arrow">→</span>
         </a>

@@ -1,13 +1,38 @@
 /* global React */
-const { useState: useStateContact } = React;
+const { useState: useStateContact, useEffect: useEffectContact } = React;
 
 // Web3Forms access key — 수신처: liszzm@lisword.co.kr (web3forms.com에서 발급)
 const WEB3FORMS_ACCESS_KEY = "c5fa5ef0-c3ff-4916-928b-0a590e6cb3ef";
 
+// 문의 유형 — CTA 버튼이 window 커스텀 이벤트 "contact-type"으로 선택을 전환한다
+const CONTACT_TYPES = {
+  edu: {
+    label: "교육 문의",
+    subject: "[리즈워드] 교육 문의가 도착했습니다",
+    placeholder: "원하시는 교육과 일정, 인원수를 알려주세요.",
+    submit: "교육 문의하기 →",
+  },
+  ax: {
+    label: "AX 전환 문의",
+    subject: "[리즈워드] AX 전환 문의가 도착했습니다",
+    placeholder: "해결하고 싶은 업무나 구축하고 싶은 시스템을 알려주세요. (예: 사내 문서 챗봇, 보고 자동화)",
+    submit: "AX 전환 문의하기 →",
+  },
+};
+
 function Contact() {
   const [showModal, setShowModal] = useStateContact(false);
   const [sending, setSending] = useStateContact(false);
+  const [type, setType] = useStateContact("edu");
   const [form, setForm] = useStateContact({ org: "", name: "", email: "", phone: "", message: "" });
+
+  useEffectContact(() => {
+    const onType = (e) => { if (CONTACT_TYPES[e.detail]) setType(e.detail); };
+    window.addEventListener("contact-type", onType);
+    return () => window.removeEventListener("contact-type", onType);
+  }, []);
+
+  const t = CONTACT_TYPES[type];
 
   const submit = async (e) => {
     e.preventDefault();
@@ -19,8 +44,9 @@ function Contact() {
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "[리즈워드] 교육 문의가 도착했습니다",
+          subject: t.subject,
           from_name: "리즈워드 홈페이지",
+          "문의유형": t.label,
           "기관·회사명": form.org,
           "담당자": form.name,
           email: form.email,
@@ -30,7 +56,7 @@ function Contact() {
         }),
       });
       if (res.ok) {
-        if (window.gtag) window.gtag("event", "contact_form_submit", { method: "formsubmit" });
+        if (window.gtag) window.gtag("event", "contact_form_submit", { method: "web3forms", type });
         setShowModal(true);
         setForm({ org: "", name: "", email: "", phone: "", message: "" });
       } else {
@@ -51,11 +77,11 @@ function Contact() {
             <div className="reveal contact-head">
               <div className="eyebrow mono">CONTACT / 09</div>
               <h2 className="contact-big">
-                교육이 <em>필요하신가요?</em><br/>
+                AI가 <em>필요하신가요?</em><br/>
                 연락 주세요.
               </h2>
               <p className="contact-sub">
-                기관·회사명과 원하시는 교육, 일정·인원을 남겨주세요. 빠르게 회신드리겠습니다.
+                교육이든 구축이든 좋습니다. 기관·회사명과 필요하신 내용, 일정·인원을 남겨주세요. 빠르게 회신드리겠습니다.
               </p>
             </div>
 
@@ -64,6 +90,16 @@ function Contact() {
               style={{ "--reveal-delay": "120ms" }}
               onSubmit={submit}
             >
+              <div className="contact-type" role="group" aria-label="문의 유형">
+                {Object.entries(CONTACT_TYPES).map(([key, v]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    className={"contact-type-btn" + (type === key ? " on" : "")}
+                    onClick={() => setType(key)}
+                  >{v.label}</button>
+                ))}
+              </div>
               <div className="contact-row-2">
                 <input
                   className="contact-input"
@@ -104,13 +140,13 @@ function Contact() {
               <textarea
                 className="contact-textarea"
                 name="문의내용"
-                placeholder="원하시는 교육과 일정, 인원수를 알려주세요."
+                placeholder={t.placeholder}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
               ></textarea>
               <button className="contact-submit" type="submit" disabled={sending}>
-                {sending ? "전송 중..." : "교육 문의하기 →"}
+                {sending ? "전송 중..." : t.submit}
               </button>
             </form>
           </div>

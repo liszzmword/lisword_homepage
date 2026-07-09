@@ -1087,6 +1087,28 @@ html.has-reveal .reveal.in {
   gap: 16px;
   text-align: left;
 }
+.contact-type {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.contact-type-btn {
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid rgba(20,8,10,0.35);
+  color: var(--accent-ink);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.contact-type-btn:hover { border-color: var(--accent-ink); }
+.contact-type-btn.on {
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+  color: var(--accent);
+}
 .contact-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;

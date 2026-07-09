@@ -30,7 +30,10 @@ function Programs() {
             <a
               href="#contact"
               className="btn btn-accent"
-              onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "programs_bootcamp" })}
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent("contact-type", { detail: "edu" }));
+                if (window.gtag) window.gtag("event", "cta_contact_click", { location: "programs_bootcamp" });
+              }}
             >상담 신청<span className="arrow">→</span></a>
           </div>
         </article>

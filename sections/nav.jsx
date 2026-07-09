@@ -18,7 +18,7 @@ function Nav() {
           href="#contact"
           className="nav-cta"
           onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "nav" })}
-        >교육 문의하기</a>
+        >상담 신청</a>
       </div>
     </header>
   );

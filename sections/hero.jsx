@@ -17,7 +17,10 @@ function Hero({ tagline }) {
             <a
               href="#contact"
               className="btn btn-accent"
-              onClick={() => window.gtag && window.gtag("event", "cta_contact_click", { location: "hero" })}
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent("contact-type", { detail: "edu" }));
+                if (window.gtag) window.gtag("event", "cta_contact_click", { location: "hero" });
+              }}
             >
               교육 문의하기
               <span className="arrow">→</span>
