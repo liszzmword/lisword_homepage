@@ -6,7 +6,7 @@ function Portfolio() {
       num: "01",
       title: "AI 부트캠프 — 창업·문제해결 트랙",
       client: "성균관대학교",
-      date: "2025",
+      date: "2026",
       image: "성균관대학교%20AI부트캠프.jpeg",
     },
     {
@@ -14,15 +14,15 @@ function Portfolio() {
       num: "02",
       title: "임직원 AI 리터러시 · RAG 워크숍",
       client: "도미노피자",
-      date: "2025",
+      date: "2026",
       image: "도미노RAG.jpg",
     },
     {
       id: "plentyn",
       num: "03",
       title: "데이터 리터러시 사내 교육",
-      client: "플렌티넷",
-      date: "2024",
+      client: "플랜티넷",
+      date: "2026",
       image: "플랜티넷_데이터리터러시%20사내%20교육.jpg",
     },
     {
