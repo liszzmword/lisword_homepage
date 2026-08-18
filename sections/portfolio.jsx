@@ -33,6 +33,22 @@ function Portfolio() {
       date: "2025",
       image: "서비스디자인해커톤.jpg",
     },
+    {
+      id: "seoulrise",
+      num: "05",
+      title: "서울시민 실전 AI 활용 클래스",
+      client: "서울 RISE 앵커사업단",
+      date: "2026",
+      image: "서울RISE_시민AI클래스.jpg",
+    },
+    {
+      id: "skku-opendata",
+      num: "06",
+      title: "공공데이터 MVP 제작 부트캠프",
+      client: "성균관대학교 RISE사업단",
+      date: "2026",
+      image: "성균관대_공공데이터MVP부트캠프.jpg",
+    },
   ];
   return (
     <section className="wrap section" id="portfolio">
