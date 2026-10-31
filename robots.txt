@@ -17,4 +17,27 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# AI 검색·답변 서비스가 질문을 받았을 때 페이지를 읽어 가는 봇 (ChatGPT 검색, Claude, Perplexity)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# 검색엔진 — Bing(ChatGPT 검색이 많이 참고), 네이버(Yeti)
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
 Sitemap: https://www.lisword.co.kr/sitemap.xml
