@@ -3,16 +3,27 @@
   "mode": "production",
   "files": [
     "blog/ai-news-2026-10/index.html",
+    "blog/aiex-forum-coex-2024-2025/index.html",
     "blog/category/ai-news/index.html",
     "blog/category/cases/index.html",
+    "blog/dominos-ai-literacy-2026/index.html",
     "blog/feed.xml",
     "blog/genai-learning-design-guide/index.html",
     "blog/index.html",
     "blog/latest.js",
+    "blog/localo-data-driven-hackathon-2024/index.html",
+    "blog/plantynet-data-literacy-2026/index.html",
     "blog/rise-ai-education-planning-guide/index.html",
+    "blog/samsung-data-driven-hackathon-2023/index.html",
     "blog/seoul-rise-citizen-ai-class/index.html",
+    "blog/skku-data-driven-service-design-2023-2024/index.html",
+    "blog/skku-jetema-data-driven-hackathon-2025/index.html",
+    "blog/skku-nrc-disability-hackathon-2024/index.html",
     "blog/skku-rise-public-data-mvp-bootcamp/index.html",
+    "blog/skku-tokyo-polytechnic-global-capstone-2024-2025/index.html",
+    "blog/skku-ux-design-school-2024/index.html",
     "blog/skku-vibe-coding-bootcamps-2026/index.html",
+    "blog/tj-media-service-design-hackathon-2025/index.html",
     "blog/vibe-coding-bootcamp-3day-guide/index.html"
   ]
 }

@@ -177,3 +177,6 @@ a.lp-case:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
   .lp-tr li { grid-template-columns: 1fr; gap: 4px; }
   .lp-tr-date { font-size: 13px; }
 }
+
+a.lp-tr-name { color: var(--fg); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+a.lp-tr-name:hover { color: var(--accent); text-decoration-color: var(--accent); }
