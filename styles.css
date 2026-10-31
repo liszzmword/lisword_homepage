@@ -213,6 +213,7 @@ html.has-reveal .reveal.in {
   font-size: 14px;
   font-weight: 500;
   color: var(--fg-2);
+  white-space: nowrap;   /* "대학·사업단"처럼 긴 메뉴가 두 줄로 갈라지지 않게 */
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--fg); }
@@ -222,6 +223,14 @@ html.has-reveal .reveal.in {
   padding: 10px 18px;
   background: var(--fg);
   color: var(--bg);
+  white-space: nowrap;
+}
+/* 메뉴가 7개라 화면이 좁아지면 메뉴 사이 간격을 줄입니다 (메뉴는 빼지 않습니다) */
+@media (max-width: 1240px) {
+  .nav-links { gap: 28px; }
+}
+@media (max-width: 1040px) {
+  .nav-links { gap: 20px; }
 }
 @media (max-width: 880px) {
   .nav-links { display: none; }
@@ -795,6 +804,8 @@ html.has-reveal .reveal.in {
   line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--fg);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .news-card-excerpt {
   margin: 0;
@@ -874,8 +885,10 @@ html.has-reveal .reveal.in {
 }
 .news-page-nav-inner {
   display: flex;
+  flex-wrap: wrap;            /* 휴대폰에서 링크가 넘치면 다음 줄로 */
   align-items: center;
   justify-content: space-between;
+  gap: 12px 24px;
 }
 .news-page-back {
   font-family: var(--font-en);
@@ -888,12 +901,15 @@ html.has-reveal .reveal.in {
 .news-page-back:hover { color: var(--fg); }
 .news-page-nav-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
+  gap: 8px 24px;
 }
+.news-page-nav-links a { white-space: nowrap; }
 .news-page-head {
   padding: 80px 0 40px;
 }
+.news-page-head p { word-break: keep-all; }
 .news-page-head h1 {
   margin: 12px 0 16px;
   font-size: clamp(32px, 5vw, 52px);
@@ -931,6 +947,8 @@ html.has-reveal .reveal.in {
   letter-spacing: -0.015em;
   color: var(--fg);
   line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .news-page-row-source {
   font-family: var(--font-en);
@@ -1221,6 +1239,32 @@ html.has-reveal .reveal.in {
   font-size: 12px;
   color: var(--fg-3);
   letter-spacing: 0.04em;
+}
+/* 바닥 링크 — 휴대폰에는 위쪽 메뉴가 없어서, 다른 페이지로 가는 길은 이 링크입니다 */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
+.footer-links a {
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--fg-2);
+  white-space: nowrap;
+  transition: color .2s;
+}
+.footer-links a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-links { gap: 0 24px; }
+  .footer-links a { padding: 12px 0; font-size: 15px; }
 }
 
 /* tweaks button positioning fallback */

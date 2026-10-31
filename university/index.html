@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>대학·사업단 AI 교육 프로그램 | 리즈워드 LISWORD</title>
+  <meta name="description" content="리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. RISE·앵커 사업단에 바이브코딩 MVP 부트캠프, AI 해커톤, 비교과 과정, AI 특강을 제공하고 결과보고서 초안까지 준비합니다." />
+  <link rel="canonical" href="https://www.lisword.co.kr/university/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FAF8F5" />
+
+  <!--
+    대학·사업단 프로그램 페이지 — 고치는 법은 업데이트_메뉴얼.md 8번.
+    ⚠️ 자주 묻는 질문·프로그램 문구를 바꾸면 아래 구조화 데이터(ld+json)의 같은 문장도 똑같이 바꾸고,
+       "dateModified" 날짜를 고친 날로 바꾼 뒤 python3 tools/build_blog.py 를 실행하세요 (사이트맵 날짜가 따라 바뀝니다).
+  -->
+
+  <!-- 공유 미리보기 (카카오톡·페이스북·링크드인·X) — 이미지 원본: tools/brand/university-og.html -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="리즈워드 LISWORD" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:url" content="https://www.lisword.co.kr/university/" />
+  <meta property="og:title" content="대학·사업단 AI 교육 프로그램 | 리즈워드 LISWORD" />
+  <meta property="og:description" content="리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. RISE·앵커 사업단에 바이브코딩 MVP 부트캠프, AI 해커톤, 비교과 과정, AI 특강을 제공하고 결과보고서 초안까지 준비합니다." />
+  <meta property="og:image" content="https://www.lisword.co.kr/university/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="리즈워드 LISWORD — 대학·사업단을 위한 AI 교육 프로그램 (바이브코딩 MVP 부트캠프 · AI 해커톤 · 비교과 · AI 특강)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="대학·사업단 AI 교육 프로그램 | 리즈워드 LISWORD" />
+  <meta name="twitter:description" content="리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. RISE·앵커 사업단에 바이브코딩 MVP 부트캠프, AI 해커톤, 비교과 과정, AI 특강을 제공하고 결과보고서 초안까지 준비합니다." />
+  <meta name="twitter:image" content="https://www.lisword.co.kr/university/og.png" />
+  <meta name="twitter:image:alt" content="리즈워드 LISWORD — 대학·사업단을 위한 AI 교육 프로그램 (바이브코딩 MVP 부트캠프 · AI 해커톤 · 비교과 · AI 특강)" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFCE89BGF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFCE89BGF7');
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- 검색엔진·AI 검색용 구조화 데이터 (페이지·서비스·자주 묻는 질문·위치) — 화면 문구와 똑같이 유지하세요 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.lisword.co.kr/university/#webpage",
+        "url": "https://www.lisword.co.kr/university/",
+        "name": "대학·사업단 AI 교육 프로그램 | 리즈워드 LISWORD",
+        "description": "리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. RISE·앵커 사업단에 바이브코딩 MVP 부트캠프, AI 해커톤, 비교과 과정, AI 특강을 제공하고 결과보고서 초안까지 준비합니다.",
+        "inLanguage": "ko-KR",
+        "isPartOf": { "@id": "https://www.lisword.co.kr/#website" },
+        "about": { "@id": "https://www.lisword.co.kr/#organization" },
+        "mainEntity": { "@id": "https://www.lisword.co.kr/university/#service" },
+        "breadcrumb": { "@id": "https://www.lisword.co.kr/university/#breadcrumb" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://www.lisword.co.kr/university/og.png",
+          "width": 1200,
+          "height": 630
+        },
+        "dateModified": "2026-10-31"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.lisword.co.kr/#organization",
+        "name": "리즈워드",
+        "alternateName": "LISWORD",
+        "url": "https://www.lisword.co.kr/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.lisword.co.kr/logo-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "email": "liszzm@lisword.co.kr"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.lisword.co.kr/university/#service",
+        "name": "대학·사업단 AI 교육 프로그램",
+        "serviceType": "대학생 AI 교육 프로그램 기획·운영",
+        "description": "리즈워드(LISWORD)가 대학 RISE·앵커 사업단, 창업지원단, 비교과·교수학습 부서를 위해 대학생 대상 AI 교육을 설계·운영합니다. 모든 프로그램에 홍보물, 출석·만족도 조사, 현장 사진, 결과물 목록, 결과보고서 초안이 들어갑니다.",
+        "url": "https://www.lisword.co.kr/university/",
+        "provider": { "@id": "https://www.lisword.co.kr/#organization" },
+        "areaServed": "KR",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "대학 RISE·앵커 사업단, 창업지원단, 비교과·교수학습 부서"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "대학생 AI 교육 프로그램 4가지",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "바이브코딩 MVP 부트캠프",
+                "description": "방학 중 2~5일. 팀별로 풀 문제를 정하고, 만들고 싶은 기능을 AI에게 설명하며 웹 서비스(MVP)를 만들어 배포한 뒤 발표합니다. 코딩을 배운 적 없는 비전공 학생도 참여할 수 있습니다."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI 해커톤 운영",
+                "description": "1~2일. 학생 팀이 정해진 주제에 맞춰 AI로 결과물을 만들고 발표하는 행사를 운영합니다."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "학기 중 비교과 과정",
+                "description": "주말 2일×2회 또는 주 1회×6주. 학기 중 수업과 함께 들을 수 있게 나눠 진행하는 AI 실습 과정입니다."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "대학생 AI 특강",
+                "description": "하루. AI를 도구로 쓰는 법을 개념부터 실습까지 다룹니다."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.lisword.co.kr/university/#faq",
+        "isPartOf": { "@id": "https://www.lisword.co.kr/university/#webpage" },
+        "inLanguage": "ko-KR",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "대학생 대상 AI 교육, 어떤 프로그램이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네 가지를 운영합니다. 방학 중 2~5일 동안 진행하는 바이브코딩 MVP 부트캠프, 1~2일 동안 진행하는 AI 해커톤, 학기 중 주말 2일×2회 또는 주 1회×6주로 진행하는 비교과 과정, 하루 동안 진행하는 대학생 AI 특강입니다. 사업단의 목적과 대상, 일정에 맞춰 내용을 조정합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "코딩을 배운 적 없는 비전공 학생도 참여할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 바이브코딩은 만들고 싶은 기능을 AI에게 말로 설명하며 서비스를 만드는 방식이라 코딩 경험이 없어도 참여할 수 있습니다. 2026년 성균관대학교 AI-VIBE 부트캠프에서도 코딩 경험이 없는 학생들이 사흘 동안 창업 아이디어를 서비스로 만들어 배포하고 발표했습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "RISE·앵커 사업단 결과보고에 필요한 자료도 받을 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 모든 프로그램에 행정 패키지가 들어갑니다. 홍보물, 출석·만족도 조사, 현장 사진, 결과물 목록, 결과보고서 초안을 준비해 드립니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI 해커톤 운영도 맡길 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 1~2일 일정의 AI 해커톤을 운영합니다. 학생 팀이 정해진 주제에 맞춰 AI로 결과물을 만들고 발표하는 행사이며, 다른 프로그램과 마찬가지로 행정 패키지가 들어갑니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "교육 비용은 어떻게 정해지나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "프로그램 종류와 인원, 기간에 따라 달라집니다. 20분 미팅에서 목적과 대상, 일정을 들은 뒤 그날 제안과 견적을 보내 드립니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "세금계산서를 발행할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 사업자 리즈워드 명의로 세금계산서를 발행합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "문의하면 어떤 순서로 진행되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "문의, 20분 미팅, 당일 제안·견적, 운영, 결과보고 순서로 진행합니다. 홈페이지 문의 양식이나 이메일(liszzm@lisword.co.kr)로 대상과 인원, 희망 일정을 알려 주세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "리즈워드가 운영한 대학 교육 사례가 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2026년에 성균관대학교 RISE사업단의 공공데이터 바이브코딩 MVP 부트캠프(7월 7~9일, 자연과학캠퍼스)와 성균관대학교 AI-VIBE 부트캠프(2월 3~5일, 7월 14~16일)를 운영했습니다. 같은 해 7월에는 「서울시민 실전 AI 활용 클래스」에서 강의했습니다. 일정과 운영 방식, 결과물은 블로그의 교육 사례 글에서 볼 수 있습니다."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.lisword.co.kr/university/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.lisword.co.kr/" },
+          { "@type": "ListItem", "position": 2, "name": "대학·사업단 AI 교육 프로그램", "item": "https://www.lisword.co.kr/university/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/blog/blog.css" />
+  <link rel="stylesheet" href="/university/university.css" />
+</head>
+<body class="blog univ">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"></span><span>LISWORD</span></a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="/university/" class="is-active" aria-current="page">대학·사업단</a>
+        <a href="/#programs">교육</a>
+        <a href="/#portfolio">사례</a>
+        <a href="/blog/">블로그</a>
+        <a href="/#contact">문의</a>
+      </nav>
+      <a href="/#contact" class="nav-cta" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'university_nav' });">상담 신청</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 첫 화면: 회사 소개 한 문장 + 2026년 운영 사례 + 문의 -->
+    <section class="wrap univ-hero">
+      <nav class="post-crumbs" aria-label="현재 위치">
+        <a href="/">홈</a><span class="post-crumbs-sep" aria-hidden="true">›</span><span>대학·사업단 AI 교육 프로그램</span>
+      </nav>
+      <div class="eyebrow mono">FOR UNIVERSITIES · 대학·사업단</div>
+      <h1 class="univ-title"><span class="nw">대학·사업단</span> <em class="accent nw">AI 교육</em> 프로그램</h1>
+      <p class="univ-lead">리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. 바이브코딩 MVP 부트캠프, AI 해커톤, 학기 중 비교과 과정, 대학생 AI 특강을 사업단의 목적과 일정에 맞춰 준비하고, 결과보고에 필요한 자료까지 함께 정리합니다.</p>
+      <p class="univ-lead univ-proof">2026년에는 성균관대학교 RISE사업단의 <a href="/blog/skku-rise-public-data-mvp-bootcamp/">공공데이터 바이브코딩 MVP 부트캠프</a>와 <a href="/blog/skku-vibe-coding-bootcamps-2026/">성균관대학교 AI-VIBE 부트캠프(2월·7월)</a>를 운영했고, <a href="/blog/seoul-rise-citizen-ai-class/">「서울시민 실전 AI 활용 클래스」</a>에서 강의했습니다.</p>
+      <div class="univ-actions">
+        <a href="/#contact" class="btn btn-accent" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'university_hero' });">교육 문의하기 <span class="arrow">→</span></a>
+        <a href="mailto:liszzm@lisword.co.kr" class="btn btn-ghost univ-mail" onclick="if (window.gtag) gtag('event', 'email_click', { location: 'university_hero' });">liszzm@lisword.co.kr</a>
+      </div>
+    </section>
+
+    <!-- 이런 담당자를 위한 페이지 (대상 — 지금까지의 고객 목록이 아닙니다) -->
+    <section class="wrap univ-section" aria-labelledby="for-whom">
+      <div class="univ-head">
+        <div class="eyebrow mono">FOR WHOM · 대상</div>
+        <h2 class="univ-h2" id="for-whom">이런 담당자를 위한 페이지입니다</h2>
+      </div>
+      <ul class="univ-audience">
+        <li>
+          <h3><span class="nw">RISE·앵커</span> 사업단</h3>
+          <p>재학생 대상 AI 교육이나 방학 부트캠프를 기획하는 연구원·팀장</p>
+        </li>
+        <li>
+          <h3>창업지원단</h3>
+          <p>창업 아이디어를 실제로 작동하는 서비스(MVP)로 만들어 보는 과정을 찾는 담당자</p>
+        </li>
+        <li>
+          <h3><span class="nw">비교과·교수학습</span> 부서</h3>
+          <p>학기 중 비교과 프로그램이나 AI 특강을 준비하는 담당자</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 프로그램 4가지 (가격은 쓰지 않습니다 — 미팅 후 견적) -->
+    <section class="wrap univ-section" id="programs" aria-labelledby="programs-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">PROGRAMS · 프로그램</div>
+        <h2 class="univ-h2" id="programs-title">대학생 AI 교육 프로그램 4가지</h2>
+        <p class="univ-sub">모든 프로그램은 사업단의 목적과 대상, 일정에 맞춰 내용을 조정합니다. 실습 중심으로 진행하고, 아래 행정 패키지가 함께 들어갑니다.</p>
+      </div>
+      <div class="univ-programs">
+        <article class="univ-program">
+          <span class="univ-program-num">01 — BOOTCAMP</span>
+          <h3 class="univ-program-title">바이브코딩 MVP 부트캠프</h3>
+          <p class="univ-program-time">방학 중 2~5일</p>
+          <dl class="univ-info">
+            <div><dt>대상</dt><dd>재학생(학부·대학원). 코딩을 배운 적 없는 비전공 학생도 참여할 수 있습니다.</dd></div>
+            <div><dt>내용</dt><dd>팀별로 풀 문제를 정하고, 만들고 싶은 기능을 AI에게 설명하며 웹 서비스(MVP)를 만들어 배포한 뒤 발표합니다. 공공데이터, 창업 아이디어처럼 사업단이 정한 주제에 맞춰 설계합니다.</dd></div>
+          </dl>
+        </article>
+        <article class="univ-program">
+          <span class="univ-program-num">02 — HACKATHON</span>
+          <h3 class="univ-program-title">AI 해커톤 운영</h3>
+          <p class="univ-program-time">1~2일</p>
+          <dl class="univ-info">
+            <div><dt>대상</dt><dd>재학생 팀</dd></div>
+            <div><dt>내용</dt><dd>학생 팀이 정해진 주제에 맞춰 AI로 결과물을 만들고 발표하는 행사를 운영합니다.</dd></div>
+          </dl>
+        </article>
+        <article class="univ-program">
+          <span class="univ-program-num">03 — SEMESTER</span>
+          <h3 class="univ-program-title">학기 중 비교과 과정</h3>
+          <p class="univ-program-time">주말 2일×2회 또는 주 1회×6주</p>
+          <dl class="univ-info">
+            <div><dt>대상</dt><dd>재학생</dd></div>
+            <div><dt>내용</dt><dd>학기 중 수업과 함께 들을 수 있게 나눠 진행하는 AI 실습 과정입니다. AI 리터러시, 데이터 리터러시, 바이브코딩 등 사업단 목적에 맞는 주제로 구성합니다.</dd></div>
+          </dl>
+        </article>
+        <article class="univ-program">
+          <span class="univ-program-num">04 — LECTURE</span>
+          <h3 class="univ-program-title">대학생 AI 특강</h3>
+          <p class="univ-program-time">하루</p>
+          <dl class="univ-info">
+            <div><dt>대상</dt><dd>전공과 관계없이 재학생 누구나</dd></div>
+            <div><dt>내용</dt><dd>AI를 도구로 쓰는 법을 개념부터 실습까지 다룹니다. AI 리터러시, 바이브코딩 등 주제를 골라 진행합니다.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- 행정 패키지 -->
+    <section class="wrap univ-section" id="admin" aria-labelledby="admin-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">ADMIN PACKAGE · 행정 패키지</div>
+        <h2 class="univ-h2" id="admin-title">모든 프로그램에 행정 패키지가 들어갑니다</h2>
+        <p class="univ-sub">사업단 담당자가 결과보고를 준비할 수 있도록, 운영에 필요한 자료를 함께 챙깁니다.</p>
+      </div>
+      <ol class="univ-pack">
+        <li><span class="univ-num mono">01</span><h3>홍보물</h3><p>참여 학생 모집에 쓸 홍보물을 준비합니다.</p></li>
+        <li><span class="univ-num mono">02</span><h3>출석·만족도 조사</h3><p>출석을 확인하고 만족도 조사를 진행해 결과를 정리합니다.</p></li>
+        <li><span class="univ-num mono">03</span><h3>현장 사진</h3><p>교육 현장 사진을 찍어 전달합니다.</p></li>
+        <li><span class="univ-num mono">04</span><h3>결과물 목록</h3><p>팀별 결과물(서비스 주소, 발표 자료 등)을 목록으로 정리합니다.</p></li>
+        <li><span class="univ-num mono">05</span><h3>결과보고서 초안</h3><p>진행 내용과 결과를 담은 결과보고서 초안을 드립니다.</p></li>
+      </ol>
+      <p class="univ-note">세금계산서는 사업자 리즈워드 명의로 발행합니다.</p>
+    </section>
+
+    <!-- 진행 절차 -->
+    <section class="wrap univ-section" id="process" aria-labelledby="process-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">PROCESS · 진행 절차</div>
+        <h2 class="univ-h2" id="process-title">문의부터 결과보고까지</h2>
+      </div>
+      <ol class="univ-steps">
+        <li><span class="univ-num mono">01</span><h3>문의</h3><p>문의 양식이나 이메일로 대상, 인원, 희망 일정을 알려 주세요.</p></li>
+        <li><span class="univ-num mono">02</span><h3>20분 미팅</h3><p>사업단의 목적과 대상, 일정을 듣고 맞는 프로그램을 함께 정합니다.</p></li>
+        <li><span class="univ-num mono">03</span><h3>당일 제안·견적</h3><p>미팅한 날 과정 제안과 견적을 보내 드립니다.</p></li>
+        <li><span class="univ-num mono">04</span><h3>운영</h3><p>교육을 진행하면서 출석·만족도 조사와 현장 사진을 챙깁니다.</p></li>
+        <li><span class="univ-num mono">05</span><h3>결과보고</h3><p>결과물 목록과 결과보고서 초안을 전달합니다.</p></li>
+      </ol>
+    </section>
+
+    <!-- 2026년 운영 사례 — 언론 보도·교육 사례 글로 확인되는 내용만 씁니다 (인원 수는 사례 글에) -->
+    <section class="wrap univ-section" id="cases" aria-labelledby="cases-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">CASES · 2026</div>
+        <h2 class="univ-h2" id="cases-title">2026년 운영 사례</h2>
+        <p class="univ-sub">일정과 운영 방식, 학생들이 만든 결과물은 블로그의 교육 사례 글에 자세히 정리했습니다.</p>
+      </div>
+      <div class="univ-cases">
+        <article class="univ-case">
+          <div class="univ-case-top"><time class="univ-case-date" datetime="2026-07-07">2026.07.07 – 07.09</time><span class="univ-case-role">운영</span></div>
+          <h3>성균관대학교 RISE사업단 · 공공데이터로 만드는 바이브코딩 MVP 제작 부트캠프</h3>
+          <p>성균관대학교 자연과학캠퍼스에서 사흘 동안 진행했습니다. 팀마다 공공데이터로 풀 생활 속 문제를 정하고, 막차 계산·버스 혼잡 예측 같은 서비스를 만들어 발표했습니다.</p>
+          <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/skku-rise-public-data-mvp-bootcamp/">사례 글 보기 <span class="arrow">→</span></a>
+            <a href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">피앤피뉴스 보도 <span class="arrow">↗</span></a>
+          </div>
+        </article>
+        <article class="univ-case">
+          <div class="univ-case-top"><span class="univ-case-date">2026.02 · 2026.07</span><span class="univ-case-role">운영</span></div>
+          <h3>성균관대학교 · AI-VIBE 부트캠프 (2회)</h3>
+          <p>바이브코딩으로 창업 아이디어를 MVP로 만드는 3일 과정입니다. 2월 3~5일과 7월 14~16일(인문사회과학캠퍼스) 두 번 운영했고, 코딩 경험이 없는 학생도 서비스를 만들어 배포하고 발표했습니다.</p>
+          <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/skku-vibe-coding-bootcamps-2026/">사례 글 보기 <span class="arrow">→</span></a>
+            <a href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">대학저널 보도(2월) <span class="arrow">↗</span></a>
+            <a href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">대학저널 보도(7월) <span class="arrow">↗</span></a>
+          </div>
+        </article>
+        <article class="univ-case">
+          <div class="univ-case-top"><span class="univ-case-date">2026.07</span><span class="univ-case-role">강의</span></div>
+          <h3>서울시민 실전 AI 활용 클래스</h3>
+          <p>2026년 7월, 시민 대상 AI 활용 과정에서 리즈워드 이인섭 대표가 강의했습니다. 네 번의 토요일 동안 실습 중심으로 수업했습니다.</p>
+          <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/seoul-rise-citizen-ai-class/">사례 글 보기 <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 자주 묻는 질문 — 문구를 바꾸면 위쪽 구조화 데이터(FAQPage)의 같은 질문·답도 똑같이 바꾸세요 -->
+    <section class="wrap univ-section" id="faq" aria-labelledby="faq-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">FAQ · 자주 묻는 질문</div>
+        <h2 class="univ-h2" id="faq-title">자주 묻는 질문</h2>
+      </div>
+      <div class="univ-faq">
+        <div class="univ-faq-item">
+          <h3>대학생 대상 AI 교육, 어떤 프로그램이 있나요?</h3>
+          <p>네 가지를 운영합니다. 방학 중 2~5일 동안 진행하는 바이브코딩 MVP 부트캠프, 1~2일 동안 진행하는 AI 해커톤, 학기 중 주말 2일×2회 또는 주 1회×6주로 진행하는 비교과 과정, 하루 동안 진행하는 대학생 AI 특강입니다. 사업단의 목적과 대상, 일정에 맞춰 내용을 조정합니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>코딩을 배운 적 없는 비전공 학생도 참여할 수 있나요?</h3>
+          <p>네. 바이브코딩은 만들고 싶은 기능을 AI에게 말로 설명하며 서비스를 만드는 방식이라 코딩 경험이 없어도 참여할 수 있습니다. 2026년 성균관대학교 AI-VIBE 부트캠프에서도 코딩 경험이 없는 학생들이 사흘 동안 창업 아이디어를 서비스로 만들어 배포하고 발표했습니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>RISE·앵커 사업단 결과보고에 필요한 자료도 받을 수 있나요?</h3>
+          <p>네. 모든 프로그램에 행정 패키지가 들어갑니다. 홍보물, 출석·만족도 조사, 현장 사진, 결과물 목록, 결과보고서 초안을 준비해 드립니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>AI 해커톤 운영도 맡길 수 있나요?</h3>
+          <p>네. 1~2일 일정의 AI 해커톤을 운영합니다. 학생 팀이 정해진 주제에 맞춰 AI로 결과물을 만들고 발표하는 행사이며, 다른 프로그램과 마찬가지로 행정 패키지가 들어갑니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>교육 비용은 어떻게 정해지나요?</h3>
+          <p>프로그램 종류와 인원, 기간에 따라 달라집니다. 20분 미팅에서 목적과 대상, 일정을 들은 뒤 그날 제안과 견적을 보내 드립니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>세금계산서를 발행할 수 있나요?</h3>
+          <p>네. 사업자 리즈워드 명의로 세금계산서를 발행합니다.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>문의하면 어떤 순서로 진행되나요?</h3>
+          <p>문의, 20분 미팅, 당일 제안·견적, 운영, 결과보고 순서로 진행합니다. 홈페이지 문의 양식이나 이메일(liszzm@lisword.co.kr)로 대상과 인원, 희망 일정을 알려 주세요.</p>
+        </div>
+        <div class="univ-faq-item">
+          <h3>리즈워드가 운영한 대학 교육 사례가 있나요?</h3>
+          <p>2026년에 성균관대학교 RISE사업단의 공공데이터 바이브코딩 MVP 부트캠프(7월 7~9일, 자연과학캠퍼스)와 성균관대학교 AI-VIBE 부트캠프(2월 3~5일, 7월 14~16일)를 운영했습니다. 같은 해 7월에는 「서울시민 실전 AI 활용 클래스」에서 강의했습니다. 일정과 운영 방식, 결과물은 블로그의 교육 사례 글에서 볼 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 문의 -->
+    <section class="wrap univ-cta-wrap" aria-label="교육 문의">
+      <aside class="post-cta univ-cta">
+        <div class="post-cta-text">
+          <h2 class="post-cta-title">우리 대학·사업단에 맞는 AI 교육이 필요하다면</h2>
+          <p class="post-cta-desc">대상과 인원, 희망 일정을 알려 주시면 20분 미팅 후 당일 제안·견적을 보내 드립니다.</p>
+        </div>
+        <div class="univ-cta-actions">
+          <a class="post-cta-btn" href="/#contact" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'university_cta' });">교육 문의하기 <span class="arrow">→</span></a>
+          <a class="univ-cta-mail" href="mailto:liszzm@lisword.co.kr" onclick="if (window.gtag) gtag('event', 'email_click', { location: 'university_cta' });">이메일 liszzm@lisword.co.kr</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-inner">
+      <div class="logo"><span class="logo-mark"></span><span>LISWORD · 리즈워드</span></div>
+      <nav class="footer-links" aria-label="바로가기">
+        <a href="/university/" aria-current="page">대학·사업단 프로그램</a>
+        <a href="/blog/">블로그</a>
+        <a href="/news.html">언론 보도</a>
+      </nav>
+      <div class="footer-meta" id="copy-year">© LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR</div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var copy = document.getElementById('copy-year');
+      if (copy) copy.textContent = '© ' + new Date().getFullYear() + ' LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR';
+    })();
+  </script>
+</body>
+</html>

@@ -8,6 +8,7 @@ function Nav() {
           <span>LISWORD</span>
         </a>
         <nav className="nav-links">
+          <a href="/university/">대학·사업단</a>
           <a href="#programs">교육</a>
           <a href="#ax">AX 전환</a>
           <a href="#youtube">유튜브</a>

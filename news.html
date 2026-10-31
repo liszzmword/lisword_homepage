@@ -58,6 +58,7 @@
         <span>LISWORD</span>
       </a>
       <div class="news-page-nav-links">
+        <a href="/university/" class="news-page-back">대학·사업단</a>
         <a href="/blog/" class="news-page-back">블로그</a>
         <a href="/" class="news-page-back">← 홈으로</a>
       </div>
@@ -73,8 +74,27 @@
       </p>
     </section>
 
+    <!--
+      기사 목록 — 검색로봇이 읽을 수 있게 HTML에 미리 적어 둡니다 (최신순).
+      페이지가 뜨면 아래 스크립트가 이 목록을 지우고 news-data.js 기준으로 다시 그립니다.
+      news-data.js에 기사를 추가하면 여기에도 같은 줄을 맨 위에 추가해 주세요 (업데이트_메뉴얼.md 1번).
+    -->
     <section class="news-page-list" id="news-list">
-      <noscript><p>이 페이지는 JavaScript가 필요합니다.</p></noscript>
+      <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">
+        <span class="news-page-row-date">2026-07-24</span>
+        <span class="news-page-row-title">리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영</span>
+        <span class="news-page-row-source">대학저널</span>
+      </a>
+      <a class="news-page-row" href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">
+        <span class="news-page-row-date">2026-07-23</span>
+        <span class="news-page-row-title">리즈워드, 성균관대서 공공데이터 활용 바이브코딩 MVP 개발 부트캠프 운영</span>
+        <span class="news-page-row-source">피앤피뉴스</span>
+      </a>
+      <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">
+        <span class="news-page-row-date">2026-06-08</span>
+        <span class="news-page-row-title">리즈워드, 성균관대서 생성형 AI 바이브코딩 부트캠프 운영</span>
+        <span class="news-page-row-source">대학저널</span>
+      </a>
     </section>
   </main>
 
@@ -84,6 +104,11 @@
         <span class="logo-mark"></span>
         <span>LISWORD · 리즈워드</span>
       </div>
+      <nav class="footer-links" aria-label="바로가기">
+        <a href="/university/">대학·사업단 프로그램</a>
+        <a href="/blog/">블로그</a>
+        <a href="/news.html">언론 보도</a>
+      </nav>
       <div class="footer-meta" id="copy-year">
         © LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR
       </div>
@@ -96,9 +121,13 @@
       var copy = document.getElementById('copy-year');
       if (copy) copy.textContent = '© ' + year + ' LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR';
 
-      var articles = window.NEWS_ARTICLES || [];
+      var articles = window.NEWS_ARTICLES;
       var list = document.getElementById('news-list');
-      if (!list) return;
+      // news-data.js를 읽지 못했으면 HTML에 미리 적어 둔 목록을 그대로 둡니다.
+      if (!list || !Array.isArray(articles)) return;
+
+      // 미리 적어 둔 목록을 지우고 news-data.js 기준으로 다시 그립니다 (같은 기사가 두 번 보이지 않게).
+      list.innerHTML = '';
 
       if (articles.length === 0) {
         list.innerHTML = '<p style="padding:40px 0; color:var(--fg-3);">아직 등록된 기사가 없습니다.</p>';
