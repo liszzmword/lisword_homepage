@@ -352,6 +352,15 @@
 .post-body tbody td:first-child { font-weight: 600; white-space: nowrap; }
 .post-body .ta-c { text-align: center; }
 .post-body .ta-r { text-align: right; }
+/* 휴대폰(640px 이하): 표 머리와 첫 칸도 줄을 바꾸고 칸 여백을 줄여, 표가 화면 폭 안에 들어오게 합니다.
+   첫 칸은 6.5em을 지켜 "11월 19일" 같은 짧은 항목이 두 줄로 갈라지지 않게 합니다 */
+@media (max-width: 640px) {
+  .post-body th,
+  .post-body td { min-width: 5em; padding: 10px; }
+  .post-body tbody td:first-child { min-width: 6.5em; }
+  .post-body thead th,
+  .post-body tbody td:first-child { white-space: normal; }
+}
 
 .post-tags {
   display: flex;
