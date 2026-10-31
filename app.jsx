@@ -57,6 +57,27 @@ function App() {
 
   useReveal();
 
+  // Deep links (/#contact, /#portfolio …): the browser jumps to the hash before React has drawn
+  // the sections, so jump again once they exist and once web fonts have settled the layout.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    let landedAt = null;
+    const go = () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView();
+      landedAt = window.scrollY;
+    };
+    requestAnimationFrame(go);
+    // Re-align after fonts load, but never yank the page back if the visitor already scrolled.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        if (landedAt === null || Math.abs(window.scrollY - landedAt) < 4) go();
+      });
+    }
+  }, []);
+
   const tagline = TAGLINES.find((x) => x.id === t.tagline) || TAGLINES[0];
 
   return (
