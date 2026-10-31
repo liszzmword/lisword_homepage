@@ -1,6 +1,6 @@
 # 리즈워드 LISWORD
 
-> 리즈워드(LISWORD)는 대학생 대상 AI 교육과 기업 임직원 AI 교육·AX 전환을 설계·운영하는 한국 회사입니다. 대학 RISE·앵커 사업단, 창업지원단, 비교과·교수학습 부서에 바이브코딩 MVP 부트캠프, AI 해커톤, 학기 중 비교과 과정, 대학생 AI 특강을 제공하고, 모든 프로그램에 결과보고용 행정 패키지(홍보물, 출석·만족도 조사, 현장 사진, 결과물 목록, 결과보고서 초안)를 포함합니다. 2026년에는 성균관대학교에서 바이브코딩 부트캠프를 세 차례 운영했습니다.
+> 리즈워드(LISWORD)는 대학생 대상 AI 교육과 기업 임직원 AI 교육·AX 전환을 설계·운영하는 한국 회사입니다. 대학 RISE·앵커 사업단, 창업지원단, 비교과·교수학습 부서에 바이브코딩 MVP 부트캠프, AI 해커톤, 학기 중 비교과 과정, 대학생 AI 특강을 제공하고, 모든 프로그램에 결과보고용 행정 패키지(홍보물, 출석·만족도 조사, 현장 사진, 결과물 목록, 결과보고서 초안)를 포함합니다. 2026년에는 성균관대학교에서 3일 바이브코딩 MVP 부트캠프를 세 차례 운영했습니다(학부·대학원생 91명, 19개 팀).
 
 ## 회사 정보
 
@@ -37,16 +37,37 @@
 
 ## 2026년 운영 사례
 
-- **성균관대학교 생성형 AI 바이브코딩 부트캠프** (AI-VIBE 부트캠프) — 2026년 2월 3~5일, 성균관대학교. 리즈워드 운영. 보도: [대학저널, 2026-06-08](https://dhnews.co.kr/news/view/1065591701447441)
-- **성균관대학교 RISE사업단 「공공데이터로 만드는 바이브코딩 MVP 제작 부트캠프」** — 2026년 7월 7~9일, 성균관대학교 자연과학캠퍼스. 리즈워드 운영. 팀별로 막차 계산·버스 혼잡 예측 같은 공공데이터 서비스를 만들었습니다. 보도: [피앤피뉴스, 2026-07-23](https://www.gosiweek.com/article/1065582310124984) · 사례 글: [블로그](https://www.lisword.co.kr/blog/skku-rise-public-data-mvp-bootcamp/)
-- **성균관대 서울 앵커사업단 「바이브코딩을 활용한 창업 아이디어 MVP 제작 부트캠프(AI-VIBE BOOTCAMP)」** — 2026년 7월 14~16일, 성균관대학교 인문사회과학캠퍼스. 리즈워드 운영. 코딩 경험이 없는 학생도 서비스를 만들어 배포했습니다. 보도: [대학저널, 2026-07-24](https://dhnews.co.kr/news/view/1065597357340091) · 사례 글(2월·7월): [블로그](https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/)
-- **서울시민 실전 AI 활용 클래스** — 2026년 7월, 시민 대상 과정에서 리즈워드 이인섭 대표가 강의했습니다. 사례 글: [블로그](https://www.lisword.co.kr/blog/seoul-rise-citizen-ai-class/)
+인원·팀 수는 각 과정의 결과보고서 기준입니다. 자세한 일정과 결과물은 블로그 교육 사례 글에 있습니다.
+
+- **성균관대학교 RISE 사업단 「바이브코딩을 활용한 창업 아이디어 MVP 제작 부트캠프(AI-VIBE BOOTCAMP)」 겨울 과정** — 2026년 2월 3~5일, 성균관대학교 자연과학캠퍼스. 리즈워드 운영. 학부·대학원생 30명이 6개 팀으로 웹 서비스 6개를 만들어 배포하고 발표했습니다. 보도: [대학저널, 2026-06-08](https://dhnews.co.kr/news/view/1065591701447441) · 사례 글(2월·7월): [블로그](https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/)
+- **성균관대학교 RISE사업단 「공공데이터로 만드는 바이브코딩 MVP 제작 부트캠프」** — 2026년 7월 7~9일, 성균관대학교 자연과학캠퍼스. 리즈워드 교육 운영. 학부생·대학원생 28명이 6개 팀으로 막차 시각 계산, 공공 쓰레기통 지도, 광역버스 혼잡 예측 같은 공공데이터 서비스(MVP) 6개를 만들었습니다. 보도: [피앤피뉴스, 2026-07-23](https://www.gosiweek.com/article/1065582310124984) · 사례 글: [블로그](https://www.lisword.co.kr/blog/skku-rise-public-data-mvp-bootcamp/)
+- **성균관대 서울 앵커사업단 「바이브코딩을 활용한 창업 아이디어 MVP 제작 부트캠프(AI-VIBE BOOTCAMP)」 여름 과정** — 2026년 7월 14~16일, 성균관대학교 인문사회과학캠퍼스. 리즈워드 운영. 학부·대학원생 33명이 7개 팀으로 웹 서비스 7개를 배포했고, 최종 발표를 심사해 세 팀을 시상했습니다. 코딩 경험이 없는 비전공자도 참여할 수 있게 짠 과정입니다. 보도: [대학저널, 2026-07-24](https://dhnews.co.kr/news/view/1065597357340091) · 사례 글(2월·7월): [블로그](https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/)
+- **「서울시민 실전 AI 활용 클래스」** — 성균관대학교 앵커사업단(RISE 사업단) 주관, 2026년 7월 4·11·18·25일(토) 4회·총 12시간, 서울시민 대상. 리즈워드 이인섭 대표가 강사로 참여했습니다(AI 리터러시, 바이브코딩, AI 디자인, 업무 자동화 실습). 사례 글: [블로그](https://www.lisword.co.kr/blog/seoul-rise-citizen-ai-class/)
+
+## 블로그 글
+
+전체 목록: [리즈워드 블로그](https://www.lisword.co.kr/blog/) · RSS: https://www.lisword.co.kr/blog/feed.xml
+
+### 교육 사례 ([목록](https://www.lisword.co.kr/blog/category/cases/))
+
+- [RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드](https://www.lisword.co.kr/blog/rise-ai-education-planning-guide/): 바이브코딩 부트캠프·AI 해커톤·학기 중 비교과·대학생 AI 특강 형식 비교, 개강 6~8주 전부터의 준비 일정, 준비 체크리스트, 결과보고서 항목을 2026년 부트캠프 3회(학부·대학원생 91명, 19개 팀) 운영 기록으로 정리했습니다.
+- [비전공 대학생 바이브코딩 부트캠프 3일 운영안 — 시간표·준비물·평가](https://www.lisword.co.kr/blog/vibe-coding-bootcamp-3day-guide/): 1일차 문제 정하기, 2일차 만들고 배포하기, 3일차 고치고 발표하기의 시간표와 준비물, 심사 배점(문제·가설 정의 30%, 검증 설계·실행 30%, 학습·피벗 20%, MVP 동작 10%, 발표·전달 10%)을 정리했습니다.
+- [서울시민 AI 교육 4주 기록 — AI 리터러시부터 업무 자동화까지](https://www.lisword.co.kr/blog/seoul-rise-citizen-ai-class/): 2026년 7월 토요일 4회(회당 3시간) 「서울시민 실전 AI 활용 클래스」에 이인섭 대표가 강사로 참여한 기록입니다. 회차별 수업과 실습, 만족도 조사 결과(5점 척도)를 담았습니다.
+- [성균관대 AI-VIBE 바이브코딩 부트캠프 2회 — 비전공자 3일 MVP](https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/): 2026년 2월 3~5일(30명·6개 팀)과 7월 14~16일(33명·7개 팀) 과정에서 13개 팀이 모두 웹 서비스를 배포했습니다. 7월 과정 만족도 조사(응답 30명, 5점 척도) 추천 의향 평균 4.43점.
+- [공공데이터로 사흘 만에 MVP, 성균관대 RISE 바이브코딩 부트캠프](https://www.lisword.co.kr/blog/skku-rise-public-data-mvp-bootcamp/): 2026년 7월 7~9일 성균관대학교 자연과학캠퍼스 제2공학관. 학부생·대학원생 28명, 6개 팀이 공공데이터로 MVP 6개를 만들어 발표했습니다. 만족도 조사(응답 27명, 5점 척도) 교육 내용 평균 4.78점.
+
+### AI 소식 ([목록](https://www.lisword.co.kr/blog/category/ai-news/))
+
+- [2026년 10월 AI 소식, 새 모델부터 커스텀 GPT 종료 예고까지](https://www.lisword.co.kr/blog/ai-news-2026-10/): 2026년 9월 15일~10월 31일 소식 5건을 날짜·원문 링크와 함께 정리했습니다. OpenAI·Anthropic·Google 새 모델, 커스텀 GPT의 플러그인 전환(표준 종료일 12월 11일), 교육부 수능 스마트안경 부정행위 대응계획(10월 29일), 국내 기업 AI 조사, 정부의 '모두의 AI'.
+- [AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드](https://www.lisword.co.kr/blog/genai-learning-design-guide/): 미국 미네소타대 CEHD가 공개한 학습과학자·교육연구자 30명의 합의 보고서(2026년 10월)와 대교협 「대학 AI 활용 윤리 가이드라인」(2026년 8월)을 함께 읽고, AI를 배움의 '연습' 단계에 넣는 설계 원칙과 담당자 체크리스트 7가지를 정리했습니다.
 
 ## 주요 페이지
 
 - [홈 — 회사 소개·프로그램·문의](https://www.lisword.co.kr/)
 - [대학·사업단 AI 교육 프로그램](https://www.lisword.co.kr/university/)
 - [블로그 — 교육 사례·AI 소식](https://www.lisword.co.kr/blog/)
+- [블로그 교육 사례 목록](https://www.lisword.co.kr/blog/category/cases/)
+- [블로그 AI 소식 목록](https://www.lisword.co.kr/blog/category/ai-news/)
 - [언론 보도](https://www.lisword.co.kr/news.html)
 
 ## 자주 묻는 질문

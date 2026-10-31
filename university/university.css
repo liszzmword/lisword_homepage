@@ -33,7 +33,8 @@
   overflow-wrap: break-word;
 }
 .univ-lead + .univ-lead { margin-top: 14px; color: var(--fg-2); }
-.univ-lead a {
+.univ-lead a,
+.univ-sub a {
   color: var(--fg);
   text-decoration: underline;
   text-decoration-color: var(--accent);
@@ -41,7 +42,9 @@
   text-underline-offset: 4px;
   transition: color .2s ease;
 }
-.univ-lead a:hover { color: var(--accent); }
+.univ-lead a:hover,
+.univ-sub a:hover { color: var(--accent); }
+.univ-guides { margin-top: clamp(28px, 3vw, 40px); }   /* 2026년 운영 사례 아래 가이드 글 링크 */
 .univ-actions {
   display: flex;
   flex-wrap: wrap;

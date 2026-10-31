@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드 | 리즈워드 블로그</title>
+  <meta name="description" content="학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다." />
+  <link rel="canonical" href="https://www.lisword.co.kr/blog/genai-learning-design-guide/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FAF8F5" />
+
+  <!-- 공유 미리보기 (카카오톡·페이스북·링크드인·X) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="리즈워드 LISWORD" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:url" content="https://www.lisword.co.kr/blog/genai-learning-design-guide/" />
+  <meta property="og:title" content="AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드" />
+  <meta property="og:description" content="학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다." />
+  <meta property="og:image" content="https://www.lisword.co.kr/blog/images/genai-learning-design-guide/cover.png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="‘습득 → 연습 → 적용’ 세 단계 도식과 글 제목이 적힌 표지. 처음 배울 때와 새 문제에 적용할 때는 AI 사용에 주의하고, 가운데 연습 단계에서 AI를 활용한다고 적혀 있습니다." />
+  <meta property="article:published_time" content="2026-10-31T00:00:00+09:00" />
+  <meta property="article:section" content="AI 소식" />
+  <meta property="article:tag" content="AI 교육 설계" />
+  <meta property="article:tag" content="생성형 AI" />
+  <meta property="article:tag" content="대학생 AI 교육" />
+  <meta property="article:tag" content="대학 AI 활용 윤리 가이드라인" />
+  <meta property="article:tag" content="AI 리터러시" />
+  <meta property="article:tag" content="임직원 AI 교육" />
+  <meta property="article:tag" content="대학 부트캠프" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드" />
+  <meta name="twitter:description" content="학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다." />
+  <meta name="twitter:image" content="https://www.lisword.co.kr/blog/images/genai-learning-design-guide/cover.png" />
+  <meta name="twitter:image:alt" content="‘습득 → 연습 → 적용’ 세 단계 도식과 글 제목이 적힌 표지. 처음 배울 때와 새 문제에 적용할 때는 AI 사용에 주의하고, 가운데 연습 단계에서 AI를 활용한다고 적혀 있습니다." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFCE89BGF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFCE89BGF7');
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="리즈워드 블로그" href="https://www.lisword.co.kr/blog/feed.xml" />
+
+  <!-- 검색엔진용 구조화 데이터 -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.lisword.co.kr/blog/genai-learning-design-guide/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.lisword.co.kr/blog/genai-learning-design-guide/"
+      },
+      "url": "https://www.lisword.co.kr/blog/genai-learning-design-guide/",
+      "headline": "AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드",
+      "description": "학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.lisword.co.kr/blog/images/genai-learning-design-guide/cover.png",
+        "width": 1600,
+        "height": 900
+      },
+      "datePublished": "2026-10-31T00:00:00+09:00",
+      "dateModified": "2026-10-31T00:00:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "이인섭"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.lisword.co.kr/#organization",
+        "name": "리즈워드",
+        "alternateName": "LISWORD",
+        "url": "https://www.lisword.co.kr/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.lisword.co.kr/logo-512.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "inLanguage": "ko-KR",
+      "articleSection": "AI 소식",
+      "keywords": [
+        "AI 교육 설계",
+        "생성형 AI",
+        "대학생 AI 교육",
+        "대학 AI 활용 윤리 가이드라인",
+        "AI 리터러시",
+        "임직원 AI 교육",
+        "대학 부트캠프"
+      ],
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://www.lisword.co.kr/blog/#blog",
+        "name": "리즈워드 블로그",
+        "url": "https://www.lisword.co.kr/blog/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://www.lisword.co.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://www.lisword.co.kr/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI 소식",
+          "item": "https://www.lisword.co.kr/blog/category/ai-news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드",
+          "item": "https://www.lisword.co.kr/blog/genai-learning-design-guide/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/blog/blog.css" />
+</head>
+<body class="blog">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"></span><span>LISWORD</span></a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="/university/">대학·사업단</a>
+        <a href="/#programs">교육</a>
+        <a href="/#portfolio">사례</a>
+        <a href="/blog/" class="is-active">블로그</a>
+        <a href="/#contact">문의</a>
+      </nav>
+      <a href="/#contact" class="nav-cta" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'blog_nav' });">상담 신청</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="wrap post">
+      <header class="post-header">
+        <nav class="post-crumbs" aria-label="현재 위치">
+          <a href="/blog/">블로그</a><span class="post-crumbs-sep" aria-hidden="true">›</span><a href="/blog/category/ai-news/">AI 소식</a>
+        </nav>
+        <div class="eyebrow mono">AI NEWS · AI 소식</div>
+        <h1 class="post-title">AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드</h1>
+        <p class="post-meta"><time datetime="2026-10-31">2026.10.31</time><span aria-hidden="true">·</span><span>이인섭</span><span aria-hidden="true">·</span><span>9분 읽기</span></p>
+      </header>
+
+      <figure class="post-cover">
+        <img src="/blog/images/genai-learning-design-guide/cover.png" alt="‘습득 → 연습 → 적용’ 세 단계 도식과 글 제목이 적힌 표지. 처음 배울 때와 새 문제에 적용할 때는 AI 사용에 주의하고, 가운데 연습 단계에서 AI를 활용한다고 적혀 있습니다." width="1600" height="900" decoding="async" fetchpriority="high" />
+      </figure>
+
+      <div class="post-body">
+        <p>생성형 AI를 교육에 넣을 때 물을 것은 &#x27;허용할까, 막을까&#x27;가 아니라 &#x27;배움의 어느 단계에, 어떤 규칙으로 넣을까&#x27;입니다. 2026년 10월에 나온 학습과학자&#8288;·&#8288;교육연구자 30명의 합의 보고서와 10월 29일 교육부의 수능 스마트안경 대응계획을 8월에 배포된 「대학 AI 활용 윤리 가이드라인」과 함께 읽고, 대학 부트캠프&#8288;·&#8288;워크숍 같은 대학생 AI 교육과 임직원 교육을 설계할 때 쓸 원칙과 체크리스트로 정리했습니다.</p>
+        <p>리즈워드(LISWORD)는 대학과 기업을 위한 현장형 AI 교육 회사입니다. 대학 RISE&#8288;·&#8288;앵커 사업단과는 바이브코딩 부트캠프를, 기업과는 임직원 AI 교육을 운영합니다.</p>
+        <h2>생성형 AI 교육, 왜 지금 다시 설계해야 하나요?</h2>
+        <ul>
+        <li><strong>10월</strong> 미국 미네소타대 교육&#8288;·&#8288;인간발달대학(CEHD)이 생성형 AI가 배움을 돕는 지점과 해치는 지점을 정리한 전문가 합의 보고서를 공개했습니다(UNC 교육대학원 10월 8일 소개).</li>
+        <li><strong>10월 29일</strong> 교육부가 스마트안경을 쓴 수능&#8288;·&#8288;대학별 고사 부정행위 우려가 커지자 대응계획을 냈습니다. 최근 대학 논술고사에서 AI 기능이 있는 스마트안경 적발이 잇따랐다는 보도도 있었습니다(경향신문).</li>
+        <li><strong>배경(8월 24일)</strong> 한국대학교육협의회(대교협)가 교육부와 함께 마련한 「대학 AI 활용 윤리 가이드라인」(8월 21일 발행)을 배포했습니다.</li>
+        </ul>
+        <p>보고서는 무제한 허용과 일괄 금지 중 하나를 고르는 것 자체를 잘못된 선택이라고 봅니다. 가이드라인은 AI를 쓸지 말지를 넘어 어떻게 책임 있게 쓸지를 묻고, 수업마다 사용 범위를 정하도록 권합니다. 교육부 대응계획은 결과만 보는 시험에서 AI 기기를 막기가 얼마나 어려워졌는지 보여 줍니다.</p>
+        <h2>보고서가 찾은 것: AI는 &#x27;연습&#x27; 단계에서 가장 쓸모 있다</h2>
+        <p>미네소타대&#8288;·&#8288;UNC 채플힐&#8288;·&#8288;UC 어바인 연구자가 이끌고 인지과학&#8288;·&#8288;교육심리&#8288;·&#8288;학습과학&#8288;·&#8288;교육공학 전문가가 참여했습니다. 첫 설문에서 전문가 30명이 생성형 AI의 영향을 받을 학습 과정을 추천했고, 책임저자들이 이를 65개로 정리했습니다. 두 번째 설문에서는 29명이 65개 과정을 하나씩 평가했습니다(델파이 방식). 그중 42개에서 합의가 나왔습니다(5점 척도 평균 3.0 이상, 응답자 75% 이상이 3점 이상).</p>
+        <p>핵심 결론은 배움을 &#x27;습득–연습–적용&#x27;으로 나눌 때 AI가 가운데, 곧 익힌 내용을 다지는 연습 단계에서 가장 쓸모 있다는 것입니다. 처음 배울 때는 AI 없이 익히고, 연습은 AI로 다지고, 새 문제에 쓸 때는 자기 생각을 앞세우라고 권합니다.</p>
+        <blockquote>
+        <p>&quot;True learning takes time and effort—two things GenAI tools are designed to reduce.&quot; — UMN CEHD 전문가 합의 보고서(2026)</p>
+        </blockquote>
+        <p>배움에는 시간과 노력이 드는데, 생성형 AI는 바로 그 둘을 줄이도록 만들어졌다는 경고입니다.</p>
+        <ul>
+        <li><strong>방해받기 쉬운 과정:</strong> 비판적 사고(평균 4.0)가 가장 높았습니다. 어떤 주장을 믿을지 근거로 따지는 사고(인식론적 사고)와 호기심&#8288;·&#8288;열린 마음&#8288;·&#8288;지적 겸손 같은 태도(지적 덕목)가 각 3.8, 자기 생각을 알아차리고 조절하는 능력(메타인지)과 스스로 계획하고 점검하며 배우는 능력(자기조절학습)이 각 3.5였습니다. 함께 배우는 사람들과의 유대감(사회적 연결, 3.8)과 협업 학습(3.3)도 이쪽으로 합의됐습니다. 교과 영역에서는 글쓰기(3.8)만 합의됐고, 역시 이쪽입니다.</li>
+        <li><strong>강화될 수 있는 과정:</strong> 피드백으로 배우기(4.0), 예제로 배우기&#8288;·&#8288;튜터링(각 3.9), 스스로 시험 보기(3.8) 같은 연습 전략이 가장 높았습니다. 도움 요청(3.7), 브레인스토밍(3.6), 디버깅(3.5)도 이쪽입니다.</li>
+        </ul>
+        <p>보고서는 한계도 밝힙니다. 합의한 과정 대부분의 &#x27;근거 강도&#x27; 점수가 4점 척도 2.5 미만이었습니다. 미국 K-20(유치원~대학원) 교육이 대상이고, 학생이 ChatGPT&#8288;·&#8288;Claude&#8288;·&#8288;Gemini 같은 범용 AI를 쓰는 경우가 기준입니다. 교육 전용 도구와 창작 도구로서의 AI는 주된 대상이 아니었습니다. 보고서는 참여 전문가들이 AI 기업&#8288;·&#8288;교육기술 관련 재정적 이해관계를 공개했다고 밝히지만, 웹판에는 누가 어떤 관계인지 나와 있지 않습니다.</p>
+        <h2>11가지 권고, 바로 쓸 것과 어려운 것</h2>
+        <p>첫 설문에서 전문가들이 낸 권고(1인당 최대 5개)를 책임저자들이 11가지로 묶었고, 두 번째 설문에서 전문가들이 각 권고의 &#x27;영향&#x27;과 &#x27;실행 가능성&#x27;을 5점 척도로 평가했습니다. 결과는 세 묶음으로 나뉩니다.</p>
+        <div class="table-wrap" role="region" aria-label="표: 11가지 권고, 바로 쓸 것과 어려운 것" tabindex="0">
+        <table>
+        <thead><tr><th scope="col">묶음</th><th scope="col">권고 (괄호는 보고서의 권고 번호)</th></tr></thead>
+        <tbody>
+        <tr><td>바로 시작 — 두 평가 모두 높음</td><td>아이디어 넓히기(2) · 수준에 맞춘 단계적 도움(5) · AI 리터러시(7)</td></tr>
+        <tr><td>다음 목표 — 두 평가 모두 중간 이상</td><td>먼저 스스로 생각하기(1) · 결과보다 과정(3) · 비판적 동료로서의 AI(4) · 비판적 AI 리터러시(8) · 상황별 사용 규칙(9)</td></tr>
+        <tr><td>어렵지만 해 볼 가치 — 실행이 가장 어려움</td><td>기초 역량 확인 후 사용(6) · 평가 재설계(10) · 포용&#8288;·&#8288;형평(11)</td></tr>
+        </tbody>
+        </table>
+        </div>
+        <p>바로 시작할 셋은 지금의 수업 안에서 할 수 있는 일이고, 어려운 셋은 교육 정책&#8288;·&#8288;기관 인프라&#8288;·&#8288;형평 같은 구조의 벽이 남은 일입니다.</p>
+        <h2>「대학 AI 활용 윤리 가이드라인」과 겹쳐 보기</h2>
+        <p>가이드라인은 5대 원칙과 12개 세부 원칙을 담은 37쪽 문서로, 수업&#8288;·&#8288;과제&#8288;·&#8288;평가를 다루고 연구 활동은 제외합니다. 서문은 처벌&#8288;·&#8288;제재 기준이 아니라 대학이 형편에 맞게 적용하는 공통 기준이라고 설명합니다. 보고서 권고와 겹치는 부분은 이렇습니다.</p>
+        <ul>
+        <li><strong>상황별 규칙(권고 9):</strong> 수업마다 AI 사용 범위를 사용 금지&#8288;·&#8288;제한적 사용&#8288;·&#8288;사용 허용 중에서 정해 강의계획서에 적고, 첫 수업에서 설명한 뒤 학생과 합의합니다.</li>
+        <li><strong>먼저 생각하기&#8288;·&#8288;역량 확인(권고 1, 6):</strong> 기초 역량을 쌓는 과목에서 AI가 핵심 학습 목표를 대신할 우려가 있으면 사용을 금지할 수 있습니다.</li>
+        <li><strong>평가 재설계(권고 10):</strong> 요약&#8288;·&#8288;번역&#8288;·&#8288;단순 개념 조사 과제는 피하고 과정 중심&#8288;·&#8288;프로젝트형 과제를 권합니다. 시험은 오프라인을 권장하고, 중간 산출물 검토와 발표&#8288;·&#8288;질의응답 같은 구두 확인을 함께 쓸 수 있다고 봅니다.</li>
+        <li><strong>사용 공개와 탐지:</strong> AI를 쓴 학생에게 도구, 사용 단계, 프롬프트, 고친 방법을 밝히게 할 수 있습니다. 탐지 도구는 보조 점검 수단으로 쓸 수 있지만, 판정은 참고자료일 뿐 징계의 결정적 증거로 삼지 않습니다.</li>
+        </ul>
+        <p>교육부 대응계획은 반대쪽 상황을 보여 줍니다. 이번 2027학년도 수능부터 시험장마다 스마트안경인지 판단하는 전담 인력을 1명씩 두고, 스마트안경 부정행위자는 고발&#8288;·&#8288;수사의뢰까지 하겠다는 방침입니다(조치 전체는 <a href="/blog/ai-news-2026-10/">10월 AI 소식</a>에 정리했습니다). 결과만 보는 시험에서 스마트안경 같은 AI 기기를 막으려고 형사고발 방침과 시험장별 전담 인력까지 동원하게 된 셈입니다. 교육 프로그램이라면 과정과 구두 확인의 비중을 높이는 편이 현실적입니다.</p>
+        <h2>대학생 AI 교육 프로그램과 임직원 교육에는 어떻게 적용하나요?</h2>
+        <p>아래는 위 자료에서 끌어낸 설계 원칙이며, 효과가 검증됐다는 뜻은 아닙니다.</p>
+        <h3>대학 부트캠프&#8288;·&#8288;워크숍</h3>
+        <ul>
+        <li><strong>처음 배우는 개념은 AI 없이.</strong> 개념 강의 뒤 첫 실습은 학생이 직접 해 보게 합니다.</li>
+        <li><strong>기초를 익힌 뒤 연습에는 AI를.</strong> 힌트&#8288;·&#8288;피드백&#8288;·&#8288;예제 설명&#8288;·&#8288;퀴즈에 씁니다.</li>
+        <li><strong>팀 프로젝트는 판단을 사람이 먼저.</strong> 누구의 어떤 문제를 풀지는 팀이 정하고, AI는 아이디어 넓히기&#8288;·&#8288;디버깅&#8288;·&#8288;검토에 씁니다. 팀 토론을 AI와의 대화로 대신하지 않습니다.</li>
+        <li><strong>첫날 규칙 안내, 과정 기록, 발표로 확인.</strong> 허용 도구와 공개 방법을 첫날 알리고, 프롬프트&#8288;·&#8288;수정 이력&#8288;·&#8288;중간 산출물을 남기게 하고, 발표와 질의응답으로 이해를 확인합니다.</li>
+        </ul>
+        <p>리즈워드(LISWORD)가 2026년 7월 14~16일 성균관대 앵커사업단 주최로 운영한 AI-VIBE 바이브코딩 부트캠프는 첫날 문제를 정한 뒤 둘째 날 AI로 서비스를 만들어 배포하고, 셋째 날 피드백을 반영해 최종 발표하는 순서였습니다. 심사 배점의 80%는 문제&#8288;·&#8288;가설 정의(30%), 검증 설계&#8288;·&#8288;실행(30%), 학습&#8288;·&#8288;피벗(20%)에 두었고, MVP 동작과 발표는 각 10%였습니다(<a href="/blog/skku-vibe-coding-bootcamps-2026/">성균관대 부트캠프 운영기</a>).</p>
+        <p>3일 부트캠프의 시간표&#8288;·&#8288;준비물&#8288;·&#8288;평가 기준은 <a href="/blog/vibe-coding-bootcamp-3day-guide/">비전공 대학생 바이브코딩 부트캠프 3일 운영안</a>에, 교육 형식 고르기와 준비 일정은 <a href="/blog/rise-ai-education-planning-guide/">RISE&#8288;·&#8288;앵커 사업단용 교육 기획 가이드</a>에 정리했습니다.</p>
+        <h3>기업 임직원 교육</h3>
+        <p><a href="/blog/ai-news-2026-10/">2026년 10월 AI 소식</a>에서 정리한 국내 기업 조사 두 건을 보면, 회사가 막아도 개인 계정으로 AI를 쓰는 응답자가 많았고(파수AI), 직원 역량 부족을 AI 확산의 큰 과제로 꼽는 기업은 많았지만 AI 성과를 종합적으로 재는 기업은 적었습니다(어도비&#8288;·&#8288;인사이시브).</p>
+        <p>그래서 임직원 교육에는 네 가지를 묶는 편이 좋습니다. 첫 시간에 회사의 AI 사용 기준(쓸 수 있는 도구, 넣으면 안 되는 정보)을 알리고, 실제 업무 과제로 연습하고, AI 결과를 사람이 확인하는 단계를 두고, 교육 전후로 사용량이 아닌 결과물 품질&#8288;·&#8288;수정 시간 같은 지표를 잽니다. 합의 보고서는 학교 교육이 대상이라 직장에는 참고로만 씁니다.</p>
+        <h2>담당자 체크리스트와 남은 질문</h2>
+        <p>다음 교육을 기획하거나 구매할 때 아래 7가지를 확인하면 좋습니다.</p>
+        <figure class="post-figure"><a class="post-figure-link" href="/blog/images/genai-learning-design-guide/checklist-7.png" target="_blank" rel="noopener"><img src="/blog/images/genai-learning-design-guide/checklist-7.png" alt="다음 교육 전에 확인할 7가지 항목과 근거를 정리한 체크리스트 카드" width="1600" height="1000" loading="lazy" decoding="async" /><span class="sr-only"> 원본 크기로 보기 (새 창)</span></a>
+        <figcaption>다음 교육 전에 확인할 7가지</figcaption>
+        </figure>
+        <ol>
+        <li>과정별 AI 허용 수준(금지&#8288;·&#8288;제한&#8288;·&#8288;허용)을 정하고 첫날 알리는가 — 가이드라인, 권고 9</li>
+        <li>&#x27;AI 없이 먼저&#x27; 배우는 구간이 있는가 — 합의 보고서, 권고 1, 6</li>
+        <li>결과물보다 과정을 평가하는가 — 권고 3, 10, 가이드라인</li>
+        <li>탐지기 판정에만 기대지 않고 발표&#8288;·&#8288;질의응답&#8288;·&#8288;중간 산출물로 확인하는가 — 가이드라인</li>
+        <li>AI 사용 공개 양식(도구&#8288;·&#8288;단계&#8288;·&#8288;프롬프트&#8288;·&#8288;기여도)이 있는가 — 가이드라인</li>
+        <li>개인정보&#8288;·&#8288;비공개 자료를 AI에 넣지 말라고 안내하는가 — 가이드라인, 파수AI 조사</li>
+        <li>교육 전후로 무엇을 잴지 정했는가 — 참고: 어도비 조사</li>
+        </ol>
+        <p>보고서는 AI의 교육 효과를 단정하는 요약이나 기사를 경계하라고, 믿을 만한 근거는 아직 부족하다고 경고합니다. 어떤 학습자에게 어떤 조건에서 도움이 되는지도 더 연구해야 합니다. 위 원칙은 지금의 전문가 판단일 뿐 검증된 정답이 아닙니다. 남은 질문은 각 교육 현장이 기록하고 재 보면서 답해 가야 합니다.</p>
+        <h2>참고한 자료</h2>
+        <ul>
+        <li><a href="https://www.cehd.umn.edu/AI-expert-consensus-report-2026" target="_blank" rel="noopener">UMN CEHD, Ways generative AI can support and threaten learning in K-20 U.S. education (전문가 합의 보고서)</a> — 2026년 10월</li>
+        <li><a href="https://ed.unc.edu/2026/10/08/greene-co-leads-report-on-ways-genai-can-support-and-threaten-learning/" target="_blank" rel="noopener">UNC 교육대학원 소개</a> — 2026년 10월 8일</li>
+        <li><a href="https://www.kcue.or.kr/notice/sub01.php?at=view&amp;idx=2765224&amp;pagenumber=1" target="_blank" rel="noopener">대교협 가이드라인 배포 안내</a> — 2026년 8월 24일</li>
+        <li><a href="https://www.kcue.or.kr/_upload/pds/2026/08/24/application_04b7594cd64af179c3b678d7483431ad.pdf" target="_blank" rel="noopener">대교협 「대학 AI 활용 윤리 가이드라인」 전문(PDF)</a> — 2026년 8월 21일 발행</li>
+        <li><a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&amp;boardSeq=107520&amp;lev=0&amp;searchType=null&amp;statusYN=W&amp;page=1&amp;s=moe&amp;m=020402&amp;opType=N" target="_blank" rel="noopener">교육부 보도참고자료(수능 스마트안경 대응계획)</a> — 2026년 10월 29일</li>
+        <li><a href="https://www.khan.co.kr/article/202610291047001/" target="_blank" rel="noopener">경향신문, 수능 스마트안경 대응계획 보도</a> — 2026년 10월 29일</li>
+        <li><a href="https://news.adobe.com/ko/news/2026/10/adobe-ai-readiness-report-2026" target="_blank" rel="noopener">어도비 뉴스룸 발표</a> — 2026년 10월 13일</li>
+        <li><a href="https://www.fasoo.ai/press-release/20261028" target="_blank" rel="noopener">파수AI 보도자료(섀도우 AI 보고서)</a> — 2026년 10월 28일</li>
+        <li><a href="https://www.itdaily.kr/news/articleView.html?idxno=242522" target="_blank" rel="noopener">아이티데일리, 파수AI 조사 보도</a> — 2026년 10월 28일</li>
+        <li><a href="https://www.sentv.co.kr/article/view/sentv202610280057" target="_blank" rel="noopener">서울경제TV, 파수AI 조사 보도</a> — 2026년 10월 28일</li>
+        </ul>
+      </div>
+      <ul class="post-tags" aria-label="태그"><li>#AI 교육 설계</li><li>#생성형 AI</li><li>#대학생 AI 교육</li><li>#대학 AI 활용 윤리 가이드라인</li><li>#AI 리터러시</li><li>#임직원 AI 교육</li><li>#대학 부트캠프</li></ul>
+
+      <aside class="post-cta" aria-label="문의 안내">
+        <div class="post-cta-text">
+          <h2 class="post-cta-title">AI 교육&#8288;·&#8288;도입이 궁금하다면</h2>
+          <p class="post-cta-desc">교육이든 구축이든 좋습니다. 필요한 내용과 일정&#8288;·&#8288;인원을 남겨 주시면 빠르게 회신드립니다.</p>
+        </div>
+        <a class="post-cta-btn" href="/#contact" onclick="if (window.gtag) gtag('event', 'blog_cta_click', { slug: 'genai-learning-design-guide', category: 'ai-news' });">상담 신청 <span class="arrow">→</span></a>
+      </aside>
+    </article>
+
+    <section class="wrap post-related" aria-labelledby="related-title">
+      <div class="post-related-head">
+        <h2 class="post-related-title" id="related-title">관련 글</h2>
+        <a class="post-related-more" href="/blog/category/ai-news/">AI 소식 전체 보기 <span class="arrow">→</span></a>
+      </div>
+      <div class="post-grid">
+        <article class="post-card">
+          <a class="post-card-link" href="/blog/ai-news-2026-10/">
+            <div class="post-card-cover"><img src="/blog/images/ai-news-2026-10/cover.png" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
+            <div class="post-card-body">
+              <div class="post-card-top"><span class="post-card-cat">AI 소식</span><time class="post-card-date" datetime="2026-10-31">2026.10.31</time></div>
+              <h3 class="post-card-title">2026년 10월 AI 소식, 새 모델부터 커스텀 GPT 종료 예고까지</h3>
+              <p class="post-card-desc">2026년 9월 15일~10월 31일 AI 소식 중 교육&#8288;·&#8288;HR 담당자에게 할 일이 생기는 5건을 날짜&#8288;·&#8288;원문 링크와 함께 정리했습니다. 3사 새 모델, 커스텀 GPT 종료, 수능 스마트안경, 기업 AI 조사, 모두의 AI를 다룹니다.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-inner">
+      <div class="logo"><span class="logo-mark"></span><span>LISWORD · 리즈워드</span></div>
+      <nav class="footer-links" aria-label="바로가기">
+        <a href="/university/">대학·사업단 프로그램</a>
+        <a href="/blog/">블로그</a>
+        <a href="/news.html">언론 보도</a>
+      </nav>
+      <div class="footer-meta" id="copy-year">© LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR</div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var copy = document.getElementById('copy-year');
+      if (copy) copy.textContent = '© ' + new Date().getFullYear() + ' LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR';
+    })();
+  </script>
+</body>
+</html>

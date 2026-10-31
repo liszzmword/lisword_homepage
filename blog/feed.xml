@@ -6,5 +6,76 @@
     <atom:link href="https://www.lisword.co.kr/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>리즈워드(LISWORD) 블로그입니다. 대학·기업에서 진행한 AI 교육 사례와 교육·HR 담당자를 위한 AI 소식을 정리합니다.</description>
     <language>ko-kr</language>
+    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0900</lastBuildDate>
+    <item>
+      <title>2026년 10월 AI 소식, 새 모델부터 커스텀 GPT 종료 예고까지</title>
+      <link>https://www.lisword.co.kr/blog/ai-news-2026-10/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/ai-news-2026-10/</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>AI 소식</category>
+      <description>2026년 9월 15일~10월 31일 AI 소식 중 교육·HR 담당자에게 할 일이 생기는 5건을 날짜·원문 링크와 함께 정리했습니다. 3사 새 모델, 커스텀 GPT 종료, 수능 스마트안경, 기업 AI 조사, 모두의 AI를 다룹니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/ai-news-2026-10/cover.png" length="111130" type="image/png" />
+    </item>
+    <item>
+      <title>AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드</title>
+      <link>https://www.lisword.co.kr/blog/genai-learning-design-guide/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/genai-learning-design-guide/</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>AI 소식</category>
+      <description>학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/genai-learning-design-guide/cover.png" length="86375" type="image/png" />
+    </item>
+    <item>
+      <title>RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드</title>
+      <link>https://www.lisword.co.kr/blog/rise-ai-education-planning-guide/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/rise-ai-education-planning-guide/</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>RISE·앵커 사업단 담당자를 위한 대학생 AI 교육 기획 가이드입니다. 부트캠프·해커톤·비교과·특강 비교, 준비 일정과 체크리스트, 결과보고서 항목을 리즈워드의 2026년 부트캠프 운영 경험으로 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/rise-ai-education-planning-guide/cover.png" length="93063" type="image/png" />
+    </item>
+    <item>
+      <title>비전공 대학생 바이브코딩 부트캠프 3일 운영안 — 시간표·준비물·평가</title>
+      <link>https://www.lisword.co.kr/blog/vibe-coding-bootcamp-3day-guide/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/vibe-coding-bootcamp-3day-guide/</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>리즈워드가 2026년 성균관대에서 세 번 운영한 3일 바이브코딩 MVP 부트캠프를 바탕으로, 비전공 대학생 부트캠프의 시간표와 준비물, 팀 평가 기준을 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/vibe-coding-bootcamp-3day-guide/cover.png" length="90400" type="image/png" />
+    </item>
+    <item>
+      <title>서울시민 AI 교육 4주 기록 — AI 리터러시부터 업무 자동화까지</title>
+      <link>https://www.lisword.co.kr/blog/seoul-rise-citizen-ai-class/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/seoul-rise-citizen-ai-class/</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>성균관대학교 앵커사업단(RISE 사업단)이 주관하고 리즈워드 이인섭 대표가 강사로 참여한 2026년 7월 「서울시민 실전 AI 활용 클래스」 4회 기록입니다. 회차별 수업 흐름과 실습, 만족도 조사 결과를 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/seoul-rise-citizen-ai-class/cover.jpg" length="380960" type="image/jpeg" />
+    </item>
+    <item>
+      <title>성균관대 AI-VIBE 바이브코딩 부트캠프 2회 — 비전공자 3일 MVP</title>
+      <link>https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/skku-vibe-coding-bootcamps-2026/</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>리즈워드가 2026년 2월과 7월 성균관대학교에서 운영한 AI-VIBE 부트캠프(바이브코딩 창업 MVP 과정) 2회를 정리했습니다. 코딩 경험이 없는 학생도 3일 동안 문제를 정하고, AI로 서비스를 만들어 배포하고, 발표했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/skku-vibe-coding-bootcamps-2026/cover.jpg" length="397084" type="image/jpeg" />
+    </item>
+    <item>
+      <title>공공데이터로 사흘 만에 MVP, 성균관대 RISE 바이브코딩 부트캠프</title>
+      <link>https://www.lisword.co.kr/blog/skku-rise-public-data-mvp-bootcamp/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/skku-rise-public-data-mvp-bootcamp/</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>리즈워드(LISWORD)가 운영한 성균관대 RISE사업단 공공데이터 바이브코딩 MVP 부트캠프(2026년 7월 7~9일). 학부생·대학원생 28명, 6개 팀이 문제 정의부터 배포·발표까지 사흘 만에 마친 과정과 결과를 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/skku-rise-public-data-mvp-bootcamp/cover.jpg" length="386175" type="image/jpeg" />
+    </item>
   </channel>
 </rss>

@@ -2,10 +2,17 @@
   "note": "tools/build_blog.py가 만든 파일 목록입니다. 직접 고치지 마세요. 글을 지우면 다음 빌드가 그 글의 파일을 지웁니다.",
   "mode": "production",
   "files": [
+    "blog/ai-news-2026-10/index.html",
     "blog/category/ai-news/index.html",
     "blog/category/cases/index.html",
     "blog/feed.xml",
+    "blog/genai-learning-design-guide/index.html",
     "blog/index.html",
-    "blog/latest.js"
+    "blog/latest.js",
+    "blog/rise-ai-education-planning-guide/index.html",
+    "blog/seoul-rise-citizen-ai-class/index.html",
+    "blog/skku-rise-public-data-mvp-bootcamp/index.html",
+    "blog/skku-vibe-coding-bootcamps-2026/index.html",
+    "blog/vibe-coding-bootcamp-3day-guide/index.html"
   ]
 }
