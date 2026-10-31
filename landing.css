@@ -140,3 +140,29 @@ a.lp-case:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 /* ---------- 바닥 ---------- */
 .lp-footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: var(--fg-2); }
 .lp-footer-links a:hover { color: var(--fg); }
+
+/* ---------- 히어로 로고 띠 ---------- */
+.lp-logos { margin-top: clamp(48px, 6vw, 80px); padding-top: 24px; border-top: 1px solid var(--line); }
+.lp-logos-label { margin: 0 0 18px; font-size: 13px; color: var(--fg-3); letter-spacing: .02em; }
+.lp-logos ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 22px 40px; }
+.lp-logos img { display: block; height: 34px; width: auto; max-width: 128px; object-fit: contain; filter: grayscale(1); opacity: .78; transition: filter .2s, opacity .2s; }
+.lp-logos li:hover img { filter: none; opacity: 1; }
+@media (max-width: 640px) {
+  .lp-logos ul { gap: 18px 26px; }
+  .lp-logos img { height: 26px; max-width: 96px; }
+}
+
+/* ---------- 운영 이력 ---------- */
+.lp-tr-groups { display: grid; gap: clamp(36px, 4vw, 56px); }
+.lp-tr { list-style: none; margin: 14px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.lp-tr li { display: grid; grid-template-columns: 150px 1.4fr 1fr 190px; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line-soft); font-size: 15px; }
+.lp-tr-date { font-family: var(--font-en); color: var(--fg-3); font-size: 14px; }
+.lp-tr-name { font-weight: 700; word-break: keep-all; }
+.lp-tr-org, .lp-tr-facts { color: var(--fg-2); word-break: keep-all; }
+@media (max-width: 880px) {
+  .lp-tr li { grid-template-columns: 1fr; gap: 4px; }
+  .lp-tr-date { font-size: 13px; }
+}
+.lp-logos img[alt="플랜티넷"] { mix-blend-mode: multiply; height: 40px; }
+.lp-logos img[alt="틱톡"] { height: 24px; opacity: .6; }
+@media (max-width: 640px) { .lp-logos img[alt="플랜티넷"] { height: 30px; } .lp-logos img[alt="틱톡"] { height: 18px; } }
