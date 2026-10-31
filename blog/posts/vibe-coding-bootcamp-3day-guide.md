@@ -4,8 +4,8 @@ slug: vibe-coding-bootcamp-3day-guide
 category: cases
 date: 2026-10-31
 description: 리즈워드가 2026년 성균관대에서 세 번 운영한 3일 바이브코딩 MVP 부트캠프를 바탕으로, 비전공 대학생 부트캠프의 시간표와 준비물, 팀 평가 기준을 정리했습니다.
-cover: cover.png
-cover_alt: 비전공 대학생 바이브코딩 부트캠프 3일 운영안 표지. 1일차 문제 정하기, 2일차 만들고 배포하기, 3일차 고치고 발표하기를 나란히 놓은 그림
+cover: cover-v2.jpg
+cover_alt: 바이브코딩 부트캠프 3일 운영안 표지. 주황색 배경지에 노란 메모지 아홉 장이 붙어 있고 옆 나무 의자 위에 노트북이 놓여 있으며, ‘바이브코딩 부트캠프 3일’ 제목이 적혀 있습니다.
 tags: [바이브코딩 부트캠프, 대학 부트캠프 운영, 비전공자 AI 교육, 대학생 AI 교육 프로그램, RISE 사업단, 앵커사업단, 성균관대학교]
 author: 이인섭
 status: published

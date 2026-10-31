@@ -4,8 +4,8 @@ slug: genai-learning-design-guide
 category: ai-news
 date: 2026-10-31
 description: 학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다.
-cover: cover.png
-cover_alt: ‘습득 → 연습 → 적용’ 세 단계 도식과 글 제목이 적힌 표지. 처음 배울 때와 새 문제에 적용할 때는 AI 사용에 주의하고, 가운데 연습 단계에서 AI를 활용한다고 적혀 있습니다.
+cover: cover-v2.jpg
+cover_alt: AI 교육 설계 가이드 표지. 햇빛이 비스듬히 드는 베이지 벽 앞 나무 책상에 닫힌 노트북, 연필을 올린 펼친 공책, 찻잔이 놓여 있고, ‘AI가 배움을 돕는 순간, 해치는 순간’ 제목이 적혀 있습니다.
 tags: [AI 교육 설계, 생성형 AI, 대학생 AI 교육, 대학 AI 활용 윤리 가이드라인, AI 리터러시, 임직원 AI 교육, 대학 부트캠프]
 author: 이인섭
 status: published

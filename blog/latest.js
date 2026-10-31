@@ -8,7 +8,7 @@ window.BLOG_LATEST = [
     "categoryLabel": "AI 소식",
     "date": "2026-10-31",
     "url": "/blog/ai-news-2026-10/",
-    "cover": "/blog/images/ai-news-2026-10/cover.png",
+    "cover": "/blog/images/ai-news-2026-10/cover-v2.jpg",
     "coverWidth": 1600,
     "coverHeight": 900,
     "draft": false
@@ -20,7 +20,7 @@ window.BLOG_LATEST = [
     "categoryLabel": "AI 소식",
     "date": "2026-10-31",
     "url": "/blog/genai-learning-design-guide/",
-    "cover": "/blog/images/genai-learning-design-guide/cover.png",
+    "cover": "/blog/images/genai-learning-design-guide/cover-v2.jpg",
     "coverWidth": 1600,
     "coverHeight": 900,
     "draft": false
@@ -32,7 +32,7 @@ window.BLOG_LATEST = [
     "categoryLabel": "교육 사례",
     "date": "2026-10-31",
     "url": "/blog/rise-ai-education-planning-guide/",
-    "cover": "/blog/images/rise-ai-education-planning-guide/cover.png",
+    "cover": "/blog/images/rise-ai-education-planning-guide/cover-v2.jpg",
     "coverWidth": 1600,
     "coverHeight": 900,
     "draft": false

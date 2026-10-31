@@ -4,8 +4,8 @@ slug: rise-ai-education-planning-guide
 category: cases
 date: 2026-10-31
 description: RISE·앵커 사업단 담당자를 위한 대학생 AI 교육 기획 가이드입니다. 부트캠프·해커톤·비교과·특강 비교, 준비 일정과 체크리스트, 결과보고서 항목을 리즈워드의 2026년 부트캠프 운영 경험으로 정리했습니다.
-cover: cover.png
-cover_alt: 대학생 AI 교육 기획 가이드 표지 그림. RISE·앵커 사업단을 위한 가이드라는 제목 아래에 형식 고르기, 준비 일정, 준비 체크리스트, 결과보고서 네 단계가 적혀 있습니다
+cover: cover-v2.jpg
+cover_alt: 대학생 AI 교육 기획 가이드 표지. 밝은 회색 벽 앞 흰 테이블에 서류 더미와 남색 플래너, 만년필, 작은 화분이 놓여 있고, ‘RISE·앵커 사업단, 대학생 AI 교육 기획 가이드’ 제목이 적혀 있습니다.
 tags: [대학 AI 교육, 대학생 AI 교육 프로그램, RISE 사업단, 앵커사업단, 바이브코딩 부트캠프, 비전공자 AI 교육, 결과보고서]
 author: 이인섭
 status: published
