@@ -151,6 +151,7 @@ a.lp-case:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .lp-marquee img { display: block; height: 34px; width: auto; max-width: 132px; object-fit: contain; filter: grayscale(1); opacity: .78; }
 .lp-marquee img[data-name="플랜티넷"] { mix-blend-mode: multiply; height: 40px; }
 .lp-marquee img[data-name="틱톡"] { height: 24px; opacity: .6; }
+.lp-marquee img[data-name="협성대학교"] { mix-blend-mode: multiply; height: 44px; }
 .lp-logo-word { display: block; white-space: nowrap; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--fg-2); opacity: .85; }
 @media (max-width: 640px) {
   .lp-marquee-track { gap: 36px; animation-duration: 30s; }
