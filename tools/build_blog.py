@@ -13,7 +13,8 @@ Python 3.9 표준 라이브러리만 쓰고, 빌드할 때 인터넷에 접속�
 빌드가 만드는 파일 (직접 고치지 마세요 — 다음 빌드 때 덮어씁니다. 목록: blog/.generated.json)
   blog/index.html · blog/category/<분류>/index.html · blog/<글주소>/index.html · blog/feed.xml · blog/latest.js
 빌드가 일부만 다시 쓰는 파일
-  sitemap.xml (블로그 주소 부분) · index.html (<!-- BLOG-LATEST:START --> 와 END 사이만)
+  sitemap.xml (블로그 주소 + 늘 들어가는 페이지 /, /university/, /news.html — 아래 SITE_PAGES)
+  index.html (<!-- BLOG-LATEST:START --> 와 END 사이만)
 
 글 형식은 업데이트_메뉴얼.md 7번을 보세요.
 """
@@ -53,10 +54,23 @@ DEFAULT_AUTHOR = "이인섭"
 CHARS_PER_MINUTE = 500            # 읽기 시간: 공백을 뺀 글자 수 ÷ 500, 올림
 LATEST_COUNT = 3                  # 홈 화면 "블로그" 칸에 보일 글 수
 RELATED_COUNT = 3                 # 글 아래 "관련 글" 수
-TODO_MARK = "[확인 필요"          # 이 표시가 남은 글은 공개 빌드가 막습니다
+# [확인 필요: …] 표시 — 이 표시가 남은 글은 공개 빌드가 막습니다.
+# 띄어쓰기가 달라도("[ 확인필요"), 전각 괄호("［확인 필요 …］")로 써도 찾습니다.
+TODO_RE = re.compile(r"[\[［]\s*확인\s*필요")
 KST = dt.timezone(dt.timedelta(hours=9))
 HOME_START = "<!-- BLOG-LATEST:START -->"
 HOME_END = "<!-- BLOG-LATEST:END -->"
+
+# 사이트맵에 늘 들어가는 블로그 밖 페이지 — (주소, 파일, 바뀌는 주기, 우선순위). 이 순서대로 맨 앞에 씁니다.
+# lastmod(고친 날짜)는 다음 날짜 중 가장 늦은 날짜입니다.
+#   · sitemap.xml에 지금 적혀 있는 날짜
+#   · 그 파일 안 구조화 데이터의 "dateModified" 날짜 (university/index.html에 있습니다 — 페이지를 고치면 이 날짜를 바꾸세요)
+#   · 홈(/)만: 가장 최근에 공개한 블로그 글 날짜
+SITE_PAGES = [
+    ("/", "index.html", "weekly", "1.0"),
+    ("/university/", "university/index.html", "monthly", "0.9"),
+    ("/news.html", "news.html", "weekly", "0.7"),
+]
 
 # 목록 페이지 공유 카드 (사이트 공통 이미지 — index.html과 같은 값)
 OG_DEFAULT = {
@@ -114,8 +128,9 @@ STATUSES = ("draft", "published")
 RESERVED_SLUGS = {"category", "posts", "images", "tag", "tags", "page", "feed", "drafts", "assets"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 IMAGE_NAME_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*\.(?:jpe?g|png|webp|gif)$", re.I)
-PHOTO_MAX_BYTES = 400 * 1024
-GRAPHIC_MAX_BYTES = 350 * 1024
+PHOTO_MAX_BYTES = 400 * 1024          # 사진(JPG) 권장 용량 — 넘으면 주의
+PHOTO_HARD_MAX_BYTES = 600 * 1024     # 사진(JPG) 최대 용량 — 넘으면 공개 빌드가 막습니다
+GRAPHIC_MAX_BYTES = 350 * 1024        # 그림(PNG 등) 권장 용량 — 넘으면 주의
 
 
 # ---------------------------------------------------------------------------
@@ -630,6 +645,18 @@ def _matching(text, start, open_ch, close_ch):
     return -1
 
 
+def _todo_close(text, start):
+    """확인 필요 표시의 닫는 괄호 위치. [ … ] 와 ［ … ］ 를 모두 받고, 둘이 섞여 있어도 찾습니다. 없으면 -1."""
+    pairs = {"[": "]", "［": "］"}
+    k = _matching(text, start, text[start], pairs[text[start]])
+    if k == -1:
+        for close_ch in ("]", "］"):
+            j = text.find(close_ch, start + 1)
+            if j != -1 and (k == -1 or j < k):
+                k = j
+    return k
+
+
 class Renderer:
     """한 글의 본문을 HTML로 바꿉니다. 오류는 log에 모읍니다."""
 
@@ -679,13 +706,13 @@ class Renderer:
                         out.append(self.link(label, text[close + 2:end].strip()))
                         i = end + 1
                         continue
-                if close != -1 and text.startswith(TODO_MARK, i):
+            if text[i] in "[［" and TODO_RE.match(text, i):
+                close = _todo_close(text, i)
+                if close != -1:
                     flush()
                     inner = self._inline(text[i + 1:close])
-                    if self.ctx.drafts:
-                        out.append('<mark class="todo-mark">[' + inner + "]</mark>")
-                    else:
-                        out.append("[" + inner + "]")
+                    marked = esc(text[i]) + inner + esc(text[close])
+                    out.append('<mark class="todo-mark">' + marked + "</mark>" if self.ctx.drafts else marked)
                     i = close + 1
                     continue
             buf.append(text[i])
@@ -757,7 +784,7 @@ class Renderer:
 
     # ----- 블록 -----
     def todo(self, *texts):
-        return self.ctx.drafts and any(TODO_MARK in (t or "") for t in texts)
+        return self.ctx.drafts and any(TODO_RE.search(t or "") for t in texts)
 
     def cls(self, *texts, base=""):
         names = [base] if base else []
@@ -844,8 +871,11 @@ class Renderer:
             return ""
         url, w, h = info
         cap = f"\n<figcaption>{self.inline(caption, line)}</figcaption>" if caption else ""
+        # 사진을 누르면 원본 크기 파일이 새 창으로 열립니다
         return (f'<figure class="post-figure{" todo" if self.todo(alt, caption) else ""}">'
-                f'<img src="{esc(url)}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async" />{cap}\n</figure>')
+                f'<a class="post-figure-link" href="{esc(url)}" target="_blank" rel="noopener">'
+                f'<img src="{esc(url)}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async" />'
+                f'<span class="sr-only"> 원본 크기로 보기 (새 창)</span></a>{cap}\n</figure>')
 
 
 # ---------------------------------------------------------------------------
@@ -958,10 +988,20 @@ class Post:
                 else:
                     log.error(line, msg, en)
             size = path.stat().st_size
-            limit = PHOTO_MAX_BYTES if name.lower().endswith((".jpg", ".jpeg")) else GRAPHIC_MAX_BYTES
-            if size > limit:
-                log.warn(line, f"이미지 용량이 큽니다 ({size // 1024}KB, 권장 {limit // 1024}KB 이하): {name}",
-                         f"Large image ({size // 1024} KB, recommended <= {limit // 1024} KB): {name}")
+            is_photo = name.lower().endswith((".jpg", ".jpeg"))
+            limit = PHOTO_MAX_BYTES if is_photo else GRAPHIC_MAX_BYTES
+            kb = math.ceil(size / 1024)          # 올림 — 600KB를 조금 넘는 사진이 "600KB"로 보이지 않게
+            if is_photo and size > PHOTO_HARD_MAX_BYTES:
+                msg = (f"사진 용량이 너무 큽니다 ({kb}KB — 최대 {PHOTO_HARD_MAX_BYTES // 1024}KB, 권장 {PHOTO_MAX_BYTES // 1024}KB 이하): "
+                       f"blog/images/{folder}/{name}. 사진을 줄인 뒤 다시 빌드하세요 (Claude에게 \"블로그 사진 줄여줘\"라고 하면 됩니다).")
+                en = f"Photo too large ({kb} KB, max {PHOTO_HARD_MAX_BYTES // 1024} KB): {name}. Resize it before publishing."
+                if ctx.drafts or self.is_draft:
+                    log.warn(line, msg + " 공개 빌드에서는 막힙니다.", en + " The production build will refuse it.")
+                else:
+                    log.error(line, msg, en)
+            elif size > limit:
+                log.warn(line, f"이미지 용량이 큽니다 ({kb}KB, 권장 {limit // 1024}KB 이하): {name}",
+                         f"Large image ({kb} KB, recommended <= {limit // 1024} KB): {name}")
         return f"/blog/images/{folder}/{name}", w, h
 
 
@@ -1073,7 +1113,7 @@ def render_post(post, ctx, problems):
                 log.warn(None, f"쓰지 않는 이미지가 폴더에 있습니다: blog/images/{post.file_slug}/{f.name}",
                          f"Unused image in folder: blog/images/{post.file_slug}/{f.name}")
     # 확인 필요 표시
-    post.todo_count = post.raw.count(TODO_MARK)
+    post.todo_count = len(TODO_RE.findall(post.raw))
     if post.todo_count and not post.is_draft:
         if ctx.drafts:
             problems.warn(post.where(), f"공개(published) 글에 [확인 필요] 표시가 {post.todo_count}개 남아 있습니다. 공개 빌드에서는 막힙니다.",
@@ -1398,13 +1438,33 @@ def rewrite_home(text, block, problems):
 
 
 URL_BLOCK_RE = re.compile(r"[ \t]*<url>.*?</url>", re.S)
+LASTMOD_RE = re.compile(r"<lastmod>\s*(\d{4}-\d{2}-\d{2})\s*</lastmod>")
+DATE_MODIFIED_RE = re.compile(r'"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})')
+
+
+def _date(text):
+    try:
+        return dt.date.fromisoformat(text)
+    except (TypeError, ValueError):
+        return None
+
+
+def page_date_modified(relpath):
+    """페이지 파일 안 구조화 데이터의 "dateModified" 날짜 중 가장 늦은 것 (없으면 None)."""
+    try:
+        text = (ROOT / relpath).read_text(encoding="utf-8")
+    except OSError:
+        return None
+    dates = [d for d in (_date(m.group(1)) for m in DATE_MODIFIED_RE.finditer(text)) if d]
+    return max(dates) if dates else None
 
 
 def rewrite_sitemap(text, posts):
-    """블로그가 아닌 기존 항목(/, /news.html 등)은 그대로 두고, 블로그 항목만 새로 씁니다."""
+    """SITE_PAGES(/, /university/, /news.html)는 늘 맨 앞에 넣고, 블로그 항목은 새로 씁니다.
+    sitemap.xml에 직접 추가한 다른 항목은 그대로 둡니다."""
     head = '<?xml version="1.0" encoding="UTF-8"?>'
     urlset = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    kept = []
+    kept = {}                     # 주소 → 기존 <url> 덩어리 (블로그가 아닌 것만)
     if text:
         m = re.match(r"\s*(<\?xml[^>]*\?>)", text)
         if m:
@@ -1415,22 +1475,25 @@ def rewrite_sitemap(text, posts):
         for block in URL_BLOCK_RE.findall(text):
             loc = re.search(r"<loc>\s*(.*?)\s*</loc>", block, re.S)
             loc = loc.group(1) if loc else ""
-            if loc.startswith(SITE + "/blog/"):
+            if loc.startswith(SITE + "/blog/") or loc in kept:
                 continue
-            kept.append((loc, "  " + block.strip()))
-    locs = [loc for loc, _ in kept]
+            kept[loc] = "  " + block.strip()
     newest = max((p.date for p in posts), default=None)
-    if SITE + "/" not in locs:
-        kept.insert(0, (SITE + "/", _url_entry(SITE + "/", newest or dt.date.today(), "weekly", "1.0")))
-    if SITE + "/news.html" not in [loc for loc, _ in kept]:
-        kept.insert(1, (SITE + "/news.html", _url_entry(SITE + "/news.html", newest or dt.date.today(), "weekly", "0.7")))
     out = []
-    for loc, block in kept:
-        if loc == SITE + "/" and newest:
-            m = re.search(r"<lastmod>\s*(\d{4}-\d{2}-\d{2})\s*</lastmod>", block)
-            if m and m.group(1) < newest.isoformat():
-                block = block.replace(m.group(0), f"<lastmod>{newest.isoformat()}</lastmod>")
-        out.append(block)
+    fixed = set()
+    for path, file, freq, priority in SITE_PAGES:
+        loc = SITE + path
+        fixed.add(loc)
+        dates = [page_date_modified(file)]
+        old = kept.get(loc)
+        m = LASTMOD_RE.search(old) if old else None
+        if m:
+            dates.append(_date(m.group(1)))
+        if path == "/":
+            dates.append(newest)
+        dates = [d for d in dates if d]
+        out.append(_url_entry(loc, max(dates) if dates else dt.date.today(), freq, priority))
+    out += [block for loc, block in kept.items() if loc not in fixed]
     if posts:
         out.append(_url_entry(SITE + "/blog/", newest, "weekly", "0.8"))
         for key in CATEGORIES:
@@ -1504,7 +1567,7 @@ def build(drafts=False, check=False):
         else:
             result = "OK"
         rows.append([p.file_slug, p.cat.get("label", p.category) or "-", p.meta.get("date", "-") or "-",
-                     "공개" if not p.is_draft else "초안", str(p.raw.count(TODO_MARK)), str(len(p.used_images)),
+                     "공개" if not p.is_draft else "초안", str(len(TODO_RE.findall(p.raw))), str(len(p.used_images)),
                      f"{p.minutes}분" if p.chars else "-", result])
     header = ["글 주소(slug)", "분류", "날짜", "상태", "확인필요", "이미지", "읽기", "결과"]
     widths = [max([display_width(header[k])] + [display_width(r[k]) for r in rows]) for k in range(len(header))]

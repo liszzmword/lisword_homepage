@@ -317,6 +317,8 @@
   line-height: 1.6;
   color: var(--fg-3);
 }
+/* 본문 사진을 누르면 원본 크기 파일이 새 창으로 열립니다 */
+.post-figure-link { display: block; cursor: zoom-in; }
 
 /* 표: 화면보다 넓으면 표 안에서 가로로 밀어 봅니다. 더 볼 내용이 있는 쪽에 옅은 그림자가 생깁니다 */
 .table-wrap {
