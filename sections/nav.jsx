@@ -12,6 +12,7 @@ function Nav() {
           <a href="#ax">AX 전환</a>
           <a href="#youtube">유튜브</a>
           <a href="#portfolio">사례</a>
+          <a href="/blog/">블로그</a>
           <a href="#contact">문의</a>
         </nav>
         <a

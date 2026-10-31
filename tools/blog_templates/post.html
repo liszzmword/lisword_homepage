@@ -1,0 +1,23 @@
+{# 글 한 편 화면의 본문. {{body}}는 Markdown을 바꾼 HTML, {{cta}}는 cta.html, {{related}}는 related.html 또는 more.html #}
+    <article class="wrap post">
+      <header class="post-header">
+        <nav class="post-crumbs" aria-label="현재 위치">
+          <a href="/blog/">블로그</a><span class="post-crumbs-sep" aria-hidden="true">›</span><a href="{{category_url}}">{{category}}</a>
+        </nav>
+        <div class="eyebrow mono">{{eyebrow}}</div>
+        <h1 class="post-title">{{title}}</h1>
+        <p class="post-meta"><time datetime="{{date_iso}}">{{date}}</time><span aria-hidden="true">·</span><span>{{author}}</span><span aria-hidden="true">·</span><span>{{minutes}}분 읽기</span></p>
+      </header>
+
+      <figure class="post-cover">
+        <img src="{{cover}}" alt="{{cover_alt}}" width="{{width}}" height="{{height}}" decoding="async" fetchpriority="high" />
+      </figure>
+
+      <div class="post-body">
+{{body}}
+      </div>{{tags}}
+
+{{cta}}
+    </article>
+
+{{related}}

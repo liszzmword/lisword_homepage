@@ -1,0 +1,13 @@
+{# 블로그 첫 화면(/blog/)과 분류 화면(/blog/category/…/)의 본문 #}
+    <section class="wrap blog-head">
+      <div class="eyebrow mono">{{eyebrow}}</div>
+      <h1 class="blog-title">{{heading}}</h1>
+      <p class="section-lead blog-lead">{{lead}}</p>
+      <nav class="blog-tabs" aria-label="블로그 분류">
+{{tabs}}
+      </nav>
+    </section>
+
+    <section class="wrap blog-list" aria-label="{{list_label}}">
+{{items}}
+    </section>

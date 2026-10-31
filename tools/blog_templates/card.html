@@ -1,0 +1,11 @@
+{# 목록·관련 글에 쓰는 글 카드 한 장 #}
+        <article class="post-card{{card_class}}">
+          <a class="post-card-link" href="{{url}}">
+            <div class="post-card-cover"><img src="{{cover}}" alt="" width="{{width}}" height="{{height}}" loading="{{loading}}" decoding="async" /></div>
+            <div class="post-card-body">
+              <div class="post-card-top"><span class="post-card-cat">{{category}}</span>{{draft_tag}}<time class="post-card-date" datetime="{{date_iso}}">{{date}}</time></div>
+              <{{htag}} class="post-card-title">{{title}}</{{htag}}>
+              <p class="post-card-desc">{{description}}</p>
+            </div>
+          </a>
+        </article>

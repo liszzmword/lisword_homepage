@@ -1,0 +1,11 @@
+{
+  "note": "tools/build_blog.py가 만든 파일 목록입니다. 직접 고치지 마세요. 글을 지우면 다음 빌드가 그 글의 파일을 지웁니다.",
+  "mode": "production",
+  "files": [
+    "blog/category/ai-news/index.html",
+    "blog/category/cases/index.html",
+    "blog/feed.xml",
+    "blog/index.html",
+    "blog/latest.js"
+  ]
+}

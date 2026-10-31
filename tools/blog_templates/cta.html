@@ -1,0 +1,8 @@
+{# 글 끝 문의 상자 — 문구는 tools/build_blog.py 맨 위 CATEGORIES 에서 분류별로 바꿉니다 #}
+      <aside class="post-cta" aria-label="문의 안내">
+        <div class="post-cta-text">
+          <h2 class="post-cta-title">{{cta_title}}</h2>
+          <p class="post-cta-desc">{{cta_text}}</p>
+        </div>
+        <a class="post-cta-btn" href="/#contact" onclick="if (window.gtag) gtag('event', 'blog_cta_click', { slug: '{{slug}}', category: '{{category}}' });">{{cta_button}} <span class="arrow">→</span></a>
+      </aside>

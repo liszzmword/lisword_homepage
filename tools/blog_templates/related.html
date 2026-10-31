@@ -1,0 +1,10 @@
+{# 글 아래 "관련 글" — 같은 분류의 최근 글 최대 3편 #}
+    <section class="wrap post-related" aria-labelledby="related-title">
+      <div class="post-related-head">
+        <h2 class="post-related-title" id="related-title">관련 글</h2>
+        <a class="post-related-more" href="{{category_url}}">{{category}} 전체 보기 <span class="arrow">→</span></a>
+      </div>
+      <div class="post-grid">
+{{cards}}
+      </div>
+    </section>

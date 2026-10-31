@@ -11,3 +11,6 @@ Thumbs.db
 
 # Node
 node_modules/
+
+# Blog build cache (tools/build_blog.py — image sizes, machine-specific)
+blog/.imagesizes.json

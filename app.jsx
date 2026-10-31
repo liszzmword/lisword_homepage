@@ -89,6 +89,7 @@ function App() {
       <AX />
       <YouTube />
       <News />
+      <BlogLatest />
       <Portfolio />
       <Companies />
       <Reviews />

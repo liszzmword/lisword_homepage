@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>리즈워드 블로그</title>
+    <link>https://www.lisword.co.kr/blog/</link>
+    <atom:link href="https://www.lisword.co.kr/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>리즈워드(LISWORD) 블로그입니다. 대학·기업에서 진행한 AI 교육 사례와 교육·HR 담당자를 위한 AI 소식을 정리합니다.</description>
+    <language>ko-kr</language>
+  </channel>
+</rss>
