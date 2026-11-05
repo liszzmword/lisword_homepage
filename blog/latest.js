@@ -27,7 +27,7 @@ window.BLOG_LATEST = [
   },
   {
     "slug": "rise-ai-education-planning-guide",
-    "title": "RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드",
+    "title": "앵커(옛 RISE) 사업단을 위한 대학생 AI 교육 기획 가이드",
     "category": "guide",
     "categoryLabel": "가이드",
     "date": "2026-10-31",

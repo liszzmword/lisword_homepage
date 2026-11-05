@@ -83,4 +83,4 @@ status: published
 ## 관련 글
 
 - [70~90명 산학 포럼 2회 기록, 2024·2025 AIEX FORUM](/blog/aiex-forum-coex-2024-2025/) — 같은 사업단이 코엑스에서 연 반나절 포럼 운영 기록
-- [RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/) — 사업단 교육을 기획할 때 정할 것들
+- [앵커(옛 RISE) 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/) — 사업단 교육을 기획할 때 정할 것들

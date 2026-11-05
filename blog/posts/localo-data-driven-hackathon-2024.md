@@ -82,4 +82,4 @@ status: published
 ## 관련 글
 
 - [삼성전자 데이터 드리븐 서비스디자인 해커톤, 학생 40명의 26시간](/blog/samsung-data-driven-hackathon-2023/) — 같은 형식으로 6개월 먼저 연 기업 연계 해커톤
-- [RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/)
+- [앵커(옛 RISE) 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/)

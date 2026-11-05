@@ -100,5 +100,5 @@ status: published
 
 ## 관련 글
 
-- [RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/) — 사업단 교육을 기획할 때 정할 것들
+- [앵커(옛 RISE) 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/) — 사업단 교육을 기획할 때 정할 것들
 - [성균관대×도쿄공예대 글로벌 캡스톤, 도쿄 워크숍 2회 기록](/blog/skku-tokyo-polytechnic-global-capstone-2024-2025/) — 같은 사업단의 해외 공동 캡스톤 운영 기록

@@ -83,5 +83,5 @@ status: published
 ## 함께 보면 좋은 글
 
 - [성균관대·제테마 데이터드리븐 서비스디자인 해커톤](/blog/skku-jetema-data-driven-hackathon-2025/) — 2025년 1월, 같은 장소에서 기업 과제로 연 무박 2일 해커톤
-- [RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/)
+- [앵커(옛 RISE) 사업단을 위한 대학생 AI 교육 기획 가이드](/blog/rise-ai-education-planning-guide/)
 - [공공데이터로 사흘 만에 MVP, 성균관대 RISE 바이브코딩 부트캠프](/blog/skku-rise-public-data-mvp-bootcamp/)
