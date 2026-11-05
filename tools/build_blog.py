@@ -13,8 +13,10 @@ Python 3.9 표준 라이브러리만 쓰고, 빌드할 때 인터넷에 접속�
 빌드가 만드는 파일 (직접 고치지 마세요 — 다음 빌드 때 덮어씁니다. 목록: blog/.generated.json)
   blog/index.html · blog/category/<분류>/index.html · blog/<글주소>/index.html · blog/feed.xml · blog/latest.js
 빌드가 일부만 다시 쓰는 파일
-  sitemap.xml (블로그 주소 + 늘 들어가는 페이지 /, /university/, /news.html — 아래 SITE_PAGES)
-  index.html (<!-- BLOG-LATEST:START --> 와 END 사이만)
+  sitemap.xml (블로그 주소 + 늘 들어가는 페이지 /, /university/, /corporate/, /news.html — 아래 SITE_PAGES)
+  index.html (<!-- BLOG-LATEST:START --> 와 END 사이)
+  index.html · university/index.html · corporate/index.html · news.html
+    (<!-- SITE-NAV --> 상단 메뉴와 <!-- SITE-FOOTER --> 바닥 메뉴 사이 — 메뉴는 tools/site_nav.py 한 곳에서 고칩니다)
 
 글 형식은 업데이트_메뉴얼.md 7번을 보세요.
 """
@@ -33,6 +35,10 @@ import subprocess
 import sys
 import unicodedata
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_nav  # noqa: E402  사이트 공통 메뉴 (tools/site_nav.py)
+import site_videos  # noqa: E402  유튜브 영상 목록 (tools/site_videos.py)
 
 # ---------------------------------------------------------------------------
 # 경로와 사이트 정보
@@ -69,6 +75,7 @@ HOME_END = "<!-- BLOG-LATEST:END -->"
 SITE_PAGES = [
     ("/", "index.html", "weekly", "1.0"),
     ("/university/", "university/index.html", "monthly", "0.9"),
+    ("/corporate/", "corporate/index.html", "monthly", "0.9"),
     ("/news.html", "news.html", "weekly", "0.7"),
 ]
 
@@ -90,15 +97,18 @@ ORGANIZATION = {
 BLOG_INDEX = {
     "eyebrow": "BLOG · 블로그",
     "heading": '리즈워드 <em class="accent">블로그</em>.',
-    "lead": "리즈워드가 진행한 교육 현장 이야기와 교육·업무에 필요한 AI 소식을 정리합니다.",
-    "description": "리즈워드(LISWORD) 블로그입니다. 대학·기업에서 진행한 AI 교육 사례와 교육·HR 담당자를 위한 AI 소식을 정리합니다.",
+    "lead": "AI 교육을 기획하는 담당자를 위한 가이드와 교육·업무에 필요한 AI 소식을 정리합니다. 진행한 교육 기록은 교육 사례에 따로 모았습니다.",
+    "description": "리즈워드(LISWORD) 블로그입니다. 대학·기업 교육 담당자를 위한 AI 교육 기획 가이드와 AI 소식을 정리합니다.",
 }
 # 홈 화면 "블로그" 칸 문구 (sections/blog.jsx 와 같게 유지)
 HOME_BLOCK = {
-    "lead": "교육 현장 이야기와 AI 소식을 블로그에 정리합니다.",
+    "lead": "교육 기획 가이드와 AI 소식을 블로그에 정리합니다.",
 }
 
-# 분류 — 순서대로 탭에 보입니다. 주소(cases, ai-news)는 바꾸지 마세요.
+# 분류 — 주소(cases, guide, ai-news)는 바꾸지 마세요.
+#   cases(교육 사례)는 상단 메뉴 "교육 사례"에 따로 있고 블로그 목록에는 넣지 않습니다.
+#   나머지 분류는 이 순서대로 블로그 탭에 보입니다.
+CASES = "cases"
 CATEGORIES = {
     "cases": {
         "label": "교육 사례",
@@ -106,8 +116,18 @@ CATEGORIES = {
         "heading": '교육 <em class="accent">사례</em>.',
         "lead": "리즈워드가 대학과 기업에서 진행한 교육을 대상·일정·운영 방식·결과물 중심으로 정리합니다.",
         "description": "리즈워드(LISWORD)가 대학·기업에서 진행한 AI 교육 사례입니다. 교육 대상과 일정, 운영 방식, 결과물을 정리했습니다.",
-        "cta_title": "우리 대학·사업단에도 이런 프로그램이 필요하다면",
+        "cta_title": "우리 학교·회사에도 이런 교육이 필요하다면",
         "cta_text": "기관의 목적과 대상, 일정·인원에 맞춰 교육을 맞춤 설계하고 운영합니다.",
+        "cta_button": "교육 문의하기",
+    },
+    "guide": {
+        "label": "가이드",
+        "eyebrow": "GUIDE · 가이드",
+        "heading": '교육 기획 <em class="accent">가이드</em>.',
+        "lead": "AI 교육을 처음 기획하는 담당자를 위해 형식 고르기, 준비 일정, 운영안, 설계 원칙을 정리합니다.",
+        "description": "대학·기업 교육 담당자를 위한 AI 교육 기획 가이드입니다. 프로그램 형식, 준비 일정, 운영안, 설계 원칙을 정리합니다.",
+        "cta_title": "우리 기관에 맞는 AI 교육을 함께 설계하려면",
+        "cta_text": "대상과 일정, 인원을 알려 주시면 20분 미팅 후 당일 제안·견적을 보내 드립니다.",
         "cta_button": "교육 문의하기",
     },
     "ai-news": {
@@ -121,6 +141,8 @@ CATEGORIES = {
         "cta_button": "상담 신청",
     },
 }
+
+BLOG_CATEGORIES = [k for k in CATEGORIES if k != CASES]   # 블로그 탭에 보이는 분류
 
 REQUIRED_FIELDS = ["title", "slug", "category", "date", "description", "cover", "cover_alt", "status"]
 KNOWN_FIELDS = set(REQUIRED_FIELDS) | {"tags", "author"}
@@ -1181,7 +1203,8 @@ def breadcrumb_ld(items):
     }
 
 
-def page_html(ctx, *, title, description, path, robots, social, json_ld, main, draft_note, blog_current):
+def page_html(ctx, *, title, description, path, robots, social, json_ld, main, draft_note, section):
+    """section: 상단 메뉴에서 켜 둘 칸 — "cases"(교육 사례) 또는 "blog"(블로그)."""
     banner = ""
     if draft_note:
         banner = f'  <div class="draft-banner" role="note">{esc(draft_note)}</div>\n'
@@ -1195,33 +1218,49 @@ def page_html(ctx, *, title, description, path, robots, social, json_ld, main, d
         json_ld=json_for_html({"@context": "https://schema.org", "@graph": json_ld}),
         body_class=" has-draft-banner" if draft_note else "",
         draft_banner=banner,
-        blog_current=' aria-current="page"' if blog_current else "",
+        site_nav=site_nav.header(section, path, "blog_nav" if section == "blog" else "cases_nav"),
+        site_footer=site_nav.footer(path),
         main=main,
     )
 
 
 def list_page(ctx, posts, counts, category=None):
+    """category=None → 블로그 첫 화면(/blog/, 사례 글 제외), CASES → 교육 사례 목록, 그 밖 → 블로그 분류 화면."""
     is_index = category is None
+    is_cases = category == CASES
     info = BLOG_INDEX if is_index else CATEGORIES[category]
     path = "/blog/" if is_index else f"/blog/category/{category}/"
     label = BLOG_NAME if is_index else info["label"]
-    title = "블로그 | 리즈워드 LISWORD" if is_index else f"{info['label']} | {BLOG_NAME}"
+    if is_index:
+        title = "블로그 | 리즈워드 LISWORD"
+    elif is_cases:
+        title = f"{info['label']} | 리즈워드 LISWORD"
+    else:
+        title = f"{info['label']} | {BLOG_NAME}"
 
-    tabs = []
-    for key, name, href, count in [(None, "전체", "/blog/", counts["all"])] + [
-            (k, c["label"], f"/blog/category/{k}/", counts[k]) for k, c in CATEGORIES.items()]:
-        current = ' aria-current="page"' if key == category else ""
-        tabs.append(f'        <a class="blog-tab" href="{href}"{current}>{esc(name)} '
-                    f'<span class="blog-tab-count">{count}<span class="sr-only">편</span></span></a>')
+    tabs_block = ""
+    if not is_cases:
+        tabs = []
+        for key, name, href, count in [(None, "전체", "/blog/", counts["blog"])] + [
+                (k, CATEGORIES[k]["label"], f"/blog/category/{k}/", counts[k]) for k in BLOG_CATEGORIES]:
+            current = ' aria-current="page"' if key == category else ""
+            tabs.append(f'        <a class="blog-tab" href="{href}"{current}>{esc(name)} '
+                        f'<span class="blog-tab-count">{count}<span class="sr-only">편</span></span></a>')
+        tabs_block = ('\n      <nav class="blog-tabs" aria-label="블로그 분류">\n'
+                      + "\n".join(tabs) + "\n      </nav>")
 
     if posts:
         cards = "\n".join(card_html(p, ctx, "h2", eager=k < 3) for k, p in enumerate(posts))
         items = f'      <div class="post-grid">\n{cards}\n      </div>'
     else:
-        if is_index or counts["all"] == 0:
+        if is_cases:
+            empty_title = "아직 공개된 교육 사례가 없습니다."
+            empty_text = "진행한 교육은 홈페이지에서 보실 수 있습니다."
+            empty_href, empty_button = "/#cases", "진행한 교육 보기"
+        elif is_index or counts["blog"] == 0:
             empty_title = "아직 공개된 글이 없습니다." if is_index else f"아직 {info['label']} 글이 없습니다."
-            empty_text = "교육 현장 이야기와 AI 소식을 준비하고 있습니다. 그동안 진행한 교육은 홈페이지의 사례에서 보실 수 있습니다."
-            empty_href, empty_button = "/#portfolio", "진행했던 교육 보기"
+            empty_text = "교육 기획 가이드와 AI 소식을 준비하고 있습니다. 그동안 진행한 교육은 교육 사례에서 보실 수 있습니다."
+            empty_href, empty_button = "/blog/category/cases/", "교육 사례 보기"
         else:
             empty_title = f"아직 {info['label']} 글이 없습니다."
             empty_text = "다른 분류의 글은 블로그 첫 화면에서 보실 수 있습니다."
@@ -1231,15 +1270,18 @@ def list_page(ctx, posts, counts, category=None):
 
     main = template(
         "list.html",
-        eyebrow=esc(BLOG_INDEX["eyebrow"]),
+        eyebrow=esc(info["eyebrow"] if is_cases else BLOG_INDEX["eyebrow"]),
         heading=info["heading"],
         lead=typeset(esc(info["lead"])),
-        tabs="\n".join(tabs),
+        tabs_block=tabs_block,
         list_label=esc(f"{label} 글 목록"),
         items=items,
     ).rstrip("\n")
 
-    crumbs = [("홈", SITE + "/"), ("블로그", SITE + "/blog/")]
+    if is_cases:
+        crumbs = [("홈", SITE + "/"), (info["label"], SITE + path)]
+    else:
+        crumbs = [("홈", SITE + "/"), ("블로그", SITE + "/blog/")]
     if is_index:
         node = {
             "@type": "Blog", "@id": SITE + "/blog/#blog", "name": BLOG_NAME, "url": SITE + "/blog/",
@@ -1251,11 +1293,14 @@ def list_page(ctx, posts, counts, category=None):
             ],
         }
     else:
-        crumbs.append((info["label"], SITE + path))
+        if not is_cases:
+            crumbs.append((info["label"], SITE + path))
+        part_of = ({"@type": "WebSite", "@id": SITE + "/#website", "name": SITE_NAME, "url": SITE + "/"} if is_cases
+                   else {"@type": "Blog", "@id": SITE + "/blog/#blog", "name": BLOG_NAME, "url": SITE + "/blog/"})
         node = {
             "@type": "CollectionPage", "@id": SITE + path, "url": SITE + path, "name": title,
             "description": info["description"], "inLanguage": "ko-KR",
-            "isPartOf": {"@type": "Blog", "@id": SITE + "/blog/#blog", "name": BLOG_NAME, "url": SITE + "/blog/"},
+            "isPartOf": part_of,
             "mainEntity": {"@type": "ItemList", "itemListElement": [
                 {"@type": "ListItem", "position": k + 1, "url": p.abs_url, "name": p.title} for k, p in enumerate(posts)
             ]},
@@ -1266,7 +1311,8 @@ def list_page(ctx, posts, counts, category=None):
     return page_html(
         ctx, title=title, description=info["description"], path=path, robots=robots,
         social=social_meta("website", title, info["description"], SITE + path, OG_DEFAULT),
-        json_ld=[_clean(node), breadcrumb_ld(crumbs)], main=main, draft_note=note, blog_current=is_index,
+        json_ld=[_clean(node), breadcrumb_ld(crumbs)], main=main, draft_note=note,
+        section="cases" if is_cases else "blog",
     )
 
 
@@ -1301,10 +1347,16 @@ def post_page(ctx, post, related):
     else:
         related_html = template("more.html").rstrip("\n")
     body = "\n".join("        " + line if line else "" for line in post.body_html.split("\n"))
+    if post.category == CASES:
+        crumbs_html = (f'<a href="/">홈</a><span class="post-crumbs-sep" aria-hidden="true">›</span>'
+                       f'<a href="/blog/category/{CASES}/">{esc(cat["label"])}</a>')
+    else:
+        crumbs_html = (f'<a href="/">홈</a><span class="post-crumbs-sep" aria-hidden="true">›</span>'
+                       f'<a href="/blog/">블로그</a><span class="post-crumbs-sep" aria-hidden="true">›</span>'
+                       f'<a href="/blog/category/{post.category}/">{esc(cat["label"])}</a>')
     main = template(
         "post.html",
-        category_url=f"/blog/category/{post.category}/",
-        category=esc(cat["label"]),
+        crumbs=crumbs_html,
         eyebrow=esc(cat["eyebrow"]),
         title=typeset(esc(post.title)),
         date_iso=post.date.isoformat(),
@@ -1340,15 +1392,19 @@ def post_page(ctx, post, related):
         "keywords": post.tags or None,
         "isPartOf": {"@type": "Blog", "@id": SITE + "/blog/#blog", "name": BLOG_NAME, "url": SITE + "/blog/"},
     }
-    crumbs = breadcrumb_ld([("홈", SITE + "/"), ("블로그", SITE + "/blog/"),
-                            (cat["label"], f"{SITE}/blog/category/{post.category}/"), (post.title, post.abs_url)])
+    trail = [("홈", SITE + "/")]
+    if post.category != CASES:
+        trail.append(("블로그", SITE + "/blog/"))
+    trail += [(cat["label"], f"{SITE}/blog/category/{post.category}/"), (post.title, post.abs_url)]
+    crumbs = breadcrumb_ld(trail)
     draft = ctx.drafts and post.is_draft
     return page_html(
         ctx, title=f"{post.title} | {BLOG_NAME}", description=post.description, path=post.url,
         robots="noindex,nofollow" if draft else "index,follow",
         social=social_meta("article", post.title, post.description, post.abs_url, image, extra),
         json_ld=[_clean(article), crumbs], main=main,
-        draft_note="초안 미리보기 — 공개 전 검토용입니다" if draft else "", blog_current=False,
+        draft_note="초안 미리보기 — 공개 전 검토용입니다" if draft else "",
+        section="cases" if post.category == CASES else "blog",
     )
 
 
@@ -1602,10 +1658,11 @@ def build(drafts=False, check=False):
 
     # 결과물 만들기
     outputs = {}
-    counts = {"all": len(built)}
+    blog_posts = [p for p in built if p.category != CASES]          # 블로그 목록에는 사례 글을 넣지 않습니다
+    counts = {"all": len(built), "blog": len(blog_posts)}
     for key in CATEGORIES:
         counts[key] = sum(1 for p in built if p.category == key)
-    outputs["blog/index.html"] = list_page(ctx, built, counts)
+    outputs["blog/index.html"] = list_page(ctx, blog_posts, counts)
     for key in CATEGORIES:
         outputs[f"blog/category/{key}/index.html"] = list_page(ctx, [p for p in built if p.category == key], counts, key)
     for p in built:
@@ -1621,9 +1678,37 @@ def build(drafts=False, check=False):
     }, ensure_ascii=False, indent=2) + "\n"
 
     home_text = HOME_PATH.read_text(encoding="utf-8") if HOME_PATH.exists() else None
-    new_home = rewrite_home(home_text, home_block(published), problems)
+    new_home = rewrite_home(home_text, home_block([p for p in published if p.category != CASES]), problems)
     if new_home is not None:
         outputs["index.html"] = new_home
+    # 블로그 밖 페이지의 상단·바닥 메뉴를 tools/site_nav.py 와 같게 맞춥니다
+    for file, active, page_path, where in site_nav.STATIC_PAGES:
+        target = ROOT / file
+        text = outputs.get(file)
+        if text is None:
+            if not target.exists():
+                problems.warn(file, "파일이 없어 메뉴를 맞추지 못했습니다.", "File missing; menu not synced.")
+                continue
+            text = target.read_text(encoding="utf-8")
+        text, missing = site_nav.apply(text, active, page_path, where)
+        for mark in missing:
+            problems.warn(file, f"{mark}:START/END 표시가 없거나 짝이 맞지 않아 메뉴를 맞추지 못했습니다.",
+                          f"{mark}:START/END markers missing or unbalanced; menu not synced.")
+        outputs[file] = text
+    # 홈·미디어 페이지의 유튜브 영상 칸을 tools/site_videos.py 목록으로 맞춥니다
+    for file, kind in site_videos.PAGES:
+        text = outputs.get(file)
+        if text is None:
+            target = ROOT / file
+            if not target.exists():
+                continue
+            text = target.read_text(encoding="utf-8")
+        new = site_videos.apply(text, kind, site_nav._replace)
+        if new is None:
+            problems.warn(file, "SITE-VIDEOS:START/END 표시가 없거나 짝이 맞지 않아 영상 목록을 맞추지 못했습니다.",
+                          "SITE-VIDEOS markers missing or unbalanced; videos not synced.")
+            continue
+        outputs[file] = new
     sitemap_text = SITEMAP_PATH.read_text(encoding="utf-8") if SITEMAP_PATH.exists() else None
     outputs["sitemap.xml"] = rewrite_sitemap(sitemap_text, published)
 

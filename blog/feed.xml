@@ -4,7 +4,7 @@
     <title>리즈워드 블로그</title>
     <link>https://www.lisword.co.kr/blog/</link>
     <atom:link href="https://www.lisword.co.kr/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <description>리즈워드(LISWORD) 블로그입니다. 대학·기업에서 진행한 AI 교육 사례와 교육·HR 담당자를 위한 AI 소식을 정리합니다.</description>
+    <description>리즈워드(LISWORD) 블로그입니다. 대학·기업 교육 담당자를 위한 AI 교육 기획 가이드와 AI 소식을 정리합니다.</description>
     <language>ko-kr</language>
     <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0900</lastBuildDate>
     <item>
@@ -23,7 +23,7 @@
       <guid isPermaLink="true">https://www.lisword.co.kr/blog/genai-learning-design-guide/</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
       <dc:creator>이인섭</dc:creator>
-      <category>AI 소식</category>
+      <category>가이드</category>
       <description>학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다.</description>
       <enclosure url="https://www.lisword.co.kr/blog/images/genai-learning-design-guide/cover-v2.jpg" length="187828" type="image/jpeg" />
     </item>
@@ -33,7 +33,7 @@
       <guid isPermaLink="true">https://www.lisword.co.kr/blog/rise-ai-education-planning-guide/</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
       <dc:creator>이인섭</dc:creator>
-      <category>교육 사례</category>
+      <category>가이드</category>
       <description>RISE·앵커 사업단 담당자를 위한 대학생 AI 교육 기획 가이드입니다. 부트캠프·해커톤·비교과·특강 비교, 준비 일정과 체크리스트, 결과보고서 항목을 리즈워드의 2026년 부트캠프 운영 경험으로 정리했습니다.</description>
       <enclosure url="https://www.lisword.co.kr/blog/images/rise-ai-education-planning-guide/cover-v2.jpg" length="171900" type="image/jpeg" />
     </item>
@@ -43,7 +43,7 @@
       <guid isPermaLink="true">https://www.lisword.co.kr/blog/vibe-coding-bootcamp-3day-guide/</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
       <dc:creator>이인섭</dc:creator>
-      <category>교육 사례</category>
+      <category>가이드</category>
       <description>리즈워드가 2026년 성균관대에서 세 번 운영한 3일 바이브코딩 MVP 부트캠프를 바탕으로, 비전공 대학생 부트캠프의 시간표와 준비물, 팀 평가 기준을 정리했습니다.</description>
       <enclosure url="https://www.lisword.co.kr/blog/images/vibe-coding-bootcamp-3day-guide/cover-v2.jpg" length="179488" type="image/jpeg" />
     </item>

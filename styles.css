@@ -217,6 +217,15 @@ html.has-reveal .reveal.in {
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--fg); }
+/* 지금 보고 있는 메뉴 (모든 페이지 공통 — 메뉴는 tools/site_nav.py 한 곳에서 만듭니다) */
+.nav-links a.is-active {
+  color: var(--fg);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
 .nav-cta {
   font-size: 14px;
   font-weight: 600;
@@ -225,15 +234,20 @@ html.has-reveal .reveal.in {
   color: var(--bg);
   white-space: nowrap;
 }
-/* 메뉴가 7개라 화면이 좁아지면 메뉴 사이 간격을 줄입니다 (메뉴는 빼지 않습니다) */
-@media (max-width: 1240px) {
-  .nav-links { gap: 28px; }
-}
+/* 화면이 좁아지면 메뉴 사이 간격을 줄이고, 휴대폰에서는 메뉴를 로고 아래 둘째 줄로 내립니다 (메뉴는 빼지 않습니다) */
 @media (max-width: 1040px) {
-  .nav-links { gap: 20px; }
+  .nav-links { gap: 24px; }
 }
 @media (max-width: 880px) {
-  .nav-links { display: none; }
+  .nav-inner { flex-wrap: wrap; height: auto; padding-top: 12px; row-gap: 2px; }
+  .nav-cta { padding: 8px 14px; font-size: 13px; }
+  .nav-links {
+    order: 3; width: 100%; gap: 22px;
+    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 10px 0 12px; font-size: 14px; }
+  .nav-links a.is-active { text-underline-offset: 6px; }
 }
 
 /* ============ HERO ============ */
@@ -966,6 +980,28 @@ html.has-reveal .reveal.in {
   }
   .news-page-row-source { order: -1; }
 }
+
+/* 미디어 페이지 (news.html) — 언론 보도 · 유튜브 영상 */
+.media-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.media-jump a { font-size: 14px; font-weight: 600; padding: 9px 16px; border: 1px solid var(--line-soft); background: var(--card, transparent); }
+.media-jump a:hover { border-color: var(--fg); }
+.media-section { padding-bottom: 88px; scroll-margin-top: 96px; }
+.media-section .news-page-list { padding-bottom: 0; }
+.media-section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 20px; }
+.media-section-head h2 { margin: 0; font-size: clamp(24px, 3vw, 30px); font-weight: 800; letter-spacing: -0.02em; }
+.media-section-head span { font-size: 14px; color: var(--fg-3); }
+.media-section-head a { font-size: 14px; font-weight: 600; border-bottom: 1px solid var(--fg); padding-bottom: 2px; }
+.media-yt { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 24px; padding-top: 28px; border-top: 1px solid var(--line-soft); }
+@media (max-width: 1000px) { .media-yt { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .media-yt { grid-template-columns: minmax(0, 1fr); } }
+.media-yt-card { display: flex; flex-direction: column; gap: 10px; }
+.media-yt-thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
+.media-yt-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.media-yt-card:hover .media-yt-thumb img { transform: scale(1.03); }
+.media-yt-len { position: absolute; right: 8px; bottom: 8px; padding: 2px 6px; background: rgba(0, 0, 0, 0.78); color: #fff; font-family: var(--font-en); font-size: 12px; font-weight: 600; }
+.media-yt-title { font-size: 16px; font-weight: 700; line-height: 1.45; letter-spacing: -0.01em; word-break: keep-all; overflow-wrap: anywhere; }
+.media-yt-card:hover .media-yt-title { color: var(--accent); }
+.media-yt-date { font-family: var(--font-en); font-size: 12px; letter-spacing: 0.12em; color: var(--fg-3); }
 
 /* ============ PORTFOLIO ============ */
 .port-grid {

@@ -33,15 +33,6 @@
 }
 .skip-link:focus { top: 12px; }
 
-/* 메뉴: 지금 보고 있는 "블로그" 표시 */
-.blog .nav-links a.is-active {
-  color: var(--fg);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
-}
 
 /* ---------- 목록 화면 (블로그 첫 화면 · 분류) ---------- */
 .blog-head {

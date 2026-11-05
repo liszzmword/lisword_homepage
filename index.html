@@ -76,28 +76,24 @@
   <link rel="stylesheet" href="/landing.css" />
 </head>
 <body>
-
-  <header class="lp-nav">
-    <div class="wrap lp-nav-inner">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <!-- SITE-NAV:START -->
+  <header class="nav">
+    <div class="wrap nav-inner">
       <a href="/" class="logo"><span class="logo-mark"></span><span>LISWORD</span></a>
-      <nav class="lp-nav-links" aria-label="주요 메뉴">
-        <a href="#cases">진행한 교육</a>
-        <a href="#track">운영 이력</a>
-        <a href="#programs">프로그램</a>
-        <a href="#process">진행 방식</a>
+      <nav class="nav-links" aria-label="주요 메뉴">
         <a href="/university/">대학·사업단</a>
+        <a href="/corporate/">기업·기관</a>
+        <a href="/blog/category/cases/">교육 사례</a>
         <a href="/blog/">블로그</a>
+        <a href="/news.html">미디어</a>
       </nav>
-      <a href="#contact" class="lp-nav-cta" data-cta="nav">교육 문의</a>
-      <nav class="lp-nav-mobile" aria-label="모바일 메뉴">
-        <a href="#cases">사례</a>
-        <a href="/university/">대학·사업단</a>
-        <a href="#contact" data-cta="nav_mobile">문의</a>
-      </nav>
+      <a href="#contact" class="nav-cta" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'nav' });">교육 문의</a>
     </div>
   </header>
+  <!-- SITE-NAV:END -->
 
-  <main>
+  <main id="main">
     <!-- 1. 첫 화면: 어떤 회사인지 + 실적 -->
     <section class="wrap lp-hero" id="top">
       <div class="eyebrow mono">AI 교육 · 부트캠프 · 해커톤 · AX 전환</div>
@@ -156,21 +152,30 @@
           <p>대학 사업단과 기업에서 실제로 진행한 교육입니다. 카드를 누르면 일정, 운영 방식, 학생들이 만든 결과물을 자세히 볼 수 있습니다.</p>
         </div>
         <div class="lp-cases">
-          <a class="lp-case" href="/blog/skku-rise-public-data-mvp-bootcamp/" data-case="skku-rise">
-            <div class="lp-case-img"><img src="/blog/images/skku-rise-public-data-mvp-bootcamp/cover.jpg" alt="성균관대학교 RISE사업단 공공데이터 바이브코딩 부트캠프 현장" loading="lazy" decoding="async" /></div>
+          <a class="lp-case" href="/blog/skku-vibe-coding-bootcamps-2026/" data-case="skku-vibe">
+            <div class="lp-case-img"><img src="/blog/images/skku-vibe-coding-bootcamps-2026/cover.jpg" alt="성균관대학교 바이브코딩 MVP 부트캠프 현장" loading="lazy" decoding="async" /></div>
             <div class="lp-case-body">
-              <span class="lp-case-client">성균관대학교 RISE사업단 · 대학</span>
-              <h3 class="lp-case-title">공공데이터 바이브코딩 MVP 부트캠프</h3>
-              <div class="lp-case-facts"><span>2026.07</span><span>3일</span><span>28명 · 6개 팀</span></div>
+              <span class="lp-case-client">성균관대학교 RISE·앵커사업단 · 대학</span>
+              <h3 class="lp-case-title">바이브코딩 MVP 부트캠프 3회</h3>
+              <div class="lp-case-facts"><span>2026.02 · 07</span><span>각 3일</span><span>91명 · 19개 팀</span></div>
               <span class="lp-case-link">운영 사례 자세히 보기 →</span>
             </div>
           </a>
-          <a class="lp-case" href="/blog/skku-vibe-coding-bootcamps-2026/" data-case="skku-vibe">
-            <div class="lp-case-img"><img src="/blog/images/skku-vibe-coding-bootcamps-2026/cover.jpg" alt="성균관대학교 AI-VIBE 바이브코딩 부트캠프 현장" loading="lazy" decoding="async" /></div>
+          <a class="lp-case" href="/blog/dominos-ai-literacy-2026/" data-case="dominos">
+            <div class="lp-case-img"><img src="/도미노RAG.jpg" alt="도미노피자 임직원 생성형 AI 교육 현장" loading="lazy" decoding="async" /></div>
             <div class="lp-case-body">
-              <span class="lp-case-client">성균관대학교 · 대학</span>
-              <h3 class="lp-case-title">AI-VIBE 바이브코딩 창업 부트캠프 2회</h3>
-              <div class="lp-case-facts"><span>2026.02 · 07</span><span>각 3일</span><span>63명 · 13개 팀</span></div>
+              <span class="lp-case-client">도미노피자 · 기업</span>
+              <h3 class="lp-case-title">임직원 생성형 AI · 데이터 시각화 교육</h3>
+              <div class="lp-case-facts"><span>2026.02 – 04</span><span>임직원 교육</span></div>
+              <span class="lp-case-link">교육 사례 자세히 보기 →</span>
+            </div>
+          </a>
+          <a class="lp-case" href="/blog/samsung-data-driven-hackathon-2023/" data-case="samsung">
+            <div class="lp-case-img"><img src="/blog/images/samsung-data-driven-hackathon-2023/cover.jpg" alt="삼성전자 가전사업부 연계 데이터 드리븐 서비스디자인 해커톤 현장" loading="lazy" decoding="async" /></div>
+            <div class="lp-case-body">
+              <span class="lp-case-client">AIEX 사업단 × 삼성전자 가전사업부 · 대학·기업</span>
+              <h3 class="lp-case-title">데이터 드리븐 서비스디자인 해커톤</h3>
+              <div class="lp-case-facts"><span>2023.08</span><span>무박 2일</span><span>40명 · 8개 팀</span></div>
               <span class="lp-case-link">운영 사례 자세히 보기 →</span>
             </div>
           </a>
@@ -181,15 +186,6 @@
               <h3 class="lp-case-title">서울시민 실전 AI 활용 클래스</h3>
               <div class="lp-case-facts"><span>2026.07</span><span>4회</span><span>이인섭 대표 강의</span></div>
               <span class="lp-case-link">수업 기록 자세히 보기 →</span>
-            </div>
-          </a>
-          <a class="lp-case" href="/blog/dominos-ai-literacy-2026/" data-case="dominos">
-            <div class="lp-case-img"><img src="/도미노RAG.jpg" alt="도미노피자 임직원 생성형 AI 교육 현장" loading="lazy" decoding="async" /></div>
-            <div class="lp-case-body">
-              <span class="lp-case-client">도미노피자 · 기업</span>
-              <h3 class="lp-case-title">임직원 생성형 AI · 데이터 시각화 교육</h3>
-              <div class="lp-case-facts"><span>2026.02 – 04</span><span>임직원 교육</span></div>
-              <span class="lp-case-link">교육 사례 자세히 보기 →</span>
             </div>
           </a>
           <a class="lp-case" href="/blog/plantynet-data-literacy-2026/" data-case="plantynet">
@@ -259,42 +255,54 @@
       </div>
     </section>
 
-    <!-- 3. 언론·영상·함께한 곳 -->
+    <!-- 3. 언론 보도 -->
     <section class="lp-section" id="press">
       <div class="wrap">
         <div class="lp-head">
           <div>
-            <div class="eyebrow mono">PRESS · YOUTUBE</div>
-            <h2>언론과 영상으로 <em>먼저 확인하세요</em>.</h2>
+            <div class="eyebrow mono">PRESS · 언론 보도</div>
+            <h2>언론에 <em>소개된 교육</em>.</h2>
           </div>
-          <p>운영한 교육은 언론에 소개됐고, 교육 방식은 유튜브에서 직접 볼 수 있습니다.</p>
+          <p>리즈워드가 운영한 교육을 대학저널과 피앤피뉴스가 기사로 다뤘습니다. 제목을 누르면 원문 기사로 이동합니다.</p>
         </div>
-        <div class="lp-trust">
+        <div class="lp-press is-grid">
+            <a href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener" data-press="dhnews-0724">
+              <div class="lp-press-meta">대학저널 · 2026.07.24</div>
+              <div class="lp-press-title">리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영</div>
+            </a>
+            <a href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener" data-press="gosiweek-0723">
+              <div class="lp-press-meta">피앤피뉴스 · 2026.07.23</div>
+              <div class="lp-press-title">리즈워드, 성균관대서 공공데이터 활용 바이브코딩 MVP 개발 부트캠프 운영</div>
+            </a>
+            <a href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener" data-press="dhnews-0608">
+              <div class="lp-press-meta">대학저널 · 2026.06.08</div>
+              <div class="lp-press-title">리즈워드, 성균관대서 생성형 AI 바이브코딩 부트캠프 운영</div>
+            </a>
+        </div>
+        <a class="lp-more" href="/news.html">언론 보도 전체 보기 →</a>
+      </div>
+    </section>
+
+    <!-- 3-1. 유튜브 (영상 목록은 tools/site_videos.py) -->
+    <section class="lp-section" id="youtube">
+      <div class="wrap">
+        <div class="lp-head">
           <div>
-            <h3 class="lp-subhead">언론 보도</h3>
-            <div class="lp-press">
-              <a href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener" data-press="dhnews-0724">
-                <div class="lp-press-meta">대학저널 · 2026.07.24</div>
-                <div class="lp-press-title">리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영</div>
-              </a>
-              <a href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener" data-press="gosiweek-0723">
-                <div class="lp-press-meta">피앤피뉴스 · 2026.07.23</div>
-                <div class="lp-press-title">리즈워드, 성균관대서 공공데이터 활용 바이브코딩 MVP 개발 부트캠프 운영</div>
-              </a>
-              <a href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener" data-press="dhnews-0608">
-                <div class="lp-press-meta">대학저널 · 2026.06.08</div>
-                <div class="lp-press-title">리즈워드, 성균관대서 생성형 AI 바이브코딩 부트캠프 운영</div>
-              </a>
-            </div>
+            <div class="eyebrow mono">YOUTUBE · 영상</div>
+            <h2>영상으로 <em>먼저 보세요</em>.</h2>
           </div>
-          <div>
-            <h3 class="lp-subhead">유튜브 · 이인섭의 AI 교육</h3>
-            <div class="lp-yt">
-              <a href="https://www.youtube.com/watch?v=GxRfz9hdiLA&t=437s" target="_blank" rel="noopener"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/GxRfz9hdiLA/hqdefault.jpg" alt="" loading="lazy" /></div><div class="lp-yt-title">AI 교육, 이렇게 시작하세요</div></a>
-              <a href="https://www.youtube.com/watch?v=7FLsVEdXeTc&t=483s" target="_blank" rel="noopener"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/7FLsVEdXeTc/hqdefault.jpg" alt="" loading="lazy" /></div><div class="lp-yt-title">실무에 바로 쓰는 AI 활용법</div></a>
-              <a href="https://www.youtube.com/watch?v=X_tKxvPtuBU&t=4s" target="_blank" rel="noopener"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/X_tKxvPtuBU/hqdefault.jpg" alt="" loading="lazy" /></div><div class="lp-yt-title">리즈워드가 풀어가는 AI 교육</div></a>
-            </div>
-          </div>
+          <p>이인섭 대표가 유튜브 채널에서 클로드코드 설치, 바이브코딩으로 서비스 배포, 엑셀·파워포인트 자동화를 직접 시연합니다.</p>
+        </div>
+        <!-- SITE-VIDEOS:START -->
+        <div class="lp-yt">
+          <a href="https://www.youtube.com/watch?v=X_tKxvPtuBU" target="_blank" rel="noopener" data-video="X_tKxvPtuBU"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/X_tKxvPtuBU/hqdefault.jpg" alt="" loading="lazy" decoding="async" /></div><div class="lp-yt-title">클로드코드, 초보자도 15분 만에 바이브코딩으로 서비스 배포하는 법</div><div class="lp-yt-meta">2026.05.06 · 17:59</div></a>
+          <a href="https://www.youtube.com/watch?v=7FLsVEdXeTc" target="_blank" rel="noopener" data-video="7FLsVEdXeTc"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/7FLsVEdXeTc/hqdefault.jpg" alt="" loading="lazy" decoding="async" /></div><div class="lp-yt-title">클로드코드 설치 완벽 가이드 (초보자도 10분이면 끝!)</div><div class="lp-yt-meta">2026.05.01 · 16:20</div></a>
+          <a href="https://www.youtube.com/watch?v=GxRfz9hdiLA" target="_blank" rel="noopener" data-video="GxRfz9hdiLA"><div class="lp-yt-thumb"><img src="https://i.ytimg.com/vi/GxRfz9hdiLA/hqdefault.jpg" alt="" loading="lazy" decoding="async" /></div><div class="lp-yt-title">엑셀 이제 끝났습니다. 클로드코드로 엑셀 자동화하는 법</div><div class="lp-yt-meta">2026.04.17 · 10:41</div></a>
+        </div>
+        <!-- SITE-VIDEOS:END -->
+        <div class="lp-paths">
+          <a class="lp-more" href="/news.html#videos">영상 전체 보기 →</a>
+          <a class="lp-more" href="https://www.youtube.com/@lisword" target="_blank" rel="noopener">유튜브 채널 바로가기 →</a>
         </div>
       </div>
     </section>
@@ -336,6 +344,10 @@
           </article>
         </div>
         <div class="lp-topics"><strong>교육 주제</strong><span>생성형 AI 활용</span><span>바이브코딩</span><span>AI 리터러시</span><span>데이터 리터러시</span><span>RAG 챗봇</span><span>업무 자동화</span></div>
+        <div class="lp-paths">
+          <a class="lp-more" href="/university/">대학·사업단 프로그램 자세히 보기 →</a>
+          <a class="lp-more" href="/corporate/">기업·기관 프로그램 자세히 보기 →</a>
+        </div>
       </div>
     </section>
 
@@ -387,7 +399,7 @@
             <div class="eyebrow mono">BLOG · 블로그</div>
             <h2 class="section-title">리즈워드 <em class="accent">블로그</em>.</h2>
           </div>
-          <p class="section-lead">교육 현장 이야기와 AI 소식을 블로그에 정리합니다.</p>
+          <p class="section-lead">교육 기획 가이드와 AI 소식을 블로그에 정리합니다.</p>
         </div>
         <div class="blog-latest-grid">
           <a href="/blog/ai-news-2026-10/" class="blog-latest-card">
@@ -400,14 +412,14 @@
           <a href="/blog/genai-learning-design-guide/" class="blog-latest-card">
             <div class="blog-latest-cover"><img src="/blog/images/genai-learning-design-guide/cover-v2.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
             <div class="blog-latest-body">
-              <div class="news-card-top"><span class="news-card-source">AI 소식</span> <span class="news-card-date">2026-10-31</span></div>
+              <div class="news-card-top"><span class="news-card-source">가이드</span> <span class="news-card-date">2026-10-31</span></div>
               <h3 class="news-card-title">AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드</h3>
             </div>
           </a>
           <a href="/blog/rise-ai-education-planning-guide/" class="blog-latest-card">
             <div class="blog-latest-cover"><img src="/blog/images/rise-ai-education-planning-guide/cover-v2.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
             <div class="blog-latest-body">
-              <div class="news-card-top"><span class="news-card-source">교육 사례</span> <span class="news-card-date">2026-10-31</span></div>
+              <div class="news-card-top"><span class="news-card-source">가이드</span> <span class="news-card-date">2026-10-31</span></div>
               <h3 class="news-card-title">RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드</h3>
             </div>
           </a>
@@ -471,9 +483,16 @@
   <footer class="wrap footer">
     <div class="footer-inner">
       <div class="logo"><span class="logo-mark"></span><span>LISWORD · 리즈워드</span></div>
-      <nav class="lp-footer-links" aria-label="바닥 메뉴">
-        <a href="/university/">대학·사업단 프로그램</a><a href="/blog/">블로그</a><a href="/news.html">언론 보도</a><a href="#contact">교육 문의</a>
+      <!-- SITE-FOOTER:START -->
+      <nav class="footer-links" aria-label="바로가기">
+        <a href="/university/">대학·사업단</a>
+        <a href="/corporate/">기업·기관</a>
+        <a href="/blog/category/cases/">교육 사례</a>
+        <a href="/blog/">블로그</a>
+        <a href="/news.html">미디어</a>
+        <a href="#contact">교육 문의</a>
       </nav>
+      <!-- SITE-FOOTER:END -->
       <div class="footer-meta">© LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR</div>
     </div>
   </footer>
@@ -503,6 +522,11 @@
         btns.forEach(function (x) { x.classList.toggle("on", x === b); });
       });
     });
+    // 기업·기관 페이지에서 온 경우(/?type=corp#contact) 문의 유형을 미리 골라 둡니다
+    try {
+      var want = new URLSearchParams(location.search).get("type");
+      if (want && TYPES[want]) btns.forEach(function (b) { if (b.getAttribute("data-type") === want) b.click(); });
+    } catch (e) {}
     var modal = document.getElementById("contact-modal");
     document.getElementById("contact-modal-close").addEventListener("click", function () { modal.classList.remove("open"); });
     modal.addEventListener("click", function (e) { if (e.target === modal) modal.classList.remove("open"); });
@@ -531,11 +555,12 @@
     });
     // 버튼·카드 클릭 측정 (구글 애널리틱스)
     document.addEventListener("click", function (e) {
-      var a = e.target.closest("[data-cta],[data-case],[data-press]");
+      var a = e.target.closest("[data-cta],[data-case],[data-press],[data-video]");
       if (!a || !window.gtag) return;
       if (a.dataset.cta) gtag("event", "cta_contact_click", { location: a.dataset.cta });
       if (a.dataset.case) gtag("event", "case_click", { case_id: a.dataset.case });
       if (a.dataset.press) gtag("event", "press_article_click", { article_id: a.dataset.press });
+      if (a.dataset.video) gtag("event", "video_click", { video_id: a.dataset.video, page: "home" });
     });
   })();
   </script>

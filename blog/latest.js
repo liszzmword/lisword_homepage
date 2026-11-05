@@ -16,8 +16,8 @@ window.BLOG_LATEST = [
   {
     "slug": "genai-learning-design-guide",
     "title": "AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드",
-    "category": "ai-news",
-    "categoryLabel": "AI 소식",
+    "category": "guide",
+    "categoryLabel": "가이드",
     "date": "2026-10-31",
     "url": "/blog/genai-learning-design-guide/",
     "cover": "/blog/images/genai-learning-design-guide/cover-v2.jpg",
@@ -28,8 +28,8 @@ window.BLOG_LATEST = [
   {
     "slug": "rise-ai-education-planning-guide",
     "title": "RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드",
-    "category": "cases",
-    "categoryLabel": "교육 사례",
+    "category": "guide",
+    "categoryLabel": "가이드",
     "date": "2026-10-31",
     "url": "/blog/rise-ai-education-planning-guide/",
     "cover": "/blog/images/rise-ai-education-planning-guide/cover-v2.jpg",

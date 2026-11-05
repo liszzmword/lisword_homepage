@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>언론 보도 — 리즈워드 LISWORD</title>
-  <meta name="description" content="언론·매체에 소개된 리즈워드(LISWORD)의 활동을 모았습니다." />
+  <title>미디어: 언론 보도·유튜브 영상 — 리즈워드 LISWORD</title>
+  <meta name="description" content="언론에 소개된 리즈워드(LISWORD)의 교육과, 이인섭 대표가 유튜브에 올린 AI 실습 영상(클로드코드·바이브코딩·업무 자동화)을 모았습니다." />
   <link rel="canonical" href="https://www.lisword.co.kr/news.html" />
   <meta name="theme-color" content="#FAF8F5" />
 
@@ -13,15 +13,15 @@
   <meta property="og:site_name" content="리즈워드 LISWORD" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:url" content="https://www.lisword.co.kr/news.html" />
-  <meta property="og:title" content="언론 보도 — 리즈워드 LISWORD" />
-  <meta property="og:description" content="언론·매체에 소개된 리즈워드(LISWORD)의 활동을 모았습니다." />
+  <meta property="og:title" content="미디어: 언론 보도·유튜브 영상 — 리즈워드 LISWORD" />
+  <meta property="og:description" content="언론에 소개된 리즈워드(LISWORD)의 교육과, 이인섭 대표가 유튜브에 올린 AI 실습 영상(클로드코드·바이브코딩·업무 자동화)을 모았습니다." />
   <meta property="og:image" content="https://www.lisword.co.kr/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="리즈워드 LISWORD — 대학·기업을 위한 현장형 AI 교육 (바이브코딩 부트캠프 · AI 리터러시 · RAG · AX 전환)" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="언론 보도 — 리즈워드 LISWORD" />
-  <meta name="twitter:description" content="언론·매체에 소개된 리즈워드(LISWORD)의 활동을 모았습니다." />
+  <meta name="twitter:title" content="미디어: 언론 보도·유튜브 영상 — 리즈워드 LISWORD" />
+  <meta name="twitter:description" content="언론에 소개된 리즈워드(LISWORD)의 교육과, 이인섭 대표가 유튜브에 올린 AI 실습 영상(클로드코드·바이브코딩·업무 자동화)을 모았습니다." />
   <meta name="twitter:image" content="https://www.lisword.co.kr/og-image.png" />
   <meta name="twitter:image:alt" content="리즈워드 LISWORD — 대학·기업을 위한 현장형 AI 교육 (바이브코딩 부트캠프 · AI 리터러시 · RAG · AX 전환)" />
 
@@ -51,50 +51,115 @@
   <script src="news-data.js"></script>
 </head>
 <body>
-  <header class="wrap news-page-nav">
-    <div class="news-page-nav-inner">
-      <a href="/" class="logo">
-        <span class="logo-mark"></span>
-        <span>LISWORD</span>
-      </a>
-      <div class="news-page-nav-links">
-        <a href="/university/" class="news-page-back">대학·사업단</a>
-        <a href="/blog/" class="news-page-back">블로그</a>
-        <a href="/" class="news-page-back">← 홈으로</a>
-      </div>
+  <!-- SITE-NAV:START -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"></span><span>LISWORD</span></a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="/university/">대학·사업단</a>
+        <a href="/corporate/">기업·기관</a>
+        <a href="/blog/category/cases/">교육 사례</a>
+        <a href="/blog/">블로그</a>
+        <a href="/news.html" class="is-active" aria-current="page">미디어</a>
+      </nav>
+      <a href="/#contact" class="nav-cta" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'news_nav' });">교육 문의</a>
     </div>
   </header>
+  <!-- SITE-NAV:END -->
 
-  <main class="wrap">
+  <main class="wrap" id="main">
     <section class="news-page-head">
-      <div class="eyebrow mono">PRESS · 언론 보도</div>
-      <h1>언론에 나온 <em class="accent">리즈워드</em>.</h1>
+      <div class="eyebrow mono">MEDIA · 미디어</div>
+      <h1>언론 보도와 <em class="accent">영상</em>.</h1>
       <p style="font-size:16px; color:var(--fg-2); max-width:640px; line-height:1.7;">
-        매체에 소개된 리즈워드의 활동을 시간순으로 모았습니다. 제목을 누르면 원문 기사로 이동합니다.
+        언론에 소개된 리즈워드의 교육과, 이인섭 대표가 유튜브에 올린 AI 실습 영상을 모았습니다.
       </p>
+      <nav class="media-jump" aria-label="이 페이지 바로가기">
+        <a href="#press">언론 보도</a>
+        <a href="#videos">유튜브 영상</a>
+      </nav>
     </section>
 
-    <!--
+    <section class="media-section" id="press" aria-labelledby="press-title">
+      <div class="media-section-head">
+        <h2 id="press-title">언론 보도</h2>
+        <span>제목을 누르면 원문 기사로 이동합니다.</span>
+      </div>
+
+      <!--
       기사 목록 — 검색로봇이 읽을 수 있게 HTML에 미리 적어 둡니다 (최신순).
       페이지가 뜨면 아래 스크립트가 이 목록을 지우고 news-data.js 기준으로 다시 그립니다.
       news-data.js에 기사를 추가하면 여기에도 같은 줄을 맨 위에 추가해 주세요 (업데이트_메뉴얼.md 1번).
-    -->
-    <section class="news-page-list" id="news-list">
-      <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">
-        <span class="news-page-row-date">2026-07-24</span>
-        <span class="news-page-row-title">리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영</span>
-        <span class="news-page-row-source">대학저널</span>
-      </a>
-      <a class="news-page-row" href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">
-        <span class="news-page-row-date">2026-07-23</span>
-        <span class="news-page-row-title">리즈워드, 성균관대서 공공데이터 활용 바이브코딩 MVP 개발 부트캠프 운영</span>
-        <span class="news-page-row-source">피앤피뉴스</span>
-      </a>
-      <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">
-        <span class="news-page-row-date">2026-06-08</span>
-        <span class="news-page-row-title">리즈워드, 성균관대서 생성형 AI 바이브코딩 부트캠프 운영</span>
-        <span class="news-page-row-source">대학저널</span>
-      </a>
+      -->
+      <div class="news-page-list" id="news-list">
+        <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">
+          <span class="news-page-row-date">2026-07-24</span>
+          <span class="news-page-row-title">리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영</span>
+          <span class="news-page-row-source">대학저널</span>
+        </a>
+        <a class="news-page-row" href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">
+          <span class="news-page-row-date">2026-07-23</span>
+          <span class="news-page-row-title">리즈워드, 성균관대서 공공데이터 활용 바이브코딩 MVP 개발 부트캠프 운영</span>
+          <span class="news-page-row-source">피앤피뉴스</span>
+        </a>
+        <a class="news-page-row" href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">
+          <span class="news-page-row-date">2026-06-08</span>
+          <span class="news-page-row-title">리즈워드, 성균관대서 생성형 AI 바이브코딩 부트캠프 운영</span>
+          <span class="news-page-row-source">대학저널</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="media-section" id="videos" aria-labelledby="videos-title">
+      <div class="media-section-head">
+        <h2 id="videos-title">유튜브 영상</h2>
+        <a href="https://www.youtube.com/@lisword" target="_blank" rel="noopener">이인섭 AI 연구원 채널 바로가기 →</a>
+      </div>
+      <!-- 영상 목록은 tools/site_videos.py 에서 고칩니다 -->
+      <!-- SITE-VIDEOS:START -->
+      <div class="media-yt">
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=LHr2ACN790Y" target="_blank" rel="noopener" data-video="LHr2ACN790Y">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/LHr2ACN790Y/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">8:37</span></div>
+          <div class="media-yt-title">AI 시장, 사실은 자기들끼리 돈 돌리고 있다?</div>
+          <div class="media-yt-date">2026.06.06</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=wAn5efbK69I" target="_blank" rel="noopener" data-video="wAn5efbK69I">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/wAn5efbK69I/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">17:39</span></div>
+          <div class="media-yt-title">클로드코드로 지방선거 후보 7,826명 까봤습니다</div>
+          <div class="media-yt-date">2026.05.23</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=9SDxGqB_dpM" target="_blank" rel="noopener" data-video="9SDxGqB_dpM">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/9SDxGqB_dpM/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">6:57</span></div>
+          <div class="media-yt-title">우리회사가 AI 도입을 못하는 이유</div>
+          <div class="media-yt-date">2026.05.21</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=KV_kYYMh3sA" target="_blank" rel="noopener" data-video="KV_kYYMh3sA">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/KV_kYYMh3sA/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">9:19</span></div>
+          <div class="media-yt-title">내 사이트 누가, 언제, 어떻게 쓰는지 다 보입니다 | 클로드 코드로 GA4 붙이기</div>
+          <div class="media-yt-date">2026.05.15</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=X_tKxvPtuBU" target="_blank" rel="noopener" data-video="X_tKxvPtuBU">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/X_tKxvPtuBU/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">17:59</span></div>
+          <div class="media-yt-title">클로드코드, 초보자도 15분 만에 바이브코딩으로 서비스 배포하는 법</div>
+          <div class="media-yt-date">2026.05.06</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=7FLsVEdXeTc" target="_blank" rel="noopener" data-video="7FLsVEdXeTc">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/7FLsVEdXeTc/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">16:20</span></div>
+          <div class="media-yt-title">클로드코드 설치 완벽 가이드 (초보자도 10분이면 끝!)</div>
+          <div class="media-yt-date">2026.05.01</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=RwdQJb_KR6A" target="_blank" rel="noopener" data-video="RwdQJb_KR6A">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/RwdQJb_KR6A/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">6:42</span></div>
+          <div class="media-yt-title">내 템플릿은 그대로!! 클로드를 활용한 파워포인트 자동화</div>
+          <div class="media-yt-date">2026.04.22</div>
+        </a>
+        <a class="media-yt-card" href="https://www.youtube.com/watch?v=GxRfz9hdiLA" target="_blank" rel="noopener" data-video="GxRfz9hdiLA">
+          <div class="media-yt-thumb"><img src="https://i.ytimg.com/vi/GxRfz9hdiLA/hqdefault.jpg" alt="" loading="lazy" decoding="async" /><span class="media-yt-len">10:41</span></div>
+          <div class="media-yt-title">엑셀 이제 끝났습니다. 클로드코드로 엑셀 자동화하는 법</div>
+          <div class="media-yt-date">2026.04.17</div>
+        </a>
+      </div>
+      <!-- SITE-VIDEOS:END -->
     </section>
   </main>
 
@@ -104,11 +169,16 @@
         <span class="logo-mark"></span>
         <span>LISWORD · 리즈워드</span>
       </div>
+      <!-- SITE-FOOTER:START -->
       <nav class="footer-links" aria-label="바로가기">
-        <a href="/university/">대학·사업단 프로그램</a>
+        <a href="/university/">대학·사업단</a>
+        <a href="/corporate/">기업·기관</a>
+        <a href="/blog/category/cases/">교육 사례</a>
         <a href="/blog/">블로그</a>
-        <a href="/news.html">언론 보도</a>
+        <a href="/news.html" aria-current="page">미디어</a>
+        <a href="/#contact">교육 문의</a>
       </nav>
+      <!-- SITE-FOOTER:END -->
       <div class="footer-meta" id="copy-year">
         © LISWORD. ALL RIGHTS RESERVED · LISWORD.CO.KR
       </div>
@@ -167,6 +237,11 @@
         list.appendChild(row);
       });
     })();
+
+    document.addEventListener('click', function (e) {
+      var v = e.target.closest('[data-video]');
+      if (v && window.gtag) window.gtag('event', 'video_click', { video_id: v.dataset.video, page: 'media' });
+    });
   </script>
 </body>
 </html>

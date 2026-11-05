@@ -1,7 +1,7 @@
 ---
 title: AI가 배움을 돕는 순간, 해치는 순간 — AI 교육 설계 가이드
 slug: genai-learning-design-guide
-category: ai-news
+category: guide
 date: 2026-10-31
 description: 학습과학자·교육연구자 30명의 합의 보고서와 「대학 AI 활용 윤리 가이드라인」을 함께 읽고, 대학 부트캠프와 임직원 교육에서 AI를 어느 단계에 어떤 규칙으로 넣을지 체크리스트로 정리했습니다.
 cover: cover-v2.jpg

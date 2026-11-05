@@ -1,7 +1,7 @@
 ---
 title: 비전공 대학생 바이브코딩 부트캠프 3일 운영안 — 시간표·준비물·평가
 slug: vibe-coding-bootcamp-3day-guide
-category: cases
+category: guide
 date: 2026-10-31
 description: 리즈워드가 2026년 성균관대에서 세 번 운영한 3일 바이브코딩 MVP 부트캠프를 바탕으로, 비전공 대학생 부트캠프의 시간표와 준비물, 팀 평가 기준을 정리했습니다.
 cover: cover-v2.jpg

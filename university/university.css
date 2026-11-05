@@ -275,7 +275,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
-@media (max-width: 1000px) { .univ-cases { grid-template-columns: minmax(0, 1fr); } }
+.univ-cases.is-2col { grid-template-columns: repeat(2, minmax(0, 1fr)); }   /* 카드 4장(기업 페이지 해커톤) */
+@media (max-width: 1000px) { .univ-cases, .univ-cases.is-2col { grid-template-columns: minmax(0, 1fr); } }
 .univ-case {
   min-width: 0;
   display: flex;
