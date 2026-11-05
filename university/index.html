@@ -246,11 +246,13 @@
   <!-- SITE-NAV:END -->
 
   <main id="main">
-    <!-- 첫 화면: 회사 소개 한 문장 + 2026년 운영 사례 + 문의 -->
+    <!-- 첫 화면: 회사 소개 한 문장 + 운영 사례 링크 + 문의 (바로 아래 사진 카드) -->
     <section class="wrap univ-hero">
       <nav class="post-crumbs" aria-label="현재 위치">
         <a href="/">홈</a><span class="post-crumbs-sep" aria-hidden="true">›</span><span>대학·사업단 AI 교육 프로그램</span>
       </nav>
+      <div class="univ-hero-grid">
+      <div class="univ-hero-text">
       <div class="eyebrow mono">FOR UNIVERSITIES · 대학·사업단</div>
       <h1 class="univ-title"><span class="nw">대학·사업단</span> <em class="accent nw">AI 교육</em> 프로그램</h1>
       <p class="univ-lead">리즈워드(LISWORD)는 대학생 대상 AI 교육을 설계·운영합니다. 바이브코딩 MVP 부트캠프, AI 해커톤, 학기 중 비교과 과정, 대학생 AI 특강을 사업단의 목적과 일정에 맞춰 준비하고, 결과보고에 필요한 자료까지 함께 정리합니다.</p>
@@ -259,6 +261,77 @@
         <a href="/#contact" class="btn btn-accent" onclick="if (window.gtag) gtag('event', 'cta_contact_click', { location: 'university_hero' });">교육 문의하기 <span class="arrow">→</span></a>
         <a href="mailto:liszzm@lisword.co.kr" class="btn btn-ghost univ-mail" onclick="if (window.gtag) gtag('event', 'email_click', { location: 'university_hero' });">liszzm@lisword.co.kr</a>
       </div>
+      </div>
+      <figure class="univ-hero-photo">
+        <img src="/blog/images/skku-vibe-coding-bootcamps-2026/cover.jpg" alt="2026년 2월 4일 성균관대 자연과학캠퍼스 강의실에서 학생들이 노트북으로 작업하고, 앞쪽 스크린에 둘째 날 진행 상황 공유(DAY 02 PRESENTATION) 화면이 떠 있는 모습" fetchpriority="high" decoding="async" />
+        <figcaption>2026년 2월 성균관대 AI-VIBE 부트캠프 둘째 날. 팀마다 만든 서비스를 공유하는 시간입니다.</figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <!-- 운영한 교육 — 첫 화면 바로 아래. 사진은 블로그 사례 글에 공개된 현장 사진만 씁니다 -->
+    <section class="wrap univ-section univ-work-section" id="cases" aria-labelledby="cases-title">
+      <div class="univ-head">
+        <div class="eyebrow mono">CASES · 운영한 교육</div>
+        <h2 class="univ-h2" id="cases-title">이런 교육을 운영했습니다</h2>
+        <p class="univ-sub">대학 사업단과 함께 진행한 교육입니다. 사진이나 제목을 누르면 일정, 운영 방식, 학생들이 만든 결과물을 자세히 볼 수 있습니다.</p>
+      </div>
+      <div class="univ-work">
+        <article class="univ-work-card">
+          <a class="univ-work-img" href="/blog/skku-rise-public-data-mvp-bootcamp/" tabindex="-1" aria-hidden="true"><img src="/blog/images/skku-rise-public-data-mvp-bootcamp/cover.jpg" alt="성균관대 자연과학캠퍼스 강의실에서 강사가 마이크를 들고 데이터 리터러시 강의를 하고, 노트북을 편 학생들이 듣는 장면. 오른쪽 벽에 부트캠프 현수막" loading="lazy" decoding="async" /></a>
+          <div class="univ-work-body">
+            <div class="univ-work-meta"><span class="univ-work-who">성균관대학교 RISE사업단</span><span>2026.07</span></div>
+            <h3><a href="/blog/skku-rise-public-data-mvp-bootcamp/">공공데이터 바이브코딩 MVP 부트캠프</a></h3>
+            <p>팀마다 공공데이터로 풀 생활 속 문제를 하나 정하고, 막차 계산·버스 혼잡 예측 같은 웹 서비스를 사흘 만에 만들어 배포하고 발표했습니다.</p>
+            <ul class="univ-work-facts"><li>3일</li><li>28명 · 6개 팀</li><li>교육 운영</li></ul>
+            <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/skku-rise-public-data-mvp-bootcamp/">사례 글 보기 <span class="arrow">→</span></a>
+            <a href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">피앤피뉴스 보도 <span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="univ-work-card">
+          <a class="univ-work-img" href="/blog/skku-vibe-coding-bootcamps-2026/" tabindex="-1" aria-hidden="true"><img src="/blog/images/skku-vibe-coding-bootcamps-2026/skku-ai-vibe-2026-summer-lecture.jpg" alt="성균관대 인문사회과학캠퍼스 교육장에서 강사가 두 스크린 앞에서 설명하고, 학생들이 원형 테이블에 팀별로 앉아 노트북으로 작업하는 모습" loading="lazy" decoding="async" /></a>
+          <div class="univ-work-body">
+            <div class="univ-work-meta"><span class="univ-work-who">성균관대학교 RISE·앵커사업단</span><span>2026.02 · 07</span></div>
+            <h3><a href="/blog/skku-vibe-coding-bootcamps-2026/">AI-VIBE 창업 MVP 부트캠프 (2회)</a></h3>
+            <p>코딩을 배운 적 없는 학생도 창업 아이디어를 3일 만에 웹 서비스(MVP)로 만들어 주소로 배포하고 발표했습니다. 13개 팀 모두 서비스를 배포했습니다.</p>
+            <ul class="univ-work-facts"><li>각 3일</li><li>63명 · 13개 팀</li><li>교육 운영</li></ul>
+            <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/skku-vibe-coding-bootcamps-2026/">사례 글 보기 <span class="arrow">→</span></a>
+            <a href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">대학저널(2월) <span class="arrow">↗</span></a>
+            <a href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">대학저널(7월) <span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="univ-work-card">
+          <a class="univ-work-img" href="/blog/seoul-rise-citizen-ai-class/" tabindex="-1" aria-hidden="true"><img src="/blog/images/seoul-rise-citizen-ai-class/week2-class.jpg" alt="서울시민 실전 AI 활용 클래스 2회차 바이브코딩 실습 시간에 수강생들이 각자 노트북으로 실습하는 모습" loading="lazy" decoding="async" /></a>
+          <div class="univ-work-body">
+            <div class="univ-work-meta"><span class="univ-work-who">성균관대학교 앵커사업단 주관</span><span>2026.07</span></div>
+            <h3><a href="/blog/seoul-rise-citizen-ai-class/">서울시민 실전 AI 활용 클래스</a></h3>
+            <p>AI 리터러시부터 바이브코딩, AI 디자인, 업무 자동화까지 네 번의 토요일 동안 실습 중심으로 진행한 시민 과정에 이인섭 대표가 강사로 참여했습니다.</p>
+            <ul class="univ-work-facts"><li>4회 · 12시간</li><li>시민 대상</li><li>강의</li></ul>
+            <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/seoul-rise-citizen-ai-class/">사례 글 보기 <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="univ-work-card">
+          <a class="univ-work-img" href="/blog/samsung-data-driven-hackathon-2023/" tabindex="-1" aria-hidden="true"><img src="/blog/images/samsung-data-driven-hackathon-2023/mentoring.jpg" alt="팀 작업 공간에서 멘토가 화이트보드에 그림을 그려 가며 설명하고, 학생들이 노트북 앞에서 듣는 모습. 얼굴과 화이트보드 내용은 흐리게 처리" loading="lazy" decoding="async" /></a>
+          <div class="univ-work-body">
+            <div class="univ-work-meta"><span class="univ-work-who">AIEX 사업단 × 삼성전자 가전사업부</span><span>2023.08</span></div>
+            <h3><a href="/blog/samsung-data-driven-hackathon-2023/">기업 연계 데이터 드리븐 해커톤</a></h3>
+            <p>학생 팀이 소셜데이터로 가전 소비자의 불편을 찾고 제품·기능 아이디어를 내는 무박 해커톤입니다. 이인섭 대표가 연구원 시절 교육과 현장 운영을 맡았습니다.</p>
+            <ul class="univ-work-facts"><li>무박 2일</li><li>40명 · 8개 팀</li><li>교육·현장 운영</li></ul>
+            <div class="univ-case-links">
+            <a class="univ-case-more" href="/blog/samsung-data-driven-hackathon-2023/">사례 글 보기 <span class="arrow">→</span></a>
+            <a href="/#track">해커톤 운영 이력 <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <a class="univ-more" href="/blog/category/cases/">교육 사례 전체 보기 <span class="arrow">→</span></a>
+      <p class="univ-sub univ-guides">처음 기획하신다면 <a href="/blog/rise-ai-education-planning-guide/">RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드</a>(형식 고르기·준비 일정·결과보고서 항목)와 <a href="/blog/vibe-coding-bootcamp-3day-guide/">비전공 대학생 바이브코딩 부트캠프 3일 운영안</a>(시간표·준비물·평가 기준)도 참고하세요.</p>
     </section>
 
     <!-- 이런 담당자를 위한 페이지 (대상 — 지금까지의 고객 목록이 아닙니다) -->
@@ -292,6 +365,7 @@
       </div>
       <div class="univ-programs">
         <article class="univ-program">
+          <figure class="univ-program-photo"><img src="/blog/images/skku-rise-public-data-mvp-bootcamp/team-demo-stopless.jpg" alt="3일차 팀별 MVP 발표 때 화면에 띄운 STOPLESS 팀의 서초구 러닝 코스 추천 서비스. 추천 경로가 파란 선으로 그려진 지도" loading="lazy" decoding="async" /><figcaption>공공데이터 부트캠프 3일차 발표, 한 팀이 만든 러닝 코스 추천 서비스</figcaption></figure>
           <span class="univ-program-num">01 — BOOTCAMP</span>
           <h3 class="univ-program-title">바이브코딩 MVP 부트캠프</h3>
           <p class="univ-program-time">방학 중 2~5일</p>
@@ -301,6 +375,7 @@
           </dl>
         </article>
         <article class="univ-program">
+          <figure class="univ-program-photo"><img src="/blog/images/localo-data-driven-hackathon-2024/night-qa.jpg" alt="호텔 볼룸에서 기업 관계자가 테이블 옆에 서서 학생 팀과 이야기하는 해커톤 현장. 얼굴과 화면은 흐리게 처리" loading="lazy" decoding="async" /><figcaption>기업 연계 무박 해커톤, 첫날 밤 기업 관계자의 팀별 질의응답</figcaption></figure>
           <span class="univ-program-num">02 — HACKATHON</span>
           <h3 class="univ-program-title">AI 해커톤 운영</h3>
           <p class="univ-program-time">1~2일</p>
@@ -310,6 +385,7 @@
           </dl>
         </article>
         <article class="univ-program">
+          <figure class="univ-program-photo"><img src="/blog/images/skku-data-driven-service-design-2023-2024/powerbi-class.jpg" alt="강의실 앞쪽 노트북과 모니터에 Power BI 대시보드가 떠 있고, 뒤로 학생들이 실습하는 모습. 얼굴은 흐리게 처리" loading="lazy" decoding="async" /><figcaption>데이터드리븐 서비스디자인 교육, Power BI 실습</figcaption></figure>
           <span class="univ-program-num">03 — SEMESTER</span>
           <h3 class="univ-program-title">학기 중 비교과 과정</h3>
           <p class="univ-program-time">주말 2일×2회 또는 주 1회×6주</p>
@@ -319,6 +395,7 @@
           </dl>
         </article>
         <article class="univ-program">
+          <figure class="univ-program-photo"><img src="/blog/images/seoul-rise-citizen-ai-class/cover.jpg" alt="이인섭 대표가 스크린 앞에서 강의하고, 수강생들이 노트북을 펼쳐 놓고 듣는 강의실 모습" loading="lazy" decoding="async" /><figcaption>이인섭 대표 AI 활용 강의</figcaption></figure>
           <span class="univ-program-num">04 — LECTURE</span>
           <h3 class="univ-program-title">대학생 AI 특강</h3>
           <p class="univ-program-time">하루</p>
@@ -360,45 +437,6 @@
         <li><span class="univ-num mono">04</span><h3>운영</h3><p>교육을 진행하면서 출석·만족도 조사와 현장 사진을 챙깁니다.</p></li>
         <li><span class="univ-num mono">05</span><h3>결과보고</h3><p>결과물 목록과 결과보고서 초안을 전달합니다.</p></li>
       </ol>
-    </section>
-
-    <!-- 2026년 운영 사례 — 언론 보도·교육 사례 글로 확인되는 내용만 씁니다 (인원 수는 사례 글에) -->
-    <section class="wrap univ-section" id="cases" aria-labelledby="cases-title">
-      <div class="univ-head">
-        <div class="eyebrow mono">CASES · 2026</div>
-        <h2 class="univ-h2" id="cases-title">2026년 운영 사례</h2>
-        <p class="univ-sub">일정과 운영 방식, 학생들이 만든 결과물은 블로그의 교육 사례 글에 자세히 정리했습니다.</p>
-      </div>
-      <div class="univ-cases">
-        <article class="univ-case">
-          <div class="univ-case-top"><time class="univ-case-date" datetime="2026-07-07">2026.07.07 – 07.09</time><span class="univ-case-role">운영</span></div>
-          <h3>성균관대학교 RISE사업단 · 공공데이터로 만드는 바이브코딩 MVP 제작 부트캠프</h3>
-          <p>성균관대학교 자연과학캠퍼스에서 사흘 동안 진행했습니다. 팀마다 공공데이터로 풀 생활 속 문제를 정하고, 막차 계산·버스 혼잡 예측 같은 서비스를 만들어 발표했습니다.</p>
-          <div class="univ-case-links">
-            <a class="univ-case-more" href="/blog/skku-rise-public-data-mvp-bootcamp/">사례 글 보기 <span class="arrow">→</span></a>
-            <a href="https://www.gosiweek.com/article/1065582310124984" target="_blank" rel="noopener">피앤피뉴스 보도 <span class="arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="univ-case">
-          <div class="univ-case-top"><span class="univ-case-date">2026.02 · 2026.07</span><span class="univ-case-role">운영</span></div>
-          <h3>성균관대학교 · AI-VIBE 부트캠프 (2회)</h3>
-          <p>바이브코딩으로 창업 아이디어를 MVP로 만드는 3일 과정입니다. 2월 3~5일과 7월 14~16일(인문사회과학캠퍼스) 두 번 운영했고, 코딩 경험이 없는 학생도 서비스를 만들어 배포하고 발표했습니다.</p>
-          <div class="univ-case-links">
-            <a class="univ-case-more" href="/blog/skku-vibe-coding-bootcamps-2026/">사례 글 보기 <span class="arrow">→</span></a>
-            <a href="https://dhnews.co.kr/news/view/1065591701447441" target="_blank" rel="noopener">대학저널 보도(2월) <span class="arrow">↗</span></a>
-            <a href="https://dhnews.co.kr/news/view/1065597357340091" target="_blank" rel="noopener">대학저널 보도(7월) <span class="arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="univ-case">
-          <div class="univ-case-top"><span class="univ-case-date">2026.07</span><span class="univ-case-role">강의</span></div>
-          <h3>서울시민 실전 AI 활용 클래스</h3>
-          <p>성균관대학교 앵커사업단(RISE 사업단)이 주관한 2026년 7월 시민 대상 AI 활용 과정에 리즈워드 이인섭 대표가 강사로 참여했습니다. 과정은 네 번의 토요일 동안 실습 중심으로 진행됐습니다.</p>
-          <div class="univ-case-links">
-            <a class="univ-case-more" href="/blog/seoul-rise-citizen-ai-class/">사례 글 보기 <span class="arrow">→</span></a>
-          </div>
-        </article>
-      </div>
-      <p class="univ-sub univ-guides">처음 기획하신다면 <a href="/blog/rise-ai-education-planning-guide/">RISE·앵커 사업단을 위한 대학생 AI 교육 기획 가이드</a>(형식 고르기·준비 일정·결과보고서 항목)와 <a href="/blog/vibe-coding-bootcamp-3day-guide/">비전공 대학생 바이브코딩 부트캠프 3일 운영안</a>(시간표·준비물·평가 기준)도 참고하세요.</p>
     </section>
 
     <!-- 자주 묻는 질문 — 문구를 바꾸면 위쪽 구조화 데이터(FAQPage)의 같은 질문·답도 똑같이 바꾸세요 -->

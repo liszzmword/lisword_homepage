@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/go/univ-a",  "destination": "/university/?utm_source=outreach&utm_medium=email&utm_campaign=2611_outreach&utm_content=a_univ", "permanent": false },
+    { "source": "/go/univ-b",  "destination": "/university/?utm_source=outreach&utm_medium=email&utm_campaign=2611_outreach&utm_content=b_univ", "permanent": false },
+    { "source": "/go/cases-a", "destination": "/blog/category/cases/?utm_source=outreach&utm_medium=email&utm_campaign=2611_outreach&utm_content=a_cases", "permanent": false },
+    { "source": "/go/cases-b", "destination": "/blog/category/cases/?utm_source=outreach&utm_medium=email&utm_campaign=2611_outreach&utm_content=b_cases", "permanent": false }
+  ]
+}
