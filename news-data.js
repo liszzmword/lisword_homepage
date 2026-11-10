@@ -3,6 +3,14 @@
 // 홈페이지의 News 섹션과 news.html 모두 이 파일을 참조합니다.
 window.NEWS_ARTICLES = [
   {
+    id: "hyupsung-samil-hs-vibe-2026-11",
+    title: "리즈워드, 협성대·삼일고 고교-대학 연계 AI 바이브코딩 교육 진행",
+    source: "대학저널",
+    date: "2026-11-10",
+    url: "https://dhnews.co.kr/news/view/1065580640059011",
+    excerpt: "리즈워드는 협성대학교 앵커사업단과 함께 수원 삼일고등학교 IT메이커스경영과 도제반 학생 약 35명을 대상으로 '2026 고교-대학 연계 AI 교육프로그램: AI 바이브코딩 실습교육'을 진행했다. 10월과 11월 두 회차 동안 학생들이 1인 1개씩 만들어 배포한 웹 서비스는 20여 개에 이른다."
+  },
+  {
     id: "skku-ai-vibe-bootcamp-2026-07",
     title: "리즈워드, 성균관대서 바이브코딩 MVP 개발 부트캠프 운영",
     source: "대학저널",
