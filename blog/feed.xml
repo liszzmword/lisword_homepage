@@ -6,7 +6,17 @@
     <atom:link href="https://www.lisword.co.kr/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>리즈워드(LISWORD) 블로그입니다. 대학·기업 교육 담당자를 위한 AI 교육 기획 가이드와 AI 소식을 정리합니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <item>
+      <title>고등학생 35명, 1인 1개 웹 서비스 배포: 협성대 고교-대학 연계 AI 바이브코딩</title>
+      <link>https://www.lisword.co.kr/blog/hyupsung-samil-hs-ai-vibe-coding-2026/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/hyupsung-samil-hs-ai-vibe-coding-2026/</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>교육 사례</category>
+      <description>리즈워드가 협성대 앵커사업단과 수원 삼일고 도제반 학생 약 35명에게 운영한 고교-대학 연계 AI 바이브코딩 실습교육(2026년 10~11월). 첫날 배포부터 로그인·AI 기능까지, 학생들이 배포한 웹 서비스 23개를 정리했습니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/hyupsung-samil-hs-ai-vibe-coding-2026/cover.jpg" length="240199" type="image/jpeg" />
+    </item>
     <item>
       <title>2026년 10월 AI 소식, 새 모델부터 커스텀 GPT 종료 예고까지</title>
       <link>https://www.lisword.co.kr/blog/ai-news-2026-10/</link>
