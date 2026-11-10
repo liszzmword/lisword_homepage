@@ -3,7 +3,7 @@
 window.BLOG_LATEST = [
   {
     "slug": "hyupsung-samil-hs-ai-vibe-coding-2026",
-    "title": "고등학생 35명, 1인 1개 웹 서비스 배포: 협성대 고교-대학 연계 AI 바이브코딩",
+    "title": "고등학생 35명, 1인 1개 웹 서비스 배포: 협성대·삼일고 고교-대학 연계 AI 바이브코딩",
     "category": "cases",
     "categoryLabel": "교육 사례",
     "date": "2026-11-06",
