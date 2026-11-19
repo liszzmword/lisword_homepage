@@ -170,7 +170,13 @@ a.lp-case:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .lp-tr-date { font-family: var(--font-en); color: var(--fg-3); font-size: 14px; }
 .lp-tr-name { font-weight: 700; word-break: keep-all; }
 .lp-tr-org, .lp-tr-facts { color: var(--fg-2); word-break: keep-all; }
-@media (max-width: 880px) {
+/* 넓은 화면: 칸마다 한 줄로 고정해 행 높이를 맞춤. 넘치는 글자는 … 처리 */
+@media (min-width: 1100px) {
+  .lp-tr li { grid-template-columns: 150px minmax(0, 1.4fr) minmax(0, 1fr) 220px; }
+  .lp-tr li > * { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lp-tr li > a.lp-tr-name { padding-bottom: 6px; margin-bottom: -6px; } /* 밑줄이 잘리지 않게 */
+}
+@media (max-width: 1099px) {
   .lp-tr li { grid-template-columns: 1fr; gap: 4px; }
   .lp-tr-date { font-size: 13px; }
 }
