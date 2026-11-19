@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LISWORD 주간 AI 소식 표지 원본 (1600×900)</title>
+  <!--
+    주간 AI 소식 표지 원본입니다. AI로 만든 배경 사진 위에 제목만 얹습니다.
+    주소 뒤 ?로 값을 넘깁니다.
+      bg : 배경 사진 파일 경로 (16:9, 왼쪽 40%는 비어 있는 사진)
+      t1 : 제목 첫 줄 (예: 11월 1주차)
+      t2 : 제목 둘째 줄, 주황색 (기본값: AI 소식)
+      pos: top 이면 제목을 위쪽에 둡니다 (사진의 물체가 왼쪽 아래까지 올 때)
+  -->
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=block" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { width: 1600px; height: 900px; overflow: hidden; background: #E9E6E2; -webkit-font-smoothing: antialiased; }
+    .card { position: relative; width: 1600px; height: 900px; background-size: cover; background-position: center; }
+    .logo { position: absolute; left: 96px; top: 84px; display: flex; align-items: center; gap: 14px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 30px; color: #15110E; }
+    .logo svg { width: 32px; height: 32px; display: block; }
+    h1 { position: absolute; left: 92px; top: 50%; transform: translateY(-46%); margin: 0;
+         font-family: "Pretendard", sans-serif; font-weight: 800; font-size: 150px; line-height: 1.02; letter-spacing: -0.055em; color: #15110E; }
+    h1 span { display: block; }
+    h1 .accent { color: #FF6B1A; }
+    body.top h1 { top: 190px; transform: none; }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="logo">
+      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="28" height="28" fill="#FF6B1A"/>
+        <path d="M6 6 H22 V15.6 H15.6 V22 H6 Z" fill="#FAF8F5"/>
+      </svg>
+      <span>LISWORD</span>
+    </div>
+    <h1><span id="t1"></span><span class="accent" id="t2"></span></h1>
+  </div>
+  <script>
+    const q = new URLSearchParams(location.search);
+    document.getElementById("card").style.backgroundImage = `url("${q.get("bg") || "bg.png"}")`;
+    document.getElementById("t1").textContent = q.get("t1") || "";
+    document.getElementById("t2").textContent = q.get("t2") || "AI 소식";
+    if (q.get("pos") === "top") document.body.classList.add("top");
+  </script>
+</body>
+</html>

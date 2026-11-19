@@ -2,7 +2,10 @@
   "note": "tools/build_blog.py가 만든 파일 목록입니다. 직접 고치지 마세요. 글을 지우면 다음 빌드가 그 글의 파일을 지웁니다.",
   "mode": "production",
   "files": [
+    "blog/ai-news-2026-10-w5/index.html",
     "blog/ai-news-2026-10/index.html",
+    "blog/ai-news-2026-11-w1/index.html",
+    "blog/ai-news-2026-11-w2/index.html",
     "blog/aiex-forum-coex-2024-2025/index.html",
     "blog/category/ai-news/index.html",
     "blog/category/cases/index.html",

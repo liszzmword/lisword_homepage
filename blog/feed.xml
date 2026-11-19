@@ -6,7 +6,27 @@
     <atom:link href="https://www.lisword.co.kr/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>리즈워드(LISWORD) 블로그입니다. 대학·기업 교육 담당자를 위한 AI 교육 기획 가이드와 AI 소식을 정리합니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <item>
+      <title>11월 2주차 AI 소식, 젠슨 황 사임부터 시험장 AI 커닝까지</title>
+      <link>https://www.lisword.co.kr/blog/ai-news-2026-11-w2/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/ai-news-2026-11-w2/</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>AI 소식</category>
+      <description>2026년 11월 9일~15일 AI 소식 5건입니다. 젠슨 황 엔비디아 CEO 사임과 정부 점검, 앤트로픽 상장 로드쇼, Claude Fable 5.2, Gemini 4 Hydrogen, 세무사 시험 AI 부정행위를 다룹니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/ai-news-2026-11-w2/cover.jpg" length="100790" type="image/jpeg" />
+    </item>
+    <item>
+      <title>11월 1주차 AI 소식, 엔비디아 CEO 조사와 GPT-6 Cyber</title>
+      <link>https://www.lisword.co.kr/blog/ai-news-2026-11-w1/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/ai-news-2026-11-w1/</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>AI 소식</category>
+      <description>2026년 11월 2일~8일 AI 소식 5건을 원문 링크와 함께 정리했습니다. 엔비디아 이사회의 젠슨 황 CEO 조사, 중간선거 뒤 AI 주식 급락, 앤트로픽 3분기 매출, GPT-6 Cyber, Kimi K3.1 Pro를 다룹니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/ai-news-2026-11-w1/cover.jpg" length="106179" type="image/jpeg" />
+    </item>
     <item>
       <title>고등학생 35명, 1인 1개 웹 서비스 배포: 협성대·삼일고 고교-대학 연계 AI 바이브코딩</title>
       <link>https://www.lisword.co.kr/blog/hyupsung-samil-hs-ai-vibe-coding-2026/</link>
@@ -16,6 +36,16 @@
       <category>교육 사례</category>
       <description>리즈워드가 협성대 앵커사업단과 수원 삼일고 도제반 학생 약 35명에게 운영한 고교-대학 연계 AI 바이브코딩 실습교육(2026년 10~11월). 첫날 배포부터 로그인·AI 기능까지, 학생들이 배포한 웹 서비스 23개를 정리했습니다.</description>
       <enclosure url="https://www.lisword.co.kr/blog/images/hyupsung-samil-hs-ai-vibe-coding-2026/cover.jpg" length="240199" type="image/jpeg" />
+    </item>
+    <item>
+      <title>10월 5주차 AI 소식, 앤트로픽 상장 서류와 AI 안전 사고</title>
+      <link>https://www.lisword.co.kr/blog/ai-news-2026-10-w5/</link>
+      <guid isPermaLink="true">https://www.lisword.co.kr/blog/ai-news-2026-10-w5/</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0900</pubDate>
+      <dc:creator>이인섭</dc:creator>
+      <category>AI 소식</category>
+      <description>2026년 10월 26일~11월 1일 AI 소식 5건을 정리했습니다. 앤트로픽 상장 서류와 안전 평가 사고, 오픈AI의 구글 TPU 구매 계획 보도, 구글 지니 4, 미스트랄 라지 4 가중치 공개를 다룹니다.</description>
+      <enclosure url="https://www.lisword.co.kr/blog/images/ai-news-2026-10-w5/cover.jpg" length="73303" type="image/jpeg" />
     </item>
     <item>
       <title>2026년 10월 AI 소식, 새 모델부터 커스텀 GPT 종료 예고까지</title>
